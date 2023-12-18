@@ -1,0 +1,35 @@
+# QuestaSim-64 vcover 2021.1 Coverage Utility 2021.01 Jan 19 2021
+# Start time: 17:21:40 on Dec 17,2023
+# vcover merge coverage/uart_tx.ucdb coverage/uart_tx_input_test.ucdb 
+# QuestaSim-64 vcover 2021.1 Coverage Utility 2021.01 Jan 19 2021
+# Merging file coverage/uart_tx_input_test.ucdb
+# Writing merged result to coverage/uart_tx.ucdb
+# 
+# End time: 17:21:40 on Dec 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcover 2021.1 Coverage Utility 2021.01 Jan 19 2021
+# Start time: 17:21:40 on Dec 17,2023
+# vcover report coverage/uart_tx.ucdb -cvg -details -output coverage/fun_coverage.txt 
+# End time: 17:21:40 on Dec 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcover 2021.1 Coverage Utility 2021.01 Jan 19 2021
+# Start time: 17:21:40 on Dec 17,2023
+# vcover report coverage/uart_tx.ucdb -details -assert -output coverage/assertions.txt 
+# End time: 17:21:40 on Dec 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcover 2021.1 Coverage Utility 2021.01 Jan 19 2021
+# Start time: 17:21:40 on Dec 17,2023
+# vcover report coverage/uart_tx.ucdb -output coverage/code_coverage.txt 
+# End time: 17:21:40 on Dec 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (D:/Ali/Courses/Verification-Projects/uart-env/sim/uart_tx/uart_tx_sim.mpf).  File can not be renamed.
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (D:/Ali/Courses/Verification-Projects/uart-env/sim/uart_tx/uart_tx_sim.mpf).  File can not be renamed.
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (D:/Ali/Courses/Verification-Projects/uart-env/sim/uart_tx/uart_tx_sim.mpf).  File can not be renamed.
+# End time: 17:28:53 on Dec 17,2023, Elapsed time: 0:07:32
+# Errors: 3, Warnings: 1

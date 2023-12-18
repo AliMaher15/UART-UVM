@@ -1,0 +1,148 @@
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (D:/Ali/Courses/Verification-Projects/uart-env/sim/uart_tx/uart_tx_sim.mpf).  File can not be renamed.
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (D:/Ali/Courses/Verification-Projects/uart-env/sim/uart_tx/uart_tx_sim.mpf).  File can not be renamed.
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (D:/Ali/Courses/Verification-Projects/uart-env/sim/uart_tx/uart_tx_sim.mpf).  File can not be renamed.
+# End time: 17:21:21 on Dec 17,2023, Elapsed time: 0:01:45
+# Errors: 103, Warnings: 1
+# vsim top_opt -c -assertdebug -debugDB -fsmdebug -coverage "+UVM_TESTNAME=uart_tx_input_test" 
+# Start time: 17:21:21 on Dec 17,2023
+# Loading sv_std.std
+# Loading work.uart_tx_system_if(fast)
+# Loading work.uart_tx_if(fast)
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.uart_tx_item_pkg(fast)
+# Loading work.uart_tx_agent_pkg(fast)
+# Loading work.uart_tx_params_pkg(fast)
+# Loading work.uart_tx_tb_pkg(fast)
+# Loading work.uart_tx_seq_pkg(fast)
+# Loading work.uart_tx_test_pkg(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.uart_tx_tb_top(fast)
+# Loading work.uart_tx_system_if(fast__2)
+# Loading work.uart_tx_if(fast__2)
+# Loading work.UART_TX(fast)
+# Loading work.uart_tx_fsm(fast)
+# Loading work.Serializer(fast)
+# Loading work.parity_calc(fast)
+# Loading work.mux(fast)
+# Loading work.uart_tx_assertions(fast)
+# Loading C:/questasim64_2021.1/uvm-1.1d\win64\uvm_dpi.dll
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+# 1
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test uart_tx_input_test...
+# --------------------------------------------------------------------
+# Name                       Type                          Size  Value
+# --------------------------------------------------------------------
+# uvm_test_top               uart_tx_input_test            -     @478 
+#   m_uart_tx_env            uart_tx_env                   -     @493 
+#     m_coverage             uart_tx_coverage              -     @653 
+#       analysis_imp         uvm_analysis_imp              -     @660 
+#     m_scoreboard           uart_tx_scoreboard            -     @638 
+#       uart_tx_out_imp      uvm_analysis_imp_uart_tx_out  -     @645 
+#     m_uart_tx_agent        uvm_agent                     -     @505 
+#       m_driver             uvm_driver #(REQ,RSP)         -     @785 
+#         rsp_port           uvm_analysis_port             -     @800 
+#         seq_item_port      uvm_seq_item_pull_port        -     @792 
+#       m_monitor            uvm_monitor                   -     @669 
+#         input_ap           uvm_analysis_port             -     @810 
+#         output_ap          uvm_analysis_port             -     @818 
+#       m_seqr               uart_tx_agent_seqr            -     @676 
+#         rsp_export         uvm_analysis_export           -     @683 
+#         seq_item_export    uvm_seq_item_pull_imp         -     @777 
+#         arbitration_queue  array                         0     -    
+#         lock_queue         array                         0     -    
+#         num_last_reqs      integral                      32    'd1  
+#         num_last_rsps      integral                      32    'd1  
+#       uart_tx_input_ap     uvm_analysis_port             -     @512 
+#       uart_tx_output_ap    uvm_analysis_port             -     @520 
+#     m_vseqr                uart_tx_vsequencer            -     @528 
+#       rsp_export           uvm_analysis_export           -     @535 
+#       seq_item_export      uvm_seq_item_pull_imp         -     @629 
+#       arbitration_queue    array                         0     -    
+#       lock_queue           array                         0     -    
+#       num_last_reqs        integral                      32    'd1  
+#       num_last_rsps        integral                      32    'd1  
+# --------------------------------------------------------------------
+# 
+#### Factory Configuration (*)
+# 
+#   No instance or type overrides are registered with this factory
+# 
+# All types registered with the factory: 55 total
+# (types without type names will not be printed)
+# 
+#   Type Name
+#   ---------
+#   questa_uvm_recorder
+#   uart_tx_agent_seqr
+#   uart_tx_base_seq
+#   uart_tx_base_test
+#   uart_tx_coverage
+#   uart_tx_env
+#   uart_tx_env_cfg
+#   uart_tx_input_seq
+#   uart_tx_input_test
+#   uart_tx_input_test_vseq
+#   uart_tx_item
+#   uart_tx_scoreboard
+#   uart_tx_vseq_base
+#   uart_tx_vsequencer
+# (*) Types with no associated type name will be printed as <unknown>
+# 
+####
+# 
+# UVM_INFO D:/Ali/Courses/Verification-Projects/uart-env/uart_tx_tb/test_lib//uart_tx_input_test.svh(18) @ 2400: uvm_test_top [uart_tx_input_test] Starting test
+# UVM_INFO D:/Ali/Courses/Verification-Projects/uart-env/uart_tx_tb/test_lib//uart_tx_input_test.svh(20) @ 2400: uvm_test_top [uart_tx_input_test] Executing uart_tx_input_test_vseq
+# UVM_INFO D:/Ali/Courses/Verification-Projects/uart-env/uart_tx_tb/test_lib//uart_tx_input_test.svh(22) @ 145550: uvm_test_top [uart_tx_input_test] uart_tx_input_test_vseq complete
+# UVM_INFO D:/Ali/Courses/Verification-Projects/uart-env/uart_tx_tb/test_lib//uart_tx_input_test.svh(25) @ 150550: uvm_test_top [uart_tx_input_test] Ending test
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 150550: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO D:/Ali/Courses/Verification-Projects/uart-env/uart_tx_tb/uart_tx_checkers/uart_tx_scoreboard.svh(123) @ 150550: uvm_test_top.m_uart_tx_env.m_scoreboard [uart_tx_scoreboard] outputs_count 100
+# UVM_INFO D:/Ali/Courses/Verification-Projects/uart-env/uart_tx_tb/uart_tx_checkers/uart_tx_scoreboard.svh(124) @ 150550: uvm_test_top.m_uart_tx_env.m_scoreboard [uart_tx_scoreboard] start_error_count 0
+# UVM_INFO D:/Ali/Courses/Verification-Projects/uart-env/uart_tx_tb/uart_tx_checkers/uart_tx_scoreboard.svh(125) @ 150550: uvm_test_top.m_uart_tx_env.m_scoreboard [uart_tx_scoreboard] stop_error_count 0
+# UVM_INFO D:/Ali/Courses/Verification-Projects/uart-env/uart_tx_tb/uart_tx_checkers/uart_tx_scoreboard.svh(126) @ 150550: uvm_test_top.m_uart_tx_env.m_scoreboard [uart_tx_scoreboard] parity_error_count 0
+# UVM_INFO D:/Ali/Courses/Verification-Projects/uart-env/uart_tx_tb/uart_tx_checkers/uart_tx_scoreboard.svh(127) @ 150550: uvm_test_top.m_uart_tx_env.m_scoreboard [uart_tx_scoreboard] data_error_count 0
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   13
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [uart_tx_input_test]     4
+# [uart_tx_scoreboard]     5
+# ** Note: $finish    : C:/questasim64_2021.1/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 15055 ns  Iteration: 54  Instance: /uart_tx_tb_top
+# 1
+# Break in Task uvm_pkg/uvm_root::run_test at C:/questasim64_2021.1/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430

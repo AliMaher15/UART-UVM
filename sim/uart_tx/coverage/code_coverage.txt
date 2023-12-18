@@ -1,0 +1,76 @@
+Coverage Report Summary Data by instance
+
+=================================================================================
+=== Instance: /uart_tx_tb_top/dut/U0_TX_FSM
+=== Design Unit: work.uart_tx_fsm
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        21        19         2    90.47%
+    FSM States                       5         5         0   100.00%
+    FSM Transitions                  9         6         3    66.66%
+    Statements                      38        33         5    86.84%
+
+=================================================================================
+=== Instance: /uart_tx_tb_top/dut/U0_SERIALIZER
+=== Design Unit: work.Serializer
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         5         5         0   100.00%
+    Conditions                       1         1         0   100.00%
+    Expressions                      1         1         0   100.00%
+    Statements                       8         8         0   100.00%
+
+=================================================================================
+=== Instance: /uart_tx_tb_top/dut/U0_PARITY
+=== Design Unit: work.parity_calc
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         5         5         0   100.00%
+    Expressions                      3         3         0   100.00%
+    Statements                       3         3         0   100.00%
+
+=================================================================================
+=== Instance: /uart_tx_tb_top/dut/U0_MUX
+=== Design Unit: work.mux
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         7         6         1    85.71%
+    Statements                       6         6         0   100.00%
+
+=================================================================================
+=== Instance: /uart_tx_tb_top/dut/uart_tx_sva
+=== Design Unit: work.uart_tx_assertions
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Assertions                       4         3         1    75.00%
+
+=================================================================================
+=== Instance: /uart_tx_tb_pkg
+=== Design Unit: work.uart_tx_tb_pkg
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Covergroups                      2        na        na   100.00%
+        Coverpoints/Crosses          4        na        na        na
+            Covergroup Bins         10        10         0   100.00%
+
+=================================================================================
+=== Instance: /uart_tx_seq_pkg
+=== Design Unit: work.uart_tx_seq_pkg
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Assertions                       1         1         0   100.00%
+
+
+TOTAL COVERGROUP COVERAGE: 100.00%  COVERGROUP TYPES: 2
+
+TOTAL ASSERTION COVERAGE: 80.00%  ASSERTIONS: 5
+
+Total Coverage By Instance (filtered view): 91.21%
+
