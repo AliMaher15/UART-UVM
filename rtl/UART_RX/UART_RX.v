@@ -11,6 +11,8 @@ input   wire    [PRESCALE_WIDTH-1:0]    Prescale,
 input   wire                            PAR_EN  ,
 input   wire                            PAR_TYP ,
 output  wire    [DATA_WIDTH-1:0]        P_DATA  ,
+output  wire                            par_err ,
+output  wire                            stp_err ,
 output  wire                            data_valid
 );
 
@@ -19,9 +21,7 @@ wire    [BIT_COUNTER_WIDTH-1:0] bit_cnt ;
 wire    [PRESCALE_WIDTH-3:0]    edg_cnt ;
 
 wire    bit_edg_en ,
-        par_err    ,
         strt_glitch,
-        stp_err    ,
         par_chk_en ,
         strt_chk_en,
         stp_chk_en ,

@@ -1,5 +1,5 @@
 # QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
-# Start time: 17:21:11 on Dec 17,2023
+# Start time: 02:30:29 on Dec 19,2023
 # vlog -reportprogress 300 -f scripts/dut.f 
 # -- Compiling module mux
 # -- Compiling module parity_calc
@@ -9,10 +9,10 @@
 # 
 # Top level modules:
 # 	UART_TX
-# End time: 17:21:11 on Dec 17,2023, Elapsed time: 0:00:00
+# End time: 02:30:29 on Dec 19,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
-# Start time: 17:21:11 on Dec 17,2023
+# Start time: 02:30:30 on Dec 19,2023
 # vlog -reportprogress 300 -f scripts/tb.f 
 # -- Compiling package uart_tx_item_pkg
 # -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
@@ -35,13 +35,11 @@
 # 
 # Top level modules:
 # 	uart_tx_tb_top
-# End time: 17:21:12 on Dec 17,2023, Elapsed time: 0:00:01
+# End time: 02:30:32 on Dec 19,2023, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vopt 2021.1 Compiler 2021.01 Jan 19 2021
-# Start time: 17:21:12 on Dec 17,2023
+# Start time: 02:30:32 on Dec 19,2023
 # vopt -reportprogress 300 uart_tx_tb_top -o top_opt -debugdb "+acc" "+cover=sbecf+UART_TX(rtl)." 
-# ** Warning: (vopt-31) Unable to unlink file "D:/Ali/Courses/Verification-Projects/uart-env/sim/uart_tx/work/top_opt/_lib.qdb".
-# ** Warning: (vopt-133) Unable to remove directory "D:/Ali/Courses/Verification-Projects/uart-env/sim/uart_tx/work/top_opt".
 # 
 # Top level modules:
 # 	uart_tx_tb_top
@@ -93,5 +91,5 @@
 # -- Optimizing interface uart_tx_system_if(fast)
 # -- Optimizing interface uart_tx_if(fast)
 # Optimized design name is top_opt
-# End time: 17:21:15 on Dec 17,2023, Elapsed time: 0:00:03
-# Errors: 0, Warnings: 2
+# End time: 02:30:40 on Dec 19,2023, Elapsed time: 0:00:08
+# Errors: 0, Warnings: 0

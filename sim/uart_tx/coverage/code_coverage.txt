@@ -47,7 +47,7 @@ Coverage Report Summary Data by instance
 =================================================================================
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Assertions                       4         3         1    75.00%
+    Assertions                       4         4         0   100.00%
 
 =================================================================================
 === Instance: /uart_tx_tb_pkg
@@ -70,7 +70,7 @@ Coverage Report Summary Data by instance
 
 TOTAL COVERGROUP COVERAGE: 100.00%  COVERGROUP TYPES: 2
 
-TOTAL ASSERTION COVERAGE: 80.00%  ASSERTIONS: 5
+TOTAL ASSERTION COVERAGE: 100.00%  ASSERTIONS: 5
 
-Total Coverage By Instance (filtered view): 91.21%
+Total Coverage By Instance (filtered view): 93.71%
 
