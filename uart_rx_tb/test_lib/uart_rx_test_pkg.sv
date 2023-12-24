@@ -4,7 +4,8 @@ package uart_rx_test_pkg ;
     `include "uvm_macros.svh"
 
     import uart_rx_item_pkg::*;
-    import uart_rx_params_pkg::*;
+    import uart_rx_global_params_pkg::*;
+    import uart_rx_usertypes_pkg::*;
     import uart_rx_agent_pkg::*;
     import uart_rx_seq_pkg::*;
     import uart_rx_tb_pkg::*;

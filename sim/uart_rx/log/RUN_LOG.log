@@ -1,0 +1,111 @@
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 17:02:37 on Dec 24,2023
+# vlog -reportprogress 300 -f scripts/dut.f 
+# -- Compiling module data_sampling
+# -- Compiling module deserializer
+# -- Compiling module edge_bit_counter
+# -- Compiling module par_chk
+# -- Compiling module strt_chk
+# -- Compiling module stp_chk
+# -- Compiling module uart_rx_fsm
+# -- Compiling module UART_RX
+# 
+# Top level modules:
+# 	UART_RX
+# End time: 17:02:37 on Dec 24,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 17:02:37 on Dec 24,2023
+# vlog -reportprogress 300 -f scripts/tb.f 
+# -- Compiling package uart_rx_global_params_pkg
+# -- Compiling package uart_rx_item_pkg
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# ** Note: (vlog-2286) D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_item/uart_rx_item_pkg.sv(4): Using implicit +incdir+C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Importing package uart_rx_global_params_pkg
+# -- Compiling package uart_rx_agent_pkg
+# -- Importing package uart_rx_item_pkg
+# -- Compiling interface uart_rx_if
+# -- Compiling package uart_rx_usertypes_pkg
+# -- Importing package uart_rx_agent_pkg
+# -- Compiling package uart_rx_tb_pkg
+# -- Importing package uart_rx_usertypes_pkg
+# -- Compiling package uart_rx_seq_pkg
+# -- Importing package uart_rx_tb_pkg
+# -- Compiling package uart_rx_test_pkg
+# -- Importing package uart_rx_seq_pkg
+# -- Compiling module uart_rx_assertions
+# -- Compiling interface uart_rx_system_if
+# -- Compiling module uart_rx_tb_top
+# -- Importing package uart_rx_test_pkg
+# 
+# Top level modules:
+# 	uart_rx_tb_top
+# End time: 17:02:37 on Dec 24,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vopt 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 17:02:37 on Dec 24,2023
+# vopt -reportprogress 300 uart_rx_tb_top -o top_opt -debugdb "+acc" "+cover=sbecf+UART_RX(rtl)." 
+# 
+# Top level modules:
+# 	uart_rx_tb_top
+# 
+# Analyzing design...
+# -- Loading module uart_rx_tb_top
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Importing package uart_rx_global_params_pkg
+# -- Importing package uart_rx_usertypes_pkg
+# -- Importing package uart_rx_agent_pkg
+# -- Importing package uart_rx_item_pkg
+# -- Importing package uart_rx_tb_pkg
+# -- Importing package uart_rx_seq_pkg
+# -- Importing package uart_rx_test_pkg
+# -- Loading package mtiUvm.questa_uvm_pkg
+# -- Loading interface uart_rx_if
+# -- Loading interface uart_rx_system_if
+# -- Loading module UART_RX
+# -- Loading module uart_rx_fsm
+# -- Loading module edge_bit_counter
+# -- Loading module data_sampling
+# -- Loading module deserializer
+# -- Loading module strt_chk
+# -- Loading module par_chk
+# -- Loading module stp_chk
+# -- Loading module uart_rx_assertions
+# Optimizing 23 design-units (inlining 0/12 module instances):
+# -- Optimizing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)(fast)
+# -- Optimizing package mtiUvm.questa_uvm_pkg(fast)
+# -- Optimizing package uart_rx_global_params_pkg(fast)
+# -- Optimizing package uart_rx_item_pkg(fast)
+# -- Optimizing package uart_rx_agent_pkg(fast)
+# -- Optimizing package uart_rx_usertypes_pkg(fast)
+# -- Optimizing package uart_rx_tb_pkg(fast)
+# -- Optimizing package uart_rx_seq_pkg(fast)
+# -- Optimizing package uart_rx_test_pkg(fast)
+# -- Optimizing module uart_rx_fsm(fast)
+# -- Processing module uart_rx_fsm(fast) for debug
+# ** Note: (vopt-143) Recognized 1 FSM in module "uart_rx_fsm(fast)".
+# -- Optimizing module data_sampling(fast)
+# -- Processing module data_sampling(fast) for debug
+# -- Optimizing module UART_RX(fast)
+# -- Processing module UART_RX(fast) for debug
+# -- Optimizing module uart_rx_tb_top(fast)
+# -- Processing module uart_rx_tb_top(fast) for debug
+# -- Optimizing module edge_bit_counter(fast)
+# -- Processing module edge_bit_counter(fast) for debug
+# -- Optimizing module uart_rx_assertions(fast)
+# -- Processing module uart_rx_assertions(fast) for debug
+# -- Optimizing module par_chk(fast)
+# -- Processing module par_chk(fast) for debug
+# -- Optimizing module deserializer(fast)
+# -- Processing module deserializer(fast) for debug
+# -- Optimizing interface uart_rx_if(fast__2)
+# -- Optimizing module strt_chk(fast)
+# -- Processing module strt_chk(fast) for debug
+# -- Optimizing module stp_chk(fast)
+# -- Processing module stp_chk(fast) for debug
+# -- Optimizing interface uart_rx_system_if(fast__2)
+# -- Optimizing interface uart_rx_if(fast)
+# -- Optimizing interface uart_rx_system_if(fast)
+# Optimized design name is top_opt
+# End time: 17:02:41 on Dec 24,2023, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 0

@@ -37,17 +37,17 @@ class uart_rx_base_test extends  uvm_test;
     endfunction : build_phase
   
     task run_phase(uvm_phase phase);
-      sys_if.res_n  = 1'b1; // deactivate
-      #25ns;
+      //sys_if.res_n  = 1'b1; // deactivate
+      //#10ns;
       sys_if.res_n  = 1'b0; // activate
-      #40ns;
+      #70ns;
       //@(posedge sys_if.clk) 
       sys_if.res_n = 1'b1;    
     endtask : run_phase
   
   
     function void set_seqs(uart_rx_vseq_base seq);
-      seq.m_cfg = m_uart_tx_env_cfg;
+      seq.m_cfg = m_uart_rx_env_cfg;
       seq.sys_if = sys_if;
     endfunction
   

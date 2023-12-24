@@ -6,7 +6,7 @@ class uart_rx_env extends uvm_env;
 //********** Declare Handles **********//    
     uart_rx_vsequencer  m_vseqr;
     uart_rx_env_cfg     m_cfg;
-    uart_rx_agent_t     m_uart_tx_agent;
+    uart_rx_agent_t     m_uart_rx_agent;
     uart_rx_scoreboard  m_scoreboard;
     uart_rx_coverage    m_coverage;
     

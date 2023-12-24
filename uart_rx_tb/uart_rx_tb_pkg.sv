@@ -5,7 +5,8 @@ package uart_rx_tb_pkg;
  
     import uart_rx_item_pkg::*;
     import uart_rx_agent_pkg::*;
-    import uart_rx_params_pkg::*;
+    import uart_rx_global_params_pkg::*;
+    import uart_rx_usertypes_pkg::*;
 
     `include "uart_rx_checkers/uart_rx_coverage.svh"
     `include "uart_rx_checkers/uart_rx_scoreboard.svh"

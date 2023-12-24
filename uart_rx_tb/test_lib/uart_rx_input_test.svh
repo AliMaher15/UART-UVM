@@ -20,7 +20,7 @@ class uart_rx_input_test extends  uart_rx_base_test;
         `uvm_info(get_full_name(),"Executing uart_rx_input_test_vseq", UVM_LOW)      
         m_uart_rx_input_test_vseq.start(m_uart_rx_env.m_vseqr) ;        
         `uvm_info(get_full_name(), "uart_rx_input_test_vseq complete", UVM_LOW) 
-        #100ns
+        #200ns
   
         `uvm_info(get_full_name(),"Ending test", UVM_LOW)
       

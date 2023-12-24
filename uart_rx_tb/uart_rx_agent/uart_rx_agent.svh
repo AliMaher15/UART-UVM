@@ -1,6 +1,6 @@
 class uart_rx_agent#(DATA_WIDTH = 8, PRESCALE_WIDTH = 4) extends uvm_agent;
 
-    `uvm_component_param_utils(uart_rx_agent#(.DATA_WIDTH, PRESCALE_WIDTH))
+    `uvm_component_param_utils(uart_rx_agent#(DATA_WIDTH, PRESCALE_WIDTH))
 
     uart_rx_agent_cfg #(DATA_WIDTH, PRESCALE_WIDTH) m_cfg;
     uart_rx_driver#(DATA_WIDTH, PRESCALE_WIDTH)     m_driver;

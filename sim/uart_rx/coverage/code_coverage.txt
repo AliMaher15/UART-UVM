@@ -1,0 +1,105 @@
+Coverage Report Summary Data by instance
+
+=================================================================================
+=== Instance: /uart_rx_tb_top/dut/U0_uart_rx_fsm
+=== Design Unit: work.uart_rx_fsm
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        37        34         3    91.89%
+    Conditions                       8         6         2    75.00%
+    FSM States                       7         7         0   100.00%
+    FSM Transitions                 14         9         5    64.28%
+    Statements                      55        52         3    94.54%
+
+=================================================================================
+=== Instance: /uart_rx_tb_top/dut/U0_edge_bit_counter
+=== Design Unit: work.edge_bit_counter
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        10        10         0   100.00%
+    Expressions                      1         1         0   100.00%
+    Statements                      10        10         0   100.00%
+
+=================================================================================
+=== Instance: /uart_rx_tb_top/dut/U0_Data_Sampling
+=== Design Unit: work.data_sampling
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        19        18         1    94.73%
+    Conditions                       3         3         0   100.00%
+    Statements                      20        20         0   100.00%
+
+=================================================================================
+=== Instance: /uart_rx_tb_top/dut/U0_Deserializer
+=== Design Unit: work.deserializer
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         3         3         0   100.00%
+    Conditions                       2         2         0   100.00%
+    Statements                       3         3         0   100.00%
+
+=================================================================================
+=== Instance: /uart_rx_tb_top/dut/U0_Strt_Check
+=== Design Unit: work.strt_chk
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         3         3         0   100.00%
+    Statements                       3         3         0   100.00%
+
+=================================================================================
+=== Instance: /uart_rx_tb_top/dut/U0_Parity_Check
+=== Design Unit: work.par_chk
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         8         8         0   100.00%
+    Expressions                      3         2         1    66.66%
+    Statements                       6         6         0   100.00%
+
+=================================================================================
+=== Instance: /uart_rx_tb_top/dut/U0_Stop_Check
+=== Design Unit: work.stp_chk
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         3         3         0   100.00%
+    Statements                       3         3         0   100.00%
+
+=================================================================================
+=== Instance: /uart_rx_tb_top/dut/uart_rx_sva
+=== Design Unit: work.uart_rx_assertions
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Assertions                       1         1         0   100.00%
+
+=================================================================================
+=== Instance: /uart_rx_tb_pkg
+=== Design Unit: work.uart_rx_tb_pkg
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Covergroups                      2        na        na    32.50%
+        Coverpoints/Crosses          6        na        na        na
+            Covergroup Bins         18         8        10    44.44%
+
+=================================================================================
+=== Instance: /uart_rx_seq_pkg
+=== Design Unit: work.uart_rx_seq_pkg
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Assertions                       1         1         0   100.00%
+
+
+TOTAL COVERGROUP COVERAGE: 32.50%  COVERGROUP TYPES: 2
+
+TOTAL ASSERTION COVERAGE: 100.00%  ASSERTIONS: 2
+
+Total Coverage By Instance (filtered view): 81.07%
+

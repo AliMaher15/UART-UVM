@@ -19,13 +19,15 @@ class uart_rx_item extends uvm_sequence_item;
 
     // automatic copy, compare and the default functions..
     `uvm_object_utils_begin(uart_rx_item)
-        `uvm_field_int(s_data_in       , UVM_DEFAULT | UVM_BIN)
-        `uvm_field_int(par_en_in       , UVM_DEFAULT | UVM_BIN)
-        `uvm_field_int(par_typ_in      , UVM_DEFAULT | UVM_BIN)
-        `uvm_field_int(data_valid_out  , UVM_DEFAULT | UVM_BIN)
-        `uvm_field_int(parity_error_out, UVM_DEFAULT | UVM_BIN)
-        `uvm_field_int(stop_error_out  , UVM_DEFAULT | UVM_BIN)
-        `uvm_field_int(p_data_out      , UVM_DEFAULT | UVM_BIN)       
+        `uvm_field_int(s_data_in          , UVM_DEFAULT | UVM_BIN)
+        `uvm_field_int(par_en_in          , UVM_DEFAULT | UVM_BIN)
+        `uvm_field_int(par_typ_in         , UVM_DEFAULT | UVM_BIN)
+        `uvm_field_int(insert_parity_error, UVM_DEFAULT | UVM_BIN)
+        `uvm_field_int(insert_stop_error  , UVM_DEFAULT | UVM_BIN)
+        `uvm_field_int(data_valid_out     , UVM_DEFAULT | UVM_BIN)
+        `uvm_field_int(parity_error_out   , UVM_DEFAULT | UVM_BIN)
+        `uvm_field_int(stop_error_out     , UVM_DEFAULT | UVM_BIN)
+        `uvm_field_int(p_data_out         , UVM_DEFAULT | UVM_BIN)       
     `uvm_object_utils_end
 
     // Constraints
