@@ -3,7 +3,7 @@ class uart_tx_scoreboard extends uvm_scoreboard;
 
     `uvm_analysis_imp_decl(_uart_tx_out)
     uvm_analysis_imp_uart_tx_out #(uart_tx_item, uart_tx_scoreboard) uart_tx_out_imp;
-    parameter data_width = 8;
+    //parameter data_width = 8;
     protected int outputs_count = 0;
     protected int start_error_count = 0;
     protected int stop_error_count = 0;
@@ -11,7 +11,7 @@ class uart_tx_scoreboard extends uvm_scoreboard;
     protected int data_error_count = 0;
 
     uart_tx_item item_queue [$];
-    bit          s_data_queue [$:data_width+3];
+    bit          s_data_queue [$:DATA_WIDTH+3];
 
     //  Constructor: new
     function new(string name, uvm_component parent);
@@ -21,7 +21,7 @@ class uart_tx_scoreboard extends uvm_scoreboard;
 
     extern function void write_uart_tx_out(input uart_tx_item item);
     extern task run_phase(uvm_phase phase);
-    extern function void comparator(input uart_tx_item item, bit start, bit stop, bit parity = 0, bit [data_width-1:0] data);
+    extern function void comparator(input uart_tx_item item, bit start, bit stop, bit parity = 0, bit [DATA_WIDTH-1:0] data);
     extern function void check_phase(uvm_phase phase);
     extern function void report_phase(uvm_phase phase);
     
@@ -40,8 +40,8 @@ task uart_tx_scoreboard::run_phase(uvm_phase phase);
         // variables
         uart_tx_item item;
         bit start_bit, stop_bit, parity_bit_sent;
-        bit data_q [data_width];
-        bit [data_width-1:0] data; // normal array
+        bit data_q [DATA_WIDTH];
+        bit [DATA_WIDTH-1:0] data; // normal array
         // only start processing if there is an item written
         wait(item_queue.size() != 0); // using wait to prevent infinite loop
             // extract the item from the queue
@@ -50,12 +50,12 @@ task uart_tx_scoreboard::run_phase(uvm_phase phase);
             s_data_queue.push_front(item.tx_out);
             // Now the length depends on parity enable
             if (item.par_en) begin // parity : length = 1+DATA_WIDTH+1+1
-                if (s_data_queue.size() == data_width+3) begin
+                if (s_data_queue.size() == DATA_WIDTH+3) begin
                     // extract start bit
                     start_bit = s_data_queue.pop_back();
                     // extract data
                     foreach (data_q[i]) begin
-                        data_q[data_width-(i+1)] = s_data_queue.pop_back();
+                        data_q[DATA_WIDTH-(i+1)] = s_data_queue.pop_back();
                     end
                     data = {>>{data_q}};
                     // extract parity
@@ -65,12 +65,12 @@ task uart_tx_scoreboard::run_phase(uvm_phase phase);
                     comparator(.item(item), .start(start_bit), .stop(stop_bit), .parity(parity_bit_sent), .data(data));
                 end
             end else begin // no parity : length = 1+DATA_WIDTH+1
-                if (s_data_queue.size() == data_width+2) begin
+                if (s_data_queue.size() == DATA_WIDTH+2) begin
                     // extract start bit
                     start_bit = s_data_queue.pop_back();
                     // extract data
                     foreach (data_q[i]) begin
-                        data_q[data_width-(i+1)] = s_data_queue.pop_back();
+                        data_q[DATA_WIDTH-(i+1)] = s_data_queue.pop_back();
                     end
                     data = {>>{data_q}};
                     // extract stop
@@ -81,7 +81,7 @@ task uart_tx_scoreboard::run_phase(uvm_phase phase);
     end
 endtask: run_phase
 
-function void uart_tx_scoreboard::comparator(input uart_tx_item item, bit start, bit stop, bit parity = 0, bit [data_width-1:0] data);
+function void uart_tx_scoreboard::comparator(input uart_tx_item item, bit start, bit stop, bit parity = 0, bit [DATA_WIDTH-1:0] data);
     bit parity_expected = 0;
     outputs_count++;
     `uvm_info("uart_tx_scoreboard", $sformatf("\nOUTPUT#%d :", outputs_count), UVM_HIGH)

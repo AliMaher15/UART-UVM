@@ -1,14 +1,13 @@
 module uart_rx_assertions #( parameter DATA_WIDTH = 8, 
-                                       PRESCALE_WIDTH = 5,   // 32 or 16 or 8 or 4
-                                       BIT_COUNTER_WIDTH = 4
+                                       PRESCALE_WIDTH = 5   // 32 or 16 or 8 or 4
                            )
 (
 input   wire                            CLK     ,
 input   wire                            RST     ,
 input   wire                            RX_IN   ,
 input   wire    [PRESCALE_WIDTH-1:0]    Prescale,
-input   wire                            PAR_EN  ,
-input   wire                            PAR_TYP ,
+input   wire                            parity_enable  ,
+input   wire                            parity_type ,
 output  wire    [DATA_WIDTH-1:0]        P_DATA  ,
 output  wire                            par_err ,
 output  wire                            stp_err ,
@@ -31,7 +30,7 @@ ap_sync_rst: assert property(@(posedge clk) !rst_n |=>  ptr==0 && cnt==0);*/
 
 // Reset assertions
 uart_rx_reset_assertion :
-    `assert_async_rst(P_DATA==0 && data_valid==0 && PAR_EN==0 && PAR_TYP==0
+    `assert_async_rst(P_DATA==0 && data_valid==0 && parity_enable==0 && parity_type==0
                       && RX_IN==0 && par_err==0 &&  stp_err==0)
 
 // Specs assertions

@@ -4,14 +4,14 @@ class uart_rx_item extends uvm_sequence_item;
 
     // Variables
     /// inputs to dut
-    rand bit [DATA_WIDTH-1:0] s_data_in; // randomize all at once and handle serialization in driver/monitor
+    randc bit [DATA_WIDTH-1:0] s_data_in; // randomize all at once and handle serialization in driver/monitor
     rand bit par_en_in;
     rand bit par_typ_in;
     // dut outputs
-    rand bit data_valid_out;
-    rand bit parity_error_out;
-    rand bit stop_error_out;
-    rand bit [DATA_WIDTH-1:0] p_data_out;
+    bit data_valid_out;
+    bit parity_error_out;
+    bit stop_error_out;
+    bit [DATA_WIDTH-1:0] p_data_out;
 
     //configurations
     rand bit insert_parity_error;

@@ -1,23 +1,13 @@
-# ** Error: Acs sdne.
-# 
-#        Unable to replace existing ini file (D:/Ali/Courses/Verification-Projects/uart-env/sim/uart_tx/uart_tx_sim.mpf).  File can not be renamed.
-# ** Error: Acs sdne.
-# 
-#        Unable to replace existing ini file (D:/Ali/Courses/Verification-Projects/uart-env/sim/uart_tx/uart_tx_sim.mpf).  File can not be renamed.
-# ** Error: Acs sdne.
-# 
-#        Unable to replace existing ini file (D:/Ali/Courses/Verification-Projects/uart-env/sim/uart_tx/uart_tx_sim.mpf).  File can not be renamed.
-# End time: 02:30:52 on Dec 19,2023, Elapsed time: 0:10:54
-# Errors: 3, Warnings: 1
 # vsim top_opt -c -assertdebug -debugDB -fsmdebug -coverage "+UVM_TESTNAME=uart_tx_input_test" 
-# Start time: 02:30:52 on Dec 19,2023
+# Start time: 11:32:01 on Dec 26,2023
 # Loading sv_std.std
 # Loading work.uart_tx_system_if(fast)
 # Loading work.uart_tx_if(fast)
+# Loading work.uart_tx_global_params_pkg(fast)
 # Loading mtiUvm.uvm_pkg(fast)
 # Loading work.uart_tx_item_pkg(fast)
 # Loading work.uart_tx_agent_pkg(fast)
-# Loading work.uart_tx_params_pkg(fast)
+# Loading work.uart_tx_usertypes_pkg(fast)
 # Loading work.uart_tx_tb_pkg(fast)
 # Loading work.uart_tx_seq_pkg(fast)
 # Loading work.uart_tx_test_pkg(fast)
@@ -118,16 +108,16 @@
 # 
 ####
 # 
-# UVM_INFO D:/Ali/Courses/Verification-Projects/uart-env/uart_tx_tb/test_lib//uart_tx_input_test.svh(18) @ 2500: uvm_test_top [uart_tx_input_test] Starting test
-# UVM_INFO D:/Ali/Courses/Verification-Projects/uart-env/uart_tx_tb/test_lib//uart_tx_input_test.svh(20) @ 2500: uvm_test_top [uart_tx_input_test] Executing uart_tx_input_test_vseq
-# UVM_INFO D:/Ali/Courses/Verification-Projects/uart-env/uart_tx_tb/test_lib//uart_tx_input_test.svh(22) @ 145650: uvm_test_top [uart_tx_input_test] uart_tx_input_test_vseq complete
-# UVM_INFO D:/Ali/Courses/Verification-Projects/uart-env/uart_tx_tb/test_lib//uart_tx_input_test.svh(25) @ 150650: uvm_test_top [uart_tx_input_test] Ending test
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test.svh(18) @ 2500: uvm_test_top [uart_tx_input_test] Starting test
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test.svh(20) @ 2500: uvm_test_top [uart_tx_input_test] Executing uart_tx_input_test_vseq
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test.svh(22) @ 145650: uvm_test_top [uart_tx_input_test] uart_tx_input_test_vseq complete
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test.svh(25) @ 150650: uvm_test_top [uart_tx_input_test] Ending test
 # UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 150650: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO D:/Ali/Courses/Verification-Projects/uart-env/uart_tx_tb/uart_tx_checkers/uart_tx_scoreboard.svh(123) @ 150650: uvm_test_top.m_uart_tx_env.m_scoreboard [uart_tx_scoreboard] outputs_count 100
-# UVM_INFO D:/Ali/Courses/Verification-Projects/uart-env/uart_tx_tb/uart_tx_checkers/uart_tx_scoreboard.svh(124) @ 150650: uvm_test_top.m_uart_tx_env.m_scoreboard [uart_tx_scoreboard] start_error_count 0
-# UVM_INFO D:/Ali/Courses/Verification-Projects/uart-env/uart_tx_tb/uart_tx_checkers/uart_tx_scoreboard.svh(125) @ 150650: uvm_test_top.m_uart_tx_env.m_scoreboard [uart_tx_scoreboard] stop_error_count 0
-# UVM_INFO D:/Ali/Courses/Verification-Projects/uart-env/uart_tx_tb/uart_tx_checkers/uart_tx_scoreboard.svh(126) @ 150650: uvm_test_top.m_uart_tx_env.m_scoreboard [uart_tx_scoreboard] parity_error_count 0
-# UVM_INFO D:/Ali/Courses/Verification-Projects/uart-env/uart_tx_tb/uart_tx_checkers/uart_tx_scoreboard.svh(127) @ 150650: uvm_test_top.m_uart_tx_env.m_scoreboard [uart_tx_scoreboard] data_error_count 0
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_checkers/uart_tx_scoreboard.svh(123) @ 150650: uvm_test_top.m_uart_tx_env.m_scoreboard [uart_tx_scoreboard] outputs_count 100
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_checkers/uart_tx_scoreboard.svh(124) @ 150650: uvm_test_top.m_uart_tx_env.m_scoreboard [uart_tx_scoreboard] start_error_count 0
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_checkers/uart_tx_scoreboard.svh(125) @ 150650: uvm_test_top.m_uart_tx_env.m_scoreboard [uart_tx_scoreboard] stop_error_count 0
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_checkers/uart_tx_scoreboard.svh(126) @ 150650: uvm_test_top.m_uart_tx_env.m_scoreboard [uart_tx_scoreboard] parity_error_count 0
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_checkers/uart_tx_scoreboard.svh(127) @ 150650: uvm_test_top.m_uart_tx_env.m_scoreboard [uart_tx_scoreboard] data_error_count 0
 # 
 # --- UVM Report Summary ---
 # 

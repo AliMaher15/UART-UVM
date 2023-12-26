@@ -5,7 +5,6 @@ class uart_rx_vseq_base extends  uvm_sequence#(uvm_sequence_item);
     virtual uart_rx_system_if sys_if;
     uart_rx_env_cfg m_cfg;
   
-    uart_rx_agent_seqr  m_uart_rx_seqr;
   
     function new(string name = "");
       super.new(name);
@@ -18,7 +17,7 @@ class uart_rx_vseq_base extends  uvm_sequence#(uvm_sequence_item);
             `uvm_fatal("uart_rx_vseq_base", "env_config is null")
         end
         // assign all sequencers to their handle in vsequencer
-        m_uart_rx_seqr = p_sequencer.m_uart_rx_agent_seqr;
+        //m_uart_rx_seqr = p_sequencer.m_uart_rx_agent_seqr;
     endtask : body
 
     function void seq_set_cfg(uart_rx_base_seq seq_);

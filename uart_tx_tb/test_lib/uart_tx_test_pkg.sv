@@ -4,7 +4,8 @@ package uart_tx_test_pkg ;
     `include "uvm_macros.svh"
 
     import uart_tx_item_pkg::*;
-    import uart_tx_params_pkg::*;
+    import uart_tx_global_params_pkg::*;
+    import uart_tx_usertypes_pkg::*;
     import uart_tx_agent_pkg::*;
     import uart_tx_seq_pkg::*;
     import uart_tx_tb_pkg::*;

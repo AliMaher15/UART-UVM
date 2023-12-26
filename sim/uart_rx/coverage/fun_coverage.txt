@@ -6,54 +6,54 @@ Coverage Report by instance with details
 =================================================================================
 
 Covergroup Coverage:
-    Covergroups                      2        na        na    32.50%
+    Covergroups                      2        na        na    35.00%
         Coverpoints/Crosses          6        na        na        na
-            Covergroup Bins         18         8        10    44.44%
+            Covergroup Bins         18        10         8    55.55%
 ----------------------------------------------------------------------------------------------------------
 Covergroup                                             Metric       Goal       Bins    Status               
                                                                                                          
 ----------------------------------------------------------------------------------------------------------
  TYPE /uart_rx_tb_pkg/uart_rx_coverage/cg_parity_stop_configurations 
-                                                       65.00%        100          -    Uncovered            
-    covered/total bins:                                     8         16          -                      
-    missing/total bins:                                     8         16          -                      
-    % Hit:                                             50.00%        100          -                      
+                                                       70.00%        100          -    Uncovered            
+    covered/total bins:                                    10         16          -                      
+    missing/total bins:                                     6         16          -                      
+    % Hit:                                             62.50%        100          -                      
     Coverpoint cp_parity_enable                       100.00%        100          -    Covered              
         covered/total bins:                                 2          2          -                      
         missing/total bins:                                 0          2          -                      
         % Hit:                                        100.00%        100          -                      
-        bin on                                              2          1          -    Covered              
-        bin off                                             2          1          -    Covered              
+        bin on                                             30          1          -    Covered              
+        bin off                                            20          1          -    Covered              
     Coverpoint cp_parity_type                         100.00%        100          -    Covered              
         covered/total bins:                                 2          2          -                      
         missing/total bins:                                 0          2          -                      
         % Hit:                                        100.00%        100          -                      
-        bin even                                            2          1          -    Covered              
-        bin odd                                             2          1          -    Covered              
+        bin even                                           24          1          -    Covered              
+        bin odd                                            26          1          -    Covered              
     Coverpoint cp_parity_error                         50.00%        100          -    Uncovered            
         covered/total bins:                                 1          2          -                      
         missing/total bins:                                 1          2          -                      
         % Hit:                                         50.00%        100          -                      
-        bin on                                              4          1          -    Covered              
-        bin off                                             0          1          -    ZERO                 
+        bin on                                              0          1          -    ZERO                 
+        bin off                                            50          1          -    Covered              
     Coverpoint cp_stop_error                           50.00%        100          -    Uncovered            
         covered/total bins:                                 1          2          -                      
         missing/total bins:                                 1          2          -                      
         % Hit:                                         50.00%        100          -                      
         bin on                                              0          1          -    ZERO                 
-        bin off                                             4          1          -    Covered              
-    Cross cx_par_typ_err_en                            25.00%        100          -    Uncovered            
-        covered/total bins:                                 2          8          -                      
-        missing/total bins:                                 6          8          -                      
-        % Hit:                                         25.00%        100          -                      
+        bin off                                            50          1          -    Covered              
+    Cross cx_par_typ_err_en                            50.00%        100          -    Uncovered            
+        covered/total bins:                                 4          8          -                      
+        missing/total bins:                                 4          8          -                      
+        % Hit:                                         50.00%        100          -                      
         Auto, Default and User Defined Bins:
-            bin on_even_correct                             0          1          -    ZERO                 
+            bin on_even_correct                            11          1          -    Covered              
             bin on_even_err                                 0          1          -    ZERO                 
-            bin on_odd_correct                              0          1          -    ZERO                 
-            bin on_odd_err                                  2          1          -    Covered              
-            bin <off,even,on>                               2          1          -    Covered              
-            bin <*,odd,*>                                   0          1          2    ZERO                 
-            bin <*,*,off>                                   0          1          2    ZERO                 
+            bin on_odd_correct                             19          1          -    Covered              
+            bin on_odd_err                                  0          1          -    ZERO                 
+            bin <off,odd,off>                               7          1          -    Covered              
+            bin <off,even,off>                             13          1          -    Covered              
+            bin <*,*,on>                                    0          1          2    ZERO                 
  TYPE /uart_rx_tb_pkg/uart_rx_coverage/cg_zeros_or_ones_data 
                                                         0.00%        100          -    ZERO                 
     covered/total bins:                                     0          2          -                      
@@ -72,46 +72,46 @@ Covergroup                                             Metric       Goal       B
                                                                                                          
 ----------------------------------------------------------------------------------------------------------
  TYPE /uart_rx_tb_pkg/uart_rx_coverage/cg_parity_stop_configurations 
-                                                       65.00%        100          -    Uncovered            
-    covered/total bins:                                     8         16          -                      
-    missing/total bins:                                     8         16          -                      
-    % Hit:                                             50.00%        100          -                      
+                                                       70.00%        100          -    Uncovered            
+    covered/total bins:                                    10         16          -                      
+    missing/total bins:                                     6         16          -                      
+    % Hit:                                             62.50%        100          -                      
     Coverpoint cp_parity_enable                       100.00%        100          -    Covered              
         covered/total bins:                                 2          2          -                      
         missing/total bins:                                 0          2          -                      
         % Hit:                                        100.00%        100          -                      
-        bin on                                              2          1          -    Covered              
-        bin off                                             2          1          -    Covered              
+        bin on                                             30          1          -    Covered              
+        bin off                                            20          1          -    Covered              
     Coverpoint cp_parity_type                         100.00%        100          -    Covered              
         covered/total bins:                                 2          2          -                      
         missing/total bins:                                 0          2          -                      
         % Hit:                                        100.00%        100          -                      
-        bin even                                            2          1          -    Covered              
-        bin odd                                             2          1          -    Covered              
+        bin even                                           24          1          -    Covered              
+        bin odd                                            26          1          -    Covered              
     Coverpoint cp_parity_error                         50.00%        100          -    Uncovered            
         covered/total bins:                                 1          2          -                      
         missing/total bins:                                 1          2          -                      
         % Hit:                                         50.00%        100          -                      
-        bin on                                              4          1          -    Covered              
-        bin off                                             0          1          -    ZERO                 
+        bin on                                              0          1          -    ZERO                 
+        bin off                                            50          1          -    Covered              
     Coverpoint cp_stop_error                           50.00%        100          -    Uncovered            
         covered/total bins:                                 1          2          -                      
         missing/total bins:                                 1          2          -                      
         % Hit:                                         50.00%        100          -                      
         bin on                                              0          1          -    ZERO                 
-        bin off                                             4          1          -    Covered              
-    Cross cx_par_typ_err_en                            25.00%        100          -    Uncovered            
-        covered/total bins:                                 2          8          -                      
-        missing/total bins:                                 6          8          -                      
-        % Hit:                                         25.00%        100          -                      
+        bin off                                            50          1          -    Covered              
+    Cross cx_par_typ_err_en                            50.00%        100          -    Uncovered            
+        covered/total bins:                                 4          8          -                      
+        missing/total bins:                                 4          8          -                      
+        % Hit:                                         50.00%        100          -                      
         Auto, Default and User Defined Bins:
-            bin on_even_correct                             0          1          -    ZERO                 
+            bin on_even_correct                            11          1          -    Covered              
             bin on_even_err                                 0          1          -    ZERO                 
-            bin on_odd_correct                              0          1          -    ZERO                 
-            bin on_odd_err                                  2          1          -    Covered              
-            bin <off,even,on>                               2          1          -    Covered              
-            bin <*,odd,*>                                   0          1          2    ZERO                 
-            bin <*,*,off>                                   0          1          2    ZERO                 
+            bin on_odd_correct                             19          1          -    Covered              
+            bin on_odd_err                                  0          1          -    ZERO                 
+            bin <off,odd,off>                               7          1          -    Covered              
+            bin <off,even,off>                             13          1          -    Covered              
+            bin <*,*,on>                                    0          1          2    ZERO                 
  TYPE /uart_rx_tb_pkg/uart_rx_coverage/cg_zeros_or_ones_data 
                                                         0.00%        100          -    ZERO                 
     covered/total bins:                                     0          2          -                      
@@ -124,7 +124,7 @@ Covergroup                                             Metric       Goal       B
         bin zeros                                           0          1          -    ZERO                 
         bin ones                                            0          1          -    ZERO                 
 
-TOTAL COVERGROUP COVERAGE: 32.50%  COVERGROUP TYPES: 2
+TOTAL COVERGROUP COVERAGE: 35.00%  COVERGROUP TYPES: 2
 
-Total Coverage By Instance (filtered view): 32.50%
+Total Coverage By Instance (filtered view): 35.00%
 

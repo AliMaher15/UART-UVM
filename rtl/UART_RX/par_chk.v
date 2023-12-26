@@ -1,40 +1,46 @@
-module par_chk #( parameter DATA_WIDTH = 8 )
+
+module par_chk # ( parameter DATA_WIDTH = 8 )
+
 (
-input   wire                        CLK,
-input   wire                        RST,
-input   wire                        Sbit,
-input   wire                        Enable,
-input   wire                        PAR_TYP,
-input   wire    [DATA_WIDTH-1:0]    P_DATA,
-output  reg                         Error
+ input   wire                   CLK,
+ input   wire                   RST,
+ input   wire                   parity_type, 
+ input   wire                   sampled_bit,
+ input   wire                   Enable,  
+ input   wire  [DATA_WIDTH-1:0] P_DATA,
+ output  reg                    par_err
 );
 
-// Internal Signal
-reg     par_bit_calc ;
 
-always @(posedge CLK or negedge RST)
-  begin
-    if(!RST)
-     begin
-        par_bit_calc <= 1'b1 ;
-     end
-    else if(Enable)
-     begin
-        // 1 is odd parity : 0 is even parity
-        par_bit_calc <= PAR_TYP ? ~^P_DATA : ^P_DATA ;
-     end
-  end
+reg        parity ;
 
-always @(posedge CLK or negedge RST)
+// parity calc
+always @ (*)
   begin
-    if(!RST)
-     begin
-        Error <= 1'b0 ;
-     end
-    else if(Enable)
-     begin
-        Error <= (Sbit == par_bit_calc) ? 1'b0 : 1'b1 ;
-     end
-  end
-    
+    case(parity_type)
+    1'b0 : begin                 
+	        parity <= ^P_DATA  ;     // Even Parity
+	       end
+    1'b1 : begin
+	        parity <= ~^P_DATA ;     // Odd Parity
+	       end		
+    endcase       	 
+ end 
+ 
+           
+// error check
+always @ (posedge CLK or negedge RST)
+ begin
+  if(!RST)
+   begin
+    par_err <= 1'b0 ;
+   end
+  else if(Enable)
+   begin
+    par_err <= parity ^	sampled_bit ;
+   end	
+ end
+ 
+
 endmodule
+ 

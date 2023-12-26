@@ -1,5 +1,6 @@
 //***************************************************//
 // NOT COMPLETE
+// trouble figuring out how to monitor output
 //***************************************************//
 class uart_rx_monitor#(DATA_WIDTH = 8, PRESCALE_WIDTH = 4) extends uvm_monitor;
     
@@ -21,7 +22,6 @@ class uart_rx_monitor#(DATA_WIDTH = 8, PRESCALE_WIDTH = 4) extends uvm_monitor;
     extern function void build_phase(uvm_phase phase);
     //  Task: run_phase
     extern task run_phase(uvm_phase phase);
-    extern task delay_periods(input integer num);
 
 endclass : uart_rx_monitor
 
@@ -52,21 +52,19 @@ task uart_rx_monitor::run_phase(uvm_phase phase);
       @(posedge vif.tx_clk);
       // check start bit for a new input
       if (vif.s_data_in == 0) begin
-        delay_periods(1);
         m_item.par_en_in = vif.par_en_in;
         m_item.par_typ_in = vif.par_typ_in;
 
         // now extract all the sent data
         for (int i=0; i<DATA_WIDTH; ++i) begin
-            delay_periods(1);
+            @(posedge vif.tx_clk);
             s_data_arr[i] = vif.s_data_in;
         end
         m_item.s_data_in = s_data_arr;
-
-        delay_periods(1);
+        // next is either parity bit or just stop bit
+        @(posedge vif.tx_clk);
         // check parity
         if (vif.par_en_in) begin
-          delay_periods(1);
           // extract the parity
           case (vif.par_typ_in)
             /*even*/ 0 : extracted_parity = ^s_data_arr;
@@ -77,6 +75,13 @@ task uart_rx_monitor::run_phase(uvm_phase phase);
             m_item.insert_parity_error = 0;
           end else begin
             m_item.insert_parity_error = 1;
+          end
+          // stop bit
+          @(posedge vif.tx_clk);
+          if (vif.s_data_in == 1) begin
+            m_item.insert_stop_error = 0;
+          end else begin
+            m_item.insert_stop_error = 1;
           end
         end else begin // no parity, check stop bit
           if (vif.s_data_in == 1) begin
@@ -89,23 +94,16 @@ task uart_rx_monitor::run_phase(uvm_phase phase);
         input_ap.write(m_item);
 
         // Now wait for the output
-        wait(vif.data_valid_out || vif.parity_error_out || vif.stop_error_out);
-        @(posedge vif.rx_clk);
+        //repeat(4) begin
+        //  @(posedge vif.rx_clk);
+        //end
+        @(posedge vif.tx_clk);
         m_item.data_valid_out = vif.data_valid_out;
         m_item.parity_error_out = vif.parity_error_out;
         m_item.stop_error_out = vif.stop_error_out;
         m_item.p_data_out = vif.p_data_out;
         // for Scoreboard
-        //output_ap.write(m_item);
+        output_ap.write(m_item);
       end   
     end
 endtask: run_phase
-
-
-// due to oversampling, we need to work on the slower clock
-task uart_rx_monitor::delay_periods(input integer num);
-  /*repeat(vif.prescale_in * num) begin
-      @(posedge vif.clk);
-  end*/
-  @(posedge vif.tx_clk);
-endtask: delay_periods

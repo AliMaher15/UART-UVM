@@ -1,5 +1,5 @@
 # QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
-# Start time: 17:02:37 on Dec 24,2023
+# Start time: 13:56:52 on Dec 26,2023
 # vlog -reportprogress 300 -f scripts/dut.f 
 # -- Compiling module data_sampling
 # -- Compiling module deserializer
@@ -12,10 +12,10 @@
 # 
 # Top level modules:
 # 	UART_RX
-# End time: 17:02:37 on Dec 24,2023, Elapsed time: 0:00:00
+# End time: 13:56:52 on Dec 26,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
-# Start time: 17:02:37 on Dec 24,2023
+# Start time: 13:56:52 on Dec 26,2023
 # vlog -reportprogress 300 -f scripts/tb.f 
 # -- Compiling package uart_rx_global_params_pkg
 # -- Compiling package uart_rx_item_pkg
@@ -40,10 +40,10 @@
 # 
 # Top level modules:
 # 	uart_rx_tb_top
-# End time: 17:02:37 on Dec 24,2023, Elapsed time: 0:00:00
+# End time: 13:56:52 on Dec 26,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vopt 2021.1 Compiler 2021.01 Jan 19 2021
-# Start time: 17:02:37 on Dec 24,2023
+# Start time: 13:56:52 on Dec 26,2023
 # vopt -reportprogress 300 uart_rx_tb_top -o top_opt -debugdb "+acc" "+cover=sbecf+UART_RX(rtl)." 
 # 
 # Top level modules:
@@ -90,22 +90,22 @@
 # -- Processing module UART_RX(fast) for debug
 # -- Optimizing module uart_rx_tb_top(fast)
 # -- Processing module uart_rx_tb_top(fast) for debug
-# -- Optimizing module edge_bit_counter(fast)
-# -- Processing module edge_bit_counter(fast) for debug
 # -- Optimizing module uart_rx_assertions(fast)
 # -- Processing module uart_rx_assertions(fast) for debug
+# -- Optimizing module edge_bit_counter(fast)
+# -- Processing module edge_bit_counter(fast) for debug
 # -- Optimizing module par_chk(fast)
 # -- Processing module par_chk(fast) for debug
 # -- Optimizing module deserializer(fast)
 # -- Processing module deserializer(fast) for debug
 # -- Optimizing interface uart_rx_if(fast__2)
-# -- Optimizing module strt_chk(fast)
-# -- Processing module strt_chk(fast) for debug
 # -- Optimizing module stp_chk(fast)
 # -- Processing module stp_chk(fast) for debug
+# -- Optimizing module strt_chk(fast)
+# -- Processing module strt_chk(fast) for debug
 # -- Optimizing interface uart_rx_system_if(fast__2)
 # -- Optimizing interface uart_rx_if(fast)
 # -- Optimizing interface uart_rx_system_if(fast)
 # Optimized design name is top_opt
-# End time: 17:02:41 on Dec 24,2023, Elapsed time: 0:00:04
+# End time: 13:56:56 on Dec 26,2023, Elapsed time: 0:00:04
 # Errors: 0, Warnings: 0

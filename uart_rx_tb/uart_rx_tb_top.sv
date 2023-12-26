@@ -22,15 +22,15 @@ uart_rx_if #(.DATA_WIDTH(DATA_WIDTH)) UART_RX_IF (.rx_clk(rx_clk), .tx_clk(tx_cl
 
 //**************** DUT INSTANTS *********************//
 UART_RX #(.DATA_WIDTH(DATA_WIDTH),
-          .PRESCALE_WIDTH(PRESCALE_WIDTH),
-          .BIT_COUNTER_WIDTH(BIT_COUNTER_WIDTH))
+          .PRESCALE_WIDTH(PRESCALE_WIDTH)   
+         )
 dut (.CLK(rx_clk),
      .RST(UART_RX_SYSTEM_IF.res_n),
      //uart_rx interface inputs to dut
      .RX_IN(UART_RX_IF.s_data_in),
      .Prescale(UART_RX_IF.prescale_in),
-     .PAR_EN(UART_RX_IF.par_en_in),
-     .PAR_TYP(UART_RX_IF.par_typ_in),
+     .parity_enable(UART_RX_IF.par_en_in),
+     .parity_type(UART_RX_IF.par_typ_in),
      //dut outputs to interface
      .P_DATA(UART_RX_IF.p_data_out),
      .data_valid(UART_RX_IF.data_valid_out),
@@ -41,8 +41,8 @@ dut (.CLK(rx_clk),
 
 //************** ASSERTIONS MODULE ******************//
  bind UART_RX : dut uart_rx_assertions #(.DATA_WIDTH(DATA_WIDTH),
-                                         .PRESCALE_WIDTH(PRESCALE_WIDTH),
-                                         .BIT_COUNTER_WIDTH(BIT_COUNTER_WIDTH))
+                                         .PRESCALE_WIDTH(PRESCALE_WIDTH)
+                                         )
                  uart_rx_sva (.*);
 //***************************************************// 
 
@@ -61,7 +61,8 @@ end
 //***************** CLOCK ***************************//
 initial begin
     rx_clk = 1;
-    prescale_tb = 'd4;
+    //prescale_tb = 'd4;
+    prescale_tb = 'b1000 ;
     forever begin  
         #(CLK_PERIOD/2);  rx_clk = ~rx_clk;
     end
@@ -69,7 +70,7 @@ end
 initial begin
     tx_clk = 1;
     forever begin
-        #((CLK_PERIOD/2)*4);  tx_clk = ~tx_clk ;
+        #((CLK_PERIOD/2)*8);  tx_clk = ~tx_clk ;
     end 
 end
 //***************************************************// 

@@ -53,8 +53,8 @@ task uart_rx_driver::run_phase(uvm_phase phase);
                     // s_data is IDLE
                     vif.s_data_in     <= 1;
                     seq_item_port.get_next_item(m_item);
-                    `uvm_info(get_full_name(), "\nrecieved item from seq", UVM_LOW)
-                    m_item.print();
+                    `uvm_info(get_full_name(), "\nrecieved item from seq", UVM_HIGH)
+                    //m_item.print();
 
                     @(posedge vif.tx_clk);
                     vif.par_en_in  <= m_item.par_en_in;
@@ -85,7 +85,6 @@ task uart_rx_driver::run_phase(uvm_phase phase);
                     // Stop bit
                     @(posedge vif.tx_clk);
                     if (m_item.insert_stop_error) begin
-                        `uvm_info(get_full_name(), "\ninserting stop error", UVM_LOW)
                         vif.s_data_in <= 0;
                     end else begin
                         vif.s_data_in <= 1;

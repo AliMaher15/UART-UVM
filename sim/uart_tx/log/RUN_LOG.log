@@ -1,5 +1,5 @@
 # QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
-# Start time: 02:30:29 on Dec 19,2023
+# Start time: 11:26:16 on Dec 26,2023
 # vlog -reportprogress 300 -f scripts/dut.f 
 # -- Compiling module mux
 # -- Compiling module parity_calc
@@ -9,21 +9,728 @@
 # 
 # Top level modules:
 # 	UART_TX
-# End time: 02:30:29 on Dec 19,2023, Elapsed time: 0:00:00
+# End time: 11:26:17 on Dec 26,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
-# Start time: 02:30:30 on Dec 19,2023
+# Start time: 11:26:17 on Dec 26,2023
 # vlog -reportprogress 300 -f scripts/tb.f 
+# -- Compiling package uart_tx_global_params_pkg
 # -- Compiling package uart_tx_item_pkg
 # -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
-# ** Note: (vlog-2286) D:/Ali/Courses/Verification-Projects/uart-env/uart_tx_tb/uart_tx_item/uart_tx_item_pkg.sv(4): Using implicit +incdir+C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# ** Note: (vlog-2286) D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_item/uart_tx_item_pkg.sv(4): Using implicit +incdir+C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_item/uart_tx_item_pkg.sv(7)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_item//uart_tx_item.svh(6): (vlog-2730) Undefined variable: 'DATA_WIDTH'.
+# -- Compiling package uart_tx_agent_pkg
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_agent/uart_tx_agent_pkg.sv(7): (vlog-13006) Could not find the package (uart_tx_item_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_agent/uart_tx_agent_pkg.sv(10)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_agent//uart_tx_monitor.svh(9): (vlog-2730) Undefined variable: 'uart_tx_item'.
+# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_agent/uart_tx_agent_pkg.sv(10)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_agent//uart_tx_monitor.svh(36): near ";": syntax error, unexpected ';', expecting '('.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_agent/uart_tx_agent_pkg.sv(10)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_agent//uart_tx_monitor.svh(37): (vlog-2730) Undefined variable: 'm_item'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_agent/uart_tx_agent_pkg.sv(10)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_agent//uart_tx_monitor.svh(37): (vlog-2164) Class or package 'uart_tx_item' not found.
+# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_agent/uart_tx_agent_pkg.sv(10)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_agent//uart_tx_monitor.svh(37): near "::": syntax error, unexpected ::, expecting ';'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_agent/uart_tx_agent_pkg.sv(11)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_agent//uart_tx_agent_seqr.svh(1): (vlog-2730) Undefined variable: 'uart_tx_item'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_agent/uart_tx_agent_pkg.sv(12)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_agent//uart_tx_driver.svh(1): (vlog-2730) Undefined variable: 'uart_tx_item'.
+# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_agent/uart_tx_agent_pkg.sv(12)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_agent//uart_tx_driver.svh(30): near ";": syntax error, unexpected ';', expecting '('.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_agent/uart_tx_agent_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_agent//uart_tx_agent.svh(10): (vlog-2730) Undefined variable: 'uart_tx_item'.
+# -- Compiling interface uart_tx_if
+# -- Compiling package uart_tx_usertypes_pkg
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_usertypes_pkg.sv(3): (vlog-13006) Could not find the package (uart_tx_agent_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_usertypes_pkg.sv(7): Syntax error:  'uart_tx_agent_cfg' is not a type.
+# 
+# -- Compiling package uart_tx_tb_pkg
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(6): (vlog-13006) Could not find the package (uart_tx_item_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(7): (vlog-13006) Could not find the package (uart_tx_agent_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# -- Importing package uart_tx_global_params_pkg
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(9): (vlog-13006) Could not find the package (uart_tx_usertypes_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(11)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_checkers/uart_tx_coverage.svh(1): (vlog-2730) Undefined variable: 'uart_tx_item'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(11)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_checkers/uart_tx_coverage.svh(46): (vlog-2400) Identifier ('uart_tx_item') found where a type or type identifier is required.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_checkers/uart_tx_scoreboard.svh(5): (vlog-2730) Undefined variable: 'uart_tx_item'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_checkers/uart_tx_scoreboard.svh(13): Invalid type 'uart_tx_item'. Please check the type of the variable 'item_queue'.
+# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_checkers/uart_tx_scoreboard.svh(13): near "[": syntax error, unexpected '[', expecting function or task or "SystemVerilog keyword 'pure'".
+# -- Compiling package uart_tx_seq_pkg
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib/uart_tx_seq_pkg.sv(6): (vlog-13006) Could not find the package (uart_tx_item_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib/uart_tx_seq_pkg.sv(7): (vlog-13006) Could not find the package (uart_tx_agent_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib/uart_tx_seq_pkg.sv(11)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib//uart_tx_base_seq.svh(5): Invalid type 'uart_tx_env_cfg'. Please check the type of the variable 'm_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib/uart_tx_seq_pkg.sv(11)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib//uart_tx_base_seq.svh(14): (vlog-2730) Undefined variable: 'm_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib/uart_tx_seq_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib//uart_tx_input_seq.svh(4): Invalid type 'uart_tx_item'. Please check the type of the variable 'input_item'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib/uart_tx_seq_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib//uart_tx_input_seq.svh(17): (vlog-2730) Undefined variable: 'input_item'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib/uart_tx_seq_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib//uart_tx_input_seq.svh(17): (vlog-2164) Class or package 'uart_tx_item' not found.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib/uart_tx_seq_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib//uart_tx_input_seq.svh(17): (vlog-2730) Undefined variable: 'uart_tx_item'.
+# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib/uart_tx_seq_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib//uart_tx_input_seq.svh(17): near "::": syntax error, unexpected ::, expecting ';'.
+# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_checkers/uart_tx_scoreboard.svh(13): near "$": syntax error, unexpected '$', expecting class.
+# -- Compiling package uart_tx_test_pkg
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(6): (vlog-13006) Could not find the package (uart_tx_item_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(7): (vlog-13006) Could not find the package (uart_tx_params_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(8): (vlog-13006) Could not find the package (uart_tx_agent_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(9): (vlog-13006) Could not find the package (uart_tx_seq_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(10): (vlog-13006) Could not find the package (uart_tx_tb_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(12)
+# ** while parsing macro expansion: 'uvm_declare_p_sequencer' starting at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_vseq_base.svh(3)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_vseq_base.svh(3): Invalid type 'uart_tx_vsequencer'. Please check the type of the variable 'p_sequencer'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(12)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_vseq_base.svh(6): Invalid type 'uart_tx_env_cfg'. Please check the type of the variable 'm_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(12)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_vseq_base.svh(16): (vlog-2730) Undefined variable: 'm_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(12)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_vseq_base.svh(24): (vlog-2400) Identifier ('uart_tx_base_seq') found where a type or type identifier is required.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(7): Invalid type 'uart_tx_agent_cfg_t'. Please check the type of the variable 'm_uart_tx_agent_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(10): Invalid type 'uart_tx_env_cfg'. Please check the type of the variable 'm_uart_tx_env_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(11): Invalid type 'uart_tx_env'. Please check the type of the variable 'm_uart_tx_env'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(21): (vlog-2730) Undefined variable: 'm_uart_tx_env_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(21): (vlog-2164) Class or package 'uart_tx_env_cfg' not found.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(21): (vlog-2730) Undefined variable: 'uart_tx_env_cfg'.
+# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(21): near "::": syntax error, unexpected ::, expecting ';'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(22): (vlog-2730) Undefined variable: 'm_uart_tx_agent_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(22): (vlog-2164) Class or package 'uart_tx_agent_cfg_t' not found.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(22): (vlog-2730) Undefined variable: 'uart_tx_agent_cfg_t'.
+# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(22): near "::": syntax error, unexpected ::, expecting ';'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(24): (vlog-2730) Undefined variable: 'uart_tx_if_t'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(36): (vlog-2730) Undefined variable: 'm_uart_tx_env'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(36): (vlog-2164) Class or package 'uart_tx_env' not found.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(36): (vlog-2730) Undefined variable: 'uart_tx_env'.
+# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(36): near "::": syntax error, unexpected ::, expecting ';'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(50): (vlog-2730) Undefined variable: 'm_uart_tx_env_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test_vseq.svh(5): Invalid type 'uart_tx_input_seq'. Please check the type of the variable 'utx_in_seq_h'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test_vseq.svh(13): (vlog-2730) Undefined variable: 'utx_in_seq_h'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test_vseq.svh(13): (vlog-2164) Class or package 'uart_tx_input_seq' not found.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test_vseq.svh(13): (vlog-2730) Undefined variable: 'uart_tx_input_seq'.
+# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test_vseq.svh(13): near "::": syntax error, unexpected ::, expecting ';'.
+# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_env_cfg.svh(1): near "uvm_object": syntax error, unexpected IDENTIFIER.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_env_cfg.svh(1): Error in class extension specification.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_env_cfg.svh(4): Illegal use of 'automatic' for variable declaration (P_DATA).
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_env_cfg.svh(5): Illegal use of 'automatic' for variable declaration (Data_Valid).
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_env_cfg.svh(6): Illegal use of 'automatic' for variable declaration (PAR_EN).
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_env_cfg.svh(7): Illegal use of 'automatic' for variable declaration (PAR_TYP).
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_env_cfg.svh(8): Illegal use of 'automatic' for variable declaration (CLK).
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_env_cfg.svh(9): Illegal use of 'automatic' for variable declaration (RST).
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_env_cfg.svh(10): Illegal use of 'automatic' for variable declaration (Busy).
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_env_cfg.svh(12): Illegal use of 'automatic' for variable declaration (TX_OUT).
+# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(14)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_vsequencer.svh(1): near "uvm_sequencer": syntax error, unexpected IDENTIFIER.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(14)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_vsequencer.svh(1): Error in class extension specification.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(14)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_vsequencer.svh(1): Illegal use of 'automatic' for variable declaration (clk).
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(14)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_vsequencer.svh(3): Illegal use of 'automatic' for variable declaration (res_n).
+# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_env.svh(4): near "uvm_env": syntax error, unexpected IDENTIFIER.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_env.svh(4): Error in class extension specification.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_top.sv(11): (vlog-13006) Could not find the package (uart_tx_usertypes_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_top.sv(12): (vlog-13006) Could not find the package (uart_tx_params_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_top.sv(13): (vlog-13006) Could not find the package (uart_tx_tb_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_top.sv(14): (vlog-13006) Could not find the package (uart_tx_seq_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_top.sv(15): (vlog-13006) Could not find the package (uart_tx_test_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_top.sv(17): Illegal use of 'automatic' for variable declaration (clk).
+# ** Error: (vlog-13069) D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(17): near "endpackage": syntax error, unexpected "SystemVerilog keyword 'endpackage'", expecting class.
+# End time: 11:26:21 on Dec 26,2023, Elapsed time: 0:00:04
+# Errors: 85, Warnings: 0
+# ** Error: C:/questasim64_2021.1/win64/vlog failed.
+# Error in macro ./scripts/run.do line 17
+# C:/questasim64_2021.1/win64/vlog failed.
+#     while executing
+# "vlog -f scripts/tb.f"
+
+do scripts/run.do
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 11:27:31 on Dec 26,2023
+# vlog -reportprogress 300 -f scripts/dut.f 
+# -- Compiling module mux
+# -- Compiling module parity_calc
+# -- Compiling module Serializer
+# -- Compiling module uart_tx_fsm
+# -- Compiling module UART_TX
+# 
+# Top level modules:
+# 	UART_TX
+# End time: 11:27:31 on Dec 26,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 11:27:31 on Dec 26,2023
+# vlog -reportprogress 300 -f scripts/tb.f 
+# -- Compiling package uart_tx_global_params_pkg
+# -- Compiling package uart_tx_item_pkg
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# ** Note: (vlog-2286) D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_item/uart_tx_item_pkg.sv(4): Using implicit +incdir+C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Importing package uart_tx_global_params_pkg
 # -- Compiling package uart_tx_agent_pkg
 # -- Importing package uart_tx_item_pkg
 # -- Compiling interface uart_tx_if
-# -- Compiling package uart_tx_params_pkg
+# -- Compiling package uart_tx_usertypes_pkg
 # -- Importing package uart_tx_agent_pkg
 # -- Compiling package uart_tx_tb_pkg
-# -- Importing package uart_tx_params_pkg
+# -- Importing package uart_tx_usertypes_pkg
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(11)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_checkers/uart_tx_coverage.svh(6): Identifier 'DATA_WIDTH' is not directly visible.
+#    Found multiple Declaration of 'DATA_WIDTH' through wildcard imports from these packages : uart_tx_global_params_pkg, uart_tx_usertypes_pkg
+# 
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(11)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_checkers/uart_tx_coverage.svh(6): (vlog-2730) Undefined variable: 'DATA_WIDTH'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_checkers/uart_tx_scoreboard.svh(14): Identifier 'DATA_WIDTH' is not directly visible.
+#    Found multiple Declaration of 'DATA_WIDTH' through wildcard imports from these packages : uart_tx_global_params_pkg, uart_tx_usertypes_pkg
+# 
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_checkers/uart_tx_scoreboard.svh(14): (vlog-2730) Undefined variable: 'DATA_WIDTH'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(12)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_checkers/uart_tx_scoreboard.svh(14): Dynamic net arrays are not allowed.
+# -- Compiling package uart_tx_seq_pkg
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib/uart_tx_seq_pkg.sv(8): (vlog-13006) Could not find the package (uart_tx_tb_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib/uart_tx_seq_pkg.sv(11)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib//uart_tx_base_seq.svh(5): Invalid type 'uart_tx_env_cfg'. Please check the type of the variable 'm_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib/uart_tx_seq_pkg.sv(11)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib//uart_tx_base_seq.svh(14): (vlog-2730) Undefined variable: 'm_cfg'.
+# -- Compiling package uart_tx_test_pkg
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(7): (vlog-13006) Could not find the package (uart_tx_params_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(9): (vlog-13006) Could not find the package (uart_tx_seq_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(10): (vlog-13006) Could not find the package (uart_tx_tb_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(12)
+# ** while parsing macro expansion: 'uvm_declare_p_sequencer' starting at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_vseq_base.svh(3)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_vseq_base.svh(3): Invalid type 'uart_tx_vsequencer'. Please check the type of the variable 'p_sequencer'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(12)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_vseq_base.svh(6): Invalid type 'uart_tx_env_cfg'. Please check the type of the variable 'm_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(12)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_vseq_base.svh(16): (vlog-2730) Undefined variable: 'm_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(12)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_vseq_base.svh(24): (vlog-2400) Identifier ('uart_tx_base_seq') found where a type or type identifier is required.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(7): Invalid type 'uart_tx_agent_cfg_t'. Please check the type of the variable 'm_uart_tx_agent_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(10): Invalid type 'uart_tx_env_cfg'. Please check the type of the variable 'm_uart_tx_env_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(11): Invalid type 'uart_tx_env'. Please check the type of the variable 'm_uart_tx_env'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(21): (vlog-2730) Undefined variable: 'm_uart_tx_env_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(21): (vlog-2164) Class or package 'uart_tx_env_cfg' not found.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(21): (vlog-2730) Undefined variable: 'uart_tx_env_cfg'.
+# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(21): near "::": syntax error, unexpected ::, expecting ';'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(22): (vlog-2730) Undefined variable: 'm_uart_tx_agent_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(22): (vlog-2164) Class or package 'uart_tx_agent_cfg_t' not found.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(22): (vlog-2730) Undefined variable: 'uart_tx_agent_cfg_t'.
+# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(22): near "::": syntax error, unexpected ::, expecting ';'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(24): (vlog-2730) Undefined variable: 'uart_tx_if_t'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(36): (vlog-2730) Undefined variable: 'm_uart_tx_env'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(36): (vlog-2164) Class or package 'uart_tx_env' not found.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(36): (vlog-2730) Undefined variable: 'uart_tx_env'.
+# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(36): near "::": syntax error, unexpected ::, expecting ';'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(50): (vlog-2730) Undefined variable: 'm_uart_tx_env_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test_vseq.svh(5): Invalid type 'uart_tx_input_seq'. Please check the type of the variable 'utx_in_seq_h'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test_vseq.svh(13): (vlog-2730) Undefined variable: 'utx_in_seq_h'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test_vseq.svh(13): (vlog-2164) Class or package 'uart_tx_input_seq' not found.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test_vseq.svh(13): (vlog-2730) Undefined variable: 'uart_tx_input_seq'.
+# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test_vseq.svh(13): near "::": syntax error, unexpected ::, expecting ';'.
+# -- Compiling module uart_tx_assertions
+# -- Compiling interface uart_tx_system_if
+# -- Compiling module uart_tx_tb_top
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_top.sv(9): (vlog-13006) Could not find the package (uart_tx_params_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_top.sv(10): (vlog-13006) Could not find the package (uart_tx_tb_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_top.sv(11): (vlog-13006) Could not find the package (uart_tx_seq_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_top.sv(12): (vlog-13006) Could not find the package (uart_tx_test_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_top.sv(19): Identifier 'DATA_WIDTH' is not directly visible.
+#    Found multiple Declaration of 'DATA_WIDTH' through wildcard imports from these packages : uart_tx_global_params_pkg, uart_tx_usertypes_pkg
+# 
+# End time: 11:27:33 on Dec 26,2023, Elapsed time: 0:00:02
+# Errors: 42, Warnings: 0
+# ** Error: C:/questasim64_2021.1/win64/vlog failed.
+# Error in macro ./scripts/run.do line 17
+# C:/questasim64_2021.1/win64/vlog failed.
+#     while executing
+# "vlog -f scripts/tb.f"
+do scripts/run.do
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 11:28:12 on Dec 26,2023
+# vlog -reportprogress 300 -f scripts/dut.f 
+# -- Compiling module mux
+# -- Compiling module parity_calc
+# -- Compiling module Serializer
+# -- Compiling module uart_tx_fsm
+# -- Compiling module UART_TX
+# 
+# Top level modules:
+# 	UART_TX
+# End time: 11:28:12 on Dec 26,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 11:28:12 on Dec 26,2023
+# vlog -reportprogress 300 -f scripts/tb.f 
+# -- Compiling package uart_tx_global_params_pkg
+# -- Compiling package uart_tx_item_pkg
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# ** Note: (vlog-2286) D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_item/uart_tx_item_pkg.sv(4): Using implicit +incdir+C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Importing package uart_tx_global_params_pkg
+# -- Compiling package uart_tx_agent_pkg
+# -- Importing package uart_tx_item_pkg
+# -- Compiling interface uart_tx_if
+# -- Compiling package uart_tx_usertypes_pkg
+# -- Importing package uart_tx_agent_pkg
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_usertypes_pkg.sv(5): (vlog-2730) Undefined variable: 'DATA_WIDTH'.
+# -- Compiling package uart_tx_tb_pkg
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(9): (vlog-13006) Could not find the package (uart_tx_usertypes_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_env_cfg.svh(10): Invalid type 'uart_tx_agent_cfg_t'. Please check the type of the variable 'm_uart_tx_agent_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_env.svh(12): Invalid type 'uart_tx_agent_t'. Please check the type of the variable 'm_uart_tx_agent'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_env.svh(33): (vlog-2730) Undefined variable: 'uart_tx_agent_cfg_t'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_env.svh(36): (vlog-2730) Undefined variable: 'm_uart_tx_agent'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_env.svh(36): (vlog-2164) Class or package 'uart_tx_agent_t' not found.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_env.svh(36): (vlog-2730) Undefined variable: 'uart_tx_agent_t'.
+# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_env.svh(36): near "::": syntax error, unexpected ::, expecting ';'.
+# -- Compiling package uart_tx_seq_pkg
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib/uart_tx_seq_pkg.sv(8): (vlog-13006) Could not find the package (uart_tx_tb_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib/uart_tx_seq_pkg.sv(11)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib//uart_tx_base_seq.svh(5): Invalid type 'uart_tx_env_cfg'. Please check the type of the variable 'm_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib/uart_tx_seq_pkg.sv(11)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib//uart_tx_base_seq.svh(14): (vlog-2730) Undefined variable: 'm_cfg'.
+# -- Compiling package uart_tx_test_pkg
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(7): (vlog-13006) Could not find the package (uart_tx_params_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(9): (vlog-13006) Could not find the package (uart_tx_seq_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(10): (vlog-13006) Could not find the package (uart_tx_tb_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(12)
+# ** while parsing macro expansion: 'uvm_declare_p_sequencer' starting at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_vseq_base.svh(3)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_vseq_base.svh(3): Invalid type 'uart_tx_vsequencer'. Please check the type of the variable 'p_sequencer'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(12)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_vseq_base.svh(6): Invalid type 'uart_tx_env_cfg'. Please check the type of the variable 'm_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(12)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_vseq_base.svh(16): (vlog-2730) Undefined variable: 'm_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(12)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_vseq_base.svh(24): (vlog-2400) Identifier ('uart_tx_base_seq') found where a type or type identifier is required.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(7): Invalid type 'uart_tx_agent_cfg_t'. Please check the type of the variable 'm_uart_tx_agent_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(10): Invalid type 'uart_tx_env_cfg'. Please check the type of the variable 'm_uart_tx_env_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(11): Invalid type 'uart_tx_env'. Please check the type of the variable 'm_uart_tx_env'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(21): (vlog-2730) Undefined variable: 'm_uart_tx_env_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(21): (vlog-2164) Class or package 'uart_tx_env_cfg' not found.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(21): (vlog-2730) Undefined variable: 'uart_tx_env_cfg'.
+# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(21): near "::": syntax error, unexpected ::, expecting ';'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(22): (vlog-2730) Undefined variable: 'm_uart_tx_agent_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(22): (vlog-2164) Class or package 'uart_tx_agent_cfg_t' not found.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(22): (vlog-2730) Undefined variable: 'uart_tx_agent_cfg_t'.
+# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(22): near "::": syntax error, unexpected ::, expecting ';'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(24): (vlog-2730) Undefined variable: 'uart_tx_if_t'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(36): (vlog-2730) Undefined variable: 'm_uart_tx_env'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(36): (vlog-2164) Class or package 'uart_tx_env' not found.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(36): (vlog-2730) Undefined variable: 'uart_tx_env'.
+# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(36): near "::": syntax error, unexpected ::, expecting ';'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(50): (vlog-2730) Undefined variable: 'm_uart_tx_env_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test_vseq.svh(5): Invalid type 'uart_tx_input_seq'. Please check the type of the variable 'utx_in_seq_h'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test_vseq.svh(13): (vlog-2730) Undefined variable: 'utx_in_seq_h'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test_vseq.svh(13): (vlog-2164) Class or package 'uart_tx_input_seq' not found.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test_vseq.svh(13): (vlog-2730) Undefined variable: 'uart_tx_input_seq'.
+# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test_vseq.svh(13): near "::": syntax error, unexpected ::, expecting ';'.
+# -- Compiling module uart_tx_assertions
+# -- Compiling interface uart_tx_system_if
+# -- Compiling module uart_tx_tb_top
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_top.sv(8): (vlog-13006) Could not find the package (uart_tx_usertypes_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_top.sv(9): (vlog-13006) Could not find the package (uart_tx_params_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_top.sv(10): (vlog-13006) Could not find the package (uart_tx_tb_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_top.sv(11): (vlog-13006) Could not find the package (uart_tx_seq_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_top.sv(12): (vlog-13006) Could not find the package (uart_tx_test_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# End time: 11:28:14 on Dec 26,2023, Elapsed time: 0:00:02
+# Errors: 46, Warnings: 0
+# ** Error: C:/questasim64_2021.1/win64/vlog failed.
+# Error in macro ./scripts/run.do line 17
+# C:/questasim64_2021.1/win64/vlog failed.
+#     while executing
+# "vlog -f scripts/tb.f"
+do scripts/run.do
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 11:30:08 on Dec 26,2023
+# vlog -reportprogress 300 -f scripts/dut.f 
+# -- Compiling module mux
+# -- Compiling module parity_calc
+# -- Compiling module Serializer
+# -- Compiling module uart_tx_fsm
+# -- Compiling module UART_TX
+# 
+# Top level modules:
+# 	UART_TX
+# End time: 11:30:08 on Dec 26,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 11:30:08 on Dec 26,2023
+# vlog -reportprogress 300 -f scripts/tb.f 
+# -- Compiling package uart_tx_global_params_pkg
+# -- Compiling package uart_tx_item_pkg
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# ** Note: (vlog-2286) D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_item/uart_tx_item_pkg.sv(4): Using implicit +incdir+C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Importing package uart_tx_global_params_pkg
+# -- Compiling package uart_tx_agent_pkg
+# -- Importing package uart_tx_item_pkg
+# -- Compiling interface uart_tx_if
+# -- Compiling package uart_tx_usertypes_pkg
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_usertypes_pkg.sv(3): (vlog-13006) Could not find the package (uart_rx_global_params_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# -- Importing package uart_tx_agent_pkg
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_usertypes_pkg.sv(6): (vlog-2730) Undefined variable: 'DATA_WIDTH'.
+# -- Compiling package uart_tx_tb_pkg
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(9): (vlog-13006) Could not find the package (uart_tx_usertypes_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_env_cfg.svh(10): Invalid type 'uart_tx_agent_cfg_t'. Please check the type of the variable 'm_uart_tx_agent_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_env.svh(12): Invalid type 'uart_tx_agent_t'. Please check the type of the variable 'm_uart_tx_agent'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_env.svh(33): (vlog-2730) Undefined variable: 'uart_tx_agent_cfg_t'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_env.svh(36): (vlog-2730) Undefined variable: 'm_uart_tx_agent'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_env.svh(36): (vlog-2164) Class or package 'uart_tx_agent_t' not found.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_env.svh(36): (vlog-2730) Undefined variable: 'uart_tx_agent_t'.
+# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_env.svh(36): near "::": syntax error, unexpected ::, expecting ';'.
+# -- Compiling package uart_tx_seq_pkg
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib/uart_tx_seq_pkg.sv(8): (vlog-13006) Could not find the package (uart_tx_tb_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib/uart_tx_seq_pkg.sv(11)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib//uart_tx_base_seq.svh(5): Invalid type 'uart_tx_env_cfg'. Please check the type of the variable 'm_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib/uart_tx_seq_pkg.sv(11)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib//uart_tx_base_seq.svh(14): (vlog-2730) Undefined variable: 'm_cfg'.
+# -- Compiling package uart_tx_test_pkg
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(7): (vlog-13006) Could not find the package (uart_tx_params_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(9): (vlog-13006) Could not find the package (uart_tx_seq_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(10): (vlog-13006) Could not find the package (uart_tx_tb_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(12)
+# ** while parsing macro expansion: 'uvm_declare_p_sequencer' starting at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_vseq_base.svh(3)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_vseq_base.svh(3): Invalid type 'uart_tx_vsequencer'. Please check the type of the variable 'p_sequencer'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(12)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_vseq_base.svh(6): Invalid type 'uart_tx_env_cfg'. Please check the type of the variable 'm_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(12)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_vseq_base.svh(16): (vlog-2730) Undefined variable: 'm_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(12)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_vseq_base.svh(24): (vlog-2400) Identifier ('uart_tx_base_seq') found where a type or type identifier is required.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(7): Invalid type 'uart_tx_agent_cfg_t'. Please check the type of the variable 'm_uart_tx_agent_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(10): Invalid type 'uart_tx_env_cfg'. Please check the type of the variable 'm_uart_tx_env_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(11): Invalid type 'uart_tx_env'. Please check the type of the variable 'm_uart_tx_env'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(21): (vlog-2730) Undefined variable: 'm_uart_tx_env_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(21): (vlog-2164) Class or package 'uart_tx_env_cfg' not found.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(21): (vlog-2730) Undefined variable: 'uart_tx_env_cfg'.
+# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(21): near "::": syntax error, unexpected ::, expecting ';'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(22): (vlog-2730) Undefined variable: 'm_uart_tx_agent_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(22): (vlog-2164) Class or package 'uart_tx_agent_cfg_t' not found.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(22): (vlog-2730) Undefined variable: 'uart_tx_agent_cfg_t'.
+# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(22): near "::": syntax error, unexpected ::, expecting ';'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(24): (vlog-2730) Undefined variable: 'uart_tx_if_t'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(36): (vlog-2730) Undefined variable: 'm_uart_tx_env'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(36): (vlog-2164) Class or package 'uart_tx_env' not found.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(36): (vlog-2730) Undefined variable: 'uart_tx_env'.
+# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(36): near "::": syntax error, unexpected ::, expecting ';'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(50): (vlog-2730) Undefined variable: 'm_uart_tx_env_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test_vseq.svh(5): Invalid type 'uart_tx_input_seq'. Please check the type of the variable 'utx_in_seq_h'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test_vseq.svh(13): (vlog-2730) Undefined variable: 'utx_in_seq_h'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test_vseq.svh(13): (vlog-2164) Class or package 'uart_tx_input_seq' not found.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test_vseq.svh(13): (vlog-2730) Undefined variable: 'uart_tx_input_seq'.
+# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(15)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test_vseq.svh(13): near "::": syntax error, unexpected ::, expecting ';'.
+# -- Compiling module uart_tx_assertions
+# -- Compiling interface uart_tx_system_if
+# -- Compiling module uart_tx_tb_top
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_top.sv(8): (vlog-13006) Could not find the package (uart_tx_usertypes_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_top.sv(9): (vlog-13006) Could not find the package (uart_tx_params_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_top.sv(10): (vlog-13006) Could not find the package (uart_tx_tb_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_top.sv(11): (vlog-13006) Could not find the package (uart_tx_seq_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_top.sv(12): (vlog-13006) Could not find the package (uart_tx_test_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# End time: 11:30:10 on Dec 26,2023, Elapsed time: 0:00:02
+# Errors: 47, Warnings: 0
+# ** Error: C:/questasim64_2021.1/win64/vlog failed.
+# Error in macro ./scripts/run.do line 17
+# C:/questasim64_2021.1/win64/vlog failed.
+#     while executing
+# "vlog -f scripts/tb.f"
+do scripts/run.do
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 11:30:32 on Dec 26,2023
+# vlog -reportprogress 300 -f scripts/dut.f 
+# -- Compiling module mux
+# -- Compiling module parity_calc
+# -- Compiling module Serializer
+# -- Compiling module uart_tx_fsm
+# -- Compiling module UART_TX
+# 
+# Top level modules:
+# 	UART_TX
+# End time: 11:30:32 on Dec 26,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 11:30:32 on Dec 26,2023
+# vlog -reportprogress 300 -f scripts/tb.f 
+# -- Compiling package uart_tx_global_params_pkg
+# -- Compiling package uart_tx_item_pkg
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# ** Note: (vlog-2286) D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_item/uart_tx_item_pkg.sv(4): Using implicit +incdir+C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Importing package uart_tx_global_params_pkg
+# -- Compiling package uart_tx_agent_pkg
+# -- Importing package uart_tx_item_pkg
+# -- Compiling interface uart_tx_if
+# -- Compiling package uart_tx_usertypes_pkg
+# -- Importing package uart_tx_agent_pkg
+# -- Compiling package uart_tx_tb_pkg
+# -- Importing package uart_tx_usertypes_pkg
+# -- Compiling package uart_tx_seq_pkg
+# -- Importing package uart_tx_tb_pkg
+# -- Compiling package uart_tx_test_pkg
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(7): (vlog-13006) Could not find the package (uart_tx_params_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# -- Importing package uart_tx_seq_pkg
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(7): Invalid type 'uart_tx_agent_cfg_t'. Please check the type of the variable 'm_uart_tx_agent_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(22): (vlog-2730) Undefined variable: 'm_uart_tx_agent_cfg'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(22): (vlog-2164) Class or package 'uart_tx_agent_cfg_t' not found.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(22): (vlog-2730) Undefined variable: 'uart_tx_agent_cfg_t'.
+# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(22): near "::": syntax error, unexpected ::, expecting ';'.
+# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/uart_tx_test_pkg.sv(13)
+# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(24): (vlog-2730) Undefined variable: 'uart_tx_if_t'.
+# -- Compiling module uart_tx_assertions
+# -- Compiling interface uart_tx_system_if
+# -- Compiling module uart_tx_tb_top
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_top.sv(9): (vlog-13006) Could not find the package (uart_tx_params_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_top.sv(12): (vlog-13006) Could not find the package (uart_tx_test_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# End time: 11:30:33 on Dec 26,2023, Elapsed time: 0:00:01
+# Errors: 9, Warnings: 0
+# ** Error: C:/questasim64_2021.1/win64/vlog failed.
+# Error in macro ./scripts/run.do line 17
+# C:/questasim64_2021.1/win64/vlog failed.
+#     while executing
+# "vlog -f scripts/tb.f"
+do scripts/run.do
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 11:31:25 on Dec 26,2023
+# vlog -reportprogress 300 -f scripts/dut.f 
+# -- Compiling module mux
+# -- Compiling module parity_calc
+# -- Compiling module Serializer
+# -- Compiling module uart_tx_fsm
+# -- Compiling module UART_TX
+# 
+# Top level modules:
+# 	UART_TX
+# End time: 11:31:25 on Dec 26,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 11:31:26 on Dec 26,2023
+# vlog -reportprogress 300 -f scripts/tb.f 
+# -- Compiling package uart_tx_global_params_pkg
+# -- Compiling package uart_tx_item_pkg
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# ** Note: (vlog-2286) D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_item/uart_tx_item_pkg.sv(4): Using implicit +incdir+C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Importing package uart_tx_global_params_pkg
+# -- Compiling package uart_tx_agent_pkg
+# -- Importing package uart_tx_item_pkg
+# -- Compiling interface uart_tx_if
+# -- Compiling package uart_tx_usertypes_pkg
+# -- Importing package uart_tx_agent_pkg
+# -- Compiling package uart_tx_tb_pkg
+# -- Importing package uart_tx_usertypes_pkg
+# -- Compiling package uart_tx_seq_pkg
+# -- Importing package uart_tx_tb_pkg
+# -- Compiling package uart_tx_test_pkg
+# -- Importing package uart_tx_seq_pkg
+# -- Compiling module uart_tx_assertions
+# -- Compiling interface uart_tx_system_if
+# -- Compiling module uart_tx_tb_top
+# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_top.sv(9): (vlog-13006) Could not find the package (uart_tx_params_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# -- Importing package uart_tx_test_pkg
+# End time: 11:31:27 on Dec 26,2023, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# ** Error: C:/questasim64_2021.1/win64/vlog failed.
+# Error in macro ./scripts/run.do line 17
+# C:/questasim64_2021.1/win64/vlog failed.
+#     while executing
+# "vlog -f scripts/tb.f"
+do scripts/run.do
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 11:31:42 on Dec 26,2023
+# vlog -reportprogress 300 -f scripts/dut.f 
+# -- Compiling module mux
+# -- Compiling module parity_calc
+# -- Compiling module Serializer
+# -- Compiling module uart_tx_fsm
+# -- Compiling module UART_TX
+# 
+# Top level modules:
+# 	UART_TX
+# End time: 11:31:42 on Dec 26,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 11:31:42 on Dec 26,2023
+# vlog -reportprogress 300 -f scripts/tb.f 
+# -- Compiling package uart_tx_global_params_pkg
+# -- Compiling package uart_tx_item_pkg
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# ** Note: (vlog-2286) D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_item/uart_tx_item_pkg.sv(4): Using implicit +incdir+C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Importing package uart_tx_global_params_pkg
+# -- Compiling package uart_tx_agent_pkg
+# -- Importing package uart_tx_item_pkg
+# -- Compiling interface uart_tx_if
+# -- Compiling package uart_tx_usertypes_pkg
+# -- Importing package uart_tx_agent_pkg
+# -- Compiling package uart_tx_tb_pkg
+# -- Importing package uart_tx_usertypes_pkg
 # -- Compiling package uart_tx_seq_pkg
 # -- Importing package uart_tx_tb_pkg
 # -- Compiling package uart_tx_test_pkg
@@ -35,10 +742,10 @@
 # 
 # Top level modules:
 # 	uart_tx_tb_top
-# End time: 02:30:32 on Dec 19,2023, Elapsed time: 0:00:02
+# End time: 11:31:43 on Dec 26,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vopt 2021.1 Compiler 2021.01 Jan 19 2021
-# Start time: 02:30:32 on Dec 19,2023
+# Start time: 11:31:47 on Dec 26,2023
 # vopt -reportprogress 300 uart_tx_tb_top -o top_opt -debugdb "+acc" "+cover=sbecf+UART_TX(rtl)." 
 # 
 # Top level modules:
@@ -47,7 +754,8 @@
 # Analyzing design...
 # -- Loading module uart_tx_tb_top
 # -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
-# -- Importing package uart_tx_params_pkg
+# -- Importing package uart_tx_global_params_pkg
+# -- Importing package uart_tx_usertypes_pkg
 # -- Importing package uart_tx_agent_pkg
 # -- Importing package uart_tx_item_pkg
 # -- Importing package uart_tx_tb_pkg
@@ -62,12 +770,13 @@
 # -- Loading module parity_calc
 # -- Loading module mux
 # -- Loading module uart_tx_assertions
-# Optimizing 19 design-units (inlining 0/9 module instances):
+# Optimizing 20 design-units (inlining 0/9 module instances):
 # -- Optimizing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)(fast)
 # -- Optimizing package mtiUvm.questa_uvm_pkg(fast)
+# -- Optimizing package uart_tx_global_params_pkg(fast)
 # -- Optimizing package uart_tx_item_pkg(fast)
 # -- Optimizing package uart_tx_agent_pkg(fast)
-# -- Optimizing package uart_tx_params_pkg(fast)
+# -- Optimizing package uart_tx_usertypes_pkg(fast)
 # -- Optimizing package uart_tx_tb_pkg(fast)
 # -- Optimizing package uart_tx_seq_pkg(fast)
 # -- Optimizing package uart_tx_test_pkg(fast)
@@ -88,8 +797,8 @@
 # -- Processing module mux(fast) for debug
 # -- Optimizing interface uart_tx_if(fast__2)
 # -- Optimizing interface uart_tx_system_if(fast__2)
-# -- Optimizing interface uart_tx_system_if(fast)
 # -- Optimizing interface uart_tx_if(fast)
+# -- Optimizing interface uart_tx_system_if(fast)
 # Optimized design name is top_opt
-# End time: 02:30:40 on Dec 19,2023, Elapsed time: 0:00:08
+# End time: 11:31:56 on Dec 26,2023, Elapsed time: 0:00:09
 # Errors: 0, Warnings: 0

@@ -1,9 +1,9 @@
 class uart_tx_item extends uvm_sequence_item;
 
-    parameter data_width = 8;
+    //parameter data_width = 8;
     // Variables
     /// inputs to dut
-    rand bit [data_width-1:0] p_data;
+    randc bit [DATA_WIDTH-1:0] p_data;
     rand bit data_valid;
     rand bit par_en;
     rand bit par_typ;

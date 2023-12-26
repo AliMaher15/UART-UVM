@@ -1,22 +1,27 @@
-module strt_chk
-(
-input   wire    CLK,
-input   wire    RST,
-input   wire    Enable,
-input   wire    Sbit,
-output  reg     glitch
+
+module strt_chk (
+ input   wire                  CLK,
+ input   wire                  RST,
+ input   wire                  sampled_bit,
+ input   wire                  Enable, 
+ output  reg                   strt_glitch
 );
 
-always @(posedge CLK or negedge RST)
-  begin
-    if(!RST)
-     begin
-        glitch <= 1'b0 ;
-     end
-    else if(Enable)
-     begin
-        glitch <= Sbit ;
-     end
-  end
+ 
+              
+// error check
+always @ (posedge CLK or negedge RST)
+ begin
+  if(!RST)
+   begin
+    strt_glitch <= 'b0 ;
+   end
+  else if(Enable)
+   begin
+    strt_glitch <= sampled_bit ;
+   end
+ end
+ 
 
+ 
 endmodule

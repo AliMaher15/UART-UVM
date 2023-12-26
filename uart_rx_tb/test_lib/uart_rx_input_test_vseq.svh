@@ -14,9 +14,9 @@ class uart_rx_input_test_vseq extends uart_rx_vseq_base ;
       seq_set_cfg(urx_in_seq_h);
      // start
       super.body();
-        repeat(5) begin
+        repeat(50) begin
           `uvm_info("uart_rx_input_test_vseq", "Executing sequence", UVM_HIGH)
-            urx_in_seq_h.start(m_uart_rx_seqr);
+            urx_in_seq_h.start(p_sequencer.m_uart_rx_agent_seqr);
           //#2us;
           `uvm_info("uart_rx_input_test_vseq", "Sequence complete", UVM_HIGH)
         end

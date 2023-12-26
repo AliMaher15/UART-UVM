@@ -1,4 +1,4 @@
-interface uart_rx_if #(DATA_WIDTH = 8, PRESCALE_WIDTH = 4)
+interface uart_rx_if #(DATA_WIDTH = 8, PRESCALE_WIDTH = 5)
                       (
                         input rx_clk,
                         input tx_clk,

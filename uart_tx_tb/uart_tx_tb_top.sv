@@ -2,9 +2,10 @@
 
 module uart_tx_tb_top();
 
-`include "uvm_macros.svh"
 import uvm_pkg::*;
-import uart_tx_params_pkg::*;
+`include "uvm_macros.svh"
+import uart_tx_global_params_pkg::*;
+import uart_tx_usertypes_pkg::*;
 import uart_tx_tb_pkg::*;
 import uart_tx_seq_pkg::*;
 import uart_tx_test_pkg::*;
