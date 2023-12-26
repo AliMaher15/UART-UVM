@@ -3,21 +3,26 @@ class uart_rx_scoreboard extends uvm_scoreboard;
 
     `uvm_analysis_imp_decl(_uart_rx_out)
     uvm_analysis_imp_uart_rx_out #(uart_rx_item, uart_rx_scoreboard) uart_rx_out_imp;
+    `uvm_analysis_imp_decl(_uart_rx_in)
+    uvm_analysis_imp_uart_rx_in #(uart_rx_item, uart_rx_scoreboard) uart_rx_in_imp;
 
     protected int outputs_count = 0;
     protected int stop_error_count = 0;
     protected int parity_error_count = 0;
     protected int data_error_count = 0;
 
-    uart_rx_item item_queue [$];
+    uart_rx_item item_in_queue [$];
+    uart_rx_item item_out_queue [$];
 
     //  Constructor: new
     function new(string name, uvm_component parent);
         super.new(name, parent);
         uart_rx_out_imp = new("uart_rx_out_imp",this);
+        uart_rx_in_imp = new("uart_rx_in_imp",this);
     endfunction: new
 
     extern function void write_uart_rx_out(input uart_rx_item item);
+    extern function void write_uart_rx_in(input uart_rx_item item);
     extern task run_phase(uvm_phase phase);
     extern function void comparator(input uart_rx_item item);
     extern function void check_phase(uvm_phase phase);
@@ -27,18 +32,37 @@ endclass: uart_rx_scoreboard
 
 
 function void uart_rx_scoreboard::write_uart_rx_out(input uart_rx_item item);
-    item_queue.push_front(item);
+    item_out_queue.push_front(item);
 endfunction : write_uart_rx_out
+
+function void uart_rx_scoreboard::write_uart_rx_in(input uart_rx_item item);
+    item_in_queue.push_front(item);
+endfunction : write_uart_rx_in
 
 task uart_rx_scoreboard::run_phase(uvm_phase phase);
     super.run_phase(phase);
     forever begin
         // variables
-        uart_rx_item item;
+        uart_rx_item item_input;
+        uart_rx_item item_output;
+        uart_rx_item item = new();
         // only start processing if there is an item written
-        wait(item_queue.size() != 0); // using wait to prevent infinite loop
+        wait(item_in_queue.size() != 0); // using wait to prevent infinite loop
         // extract the item from the queue
-        item = item_queue.pop_back();
+        item_input = item_in_queue.pop_back();
+        wait(item_out_queue.size() != 0);
+        item_output = item_out_queue.pop_back();
+        //*******************************//
+        // GROUP THEM INTO ONE ITEM     //
+        item.s_data_in           = item_input.s_data_in;
+        item.par_en_in           = item_input.par_en_in;
+        item.par_typ_in          = item_input.par_typ_in;
+        item.insert_parity_error = item_input.insert_parity_error;
+        item.insert_stop_error   = item_input.insert_stop_error;
+        item.data_valid_out      = item_output.data_valid_out;
+        item.parity_error_out    = item_output.parity_error_out;
+        item.stop_error_out      = item_output.stop_error_out;
+        item.p_data_out          = item_output.p_data_out;
         comparator(item);
     end
 endtask: run_phase

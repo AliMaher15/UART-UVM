@@ -46,5 +46,7 @@ function void uart_rx_env::connect_phase(uvm_phase phase);
 
     // Connect Coverage and Scoreboard with monitor
     m_uart_rx_agent.uart_rx_input_ap.connect(m_coverage.analysis_export);
+    m_uart_rx_agent.uart_rx_input_ap.connect(m_scoreboard.uart_rx_in_imp);
     m_uart_rx_agent.uart_rx_output_ap.connect(m_scoreboard.uart_rx_out_imp);
+    
 endfunction: connect_phase

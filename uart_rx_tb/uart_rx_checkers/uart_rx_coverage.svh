@@ -36,6 +36,7 @@ class uart_rx_coverage extends uvm_subscriber#(uart_rx_item);
             bins on_even_err    = binsof(cp_parity_enable.on)  && binsof(cp_parity_type.even) && binsof(cp_parity_error.on);
             bins on_odd_correct = binsof(cp_parity_enable.on)  && binsof(cp_parity_type.odd)  && binsof(cp_parity_error.off);
             bins on_odd_err     = binsof(cp_parity_enable.on)  && binsof(cp_parity_type.odd)  && binsof(cp_parity_error.on);
+            ignore_bins no_parity = binsof(cp_parity_enable.off);
         }
         
     endgroup: cg_parity_stop_configurations

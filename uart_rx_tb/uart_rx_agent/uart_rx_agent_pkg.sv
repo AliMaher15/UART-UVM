@@ -7,7 +7,8 @@ package uart_rx_agent_pkg;
     import uart_rx_item_pkg::*;
 
     `include "uart_rx_agent_cfg.svh"
-    `include "uart_rx_monitor.svh"
+    `include "uart_rx_out_monitor.svh"
+    `include "uart_rx_in_monitor.svh"
     `include "uart_rx_agent_seqr.svh"
     `include "uart_rx_driver.svh"
     `include "uart_rx_agent.svh"

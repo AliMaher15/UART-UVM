@@ -16,7 +16,9 @@ module uart_rx_fsm  # ( parameter DATA_WIDTH = 8 ) (
  output  reg                   par_chk_en, 
  output  reg                   stp_chk_en,
  output  reg                   dat_samp_en,
- output  reg                   data_valid
+ output  reg                   data_valid ,
+ output  reg                   par_err_out ,
+ output  reg                   stp_err_out 
 );
 
 
@@ -26,7 +28,7 @@ parameter   [2:0]      IDLE     = 3'b000 ,
 					   data     = 3'b011 ,
 					   parity   = 3'b010 ,
 					   stop     = 3'b110 ,
-					   err_chk  = 3'b111 ,
+					   //err_chk  = 3'b111 ,
 					   data_vld = 3'b101 ;
 
 reg         [2:0]      current_state , next_state ;
@@ -103,23 +105,17 @@ always @ (*)
   stop   : begin
              if(bit_count == 4'd10 && edge_count == 3'd5)
 			   begin
-			    next_state = err_chk ; 
+			    //next_state = err_chk ;
+           next_state = data_vld ;
                end
 			 else
 			   begin
 			    next_state = stop ; 			
                end			  
            end	
-  err_chk   : begin
-               if(par_err | stp_err)
-			   begin
-			    next_state = IDLE ; 
-               end
-			 else
-			   begin
-			    next_state = data_vld ; 	    				
-               end			  
-             end	
+  /*err_chk   : begin
+			           next_state = data_vld ; 	    				
+             end*/	
   data_vld : begin
               if(!S_DATA)
 			   next_state = start ;
@@ -143,6 +139,8 @@ always @ (*)
   stp_chk_en  = 1'b0 ;
   data_valid  = 1'b0 ;
   strt_chk_en = 1'b0 ;
+  par_err_out = 1'b0 ;
+  stp_err_out = 1'b0 ;
   case(current_state)
   IDLE   : begin
              if(!S_DATA)
@@ -193,18 +191,25 @@ always @ (*)
              stp_chk_en  = 1'b1 ;
              dat_samp_en = 1'b1 ;				 
            end	
-  err_chk: begin
+  /*err_chk: begin
              edge_bit_en = 1'b0 ; 
              deser_en    = 1'b0 ; 
              par_chk_en  = 1'b0 ; 
              stp_chk_en  = 1'b0 ;
-             dat_samp_en = 1'b1 ;				 
-           end	
+             dat_samp_en = 1'b1 ;	
+             par_err_out = par_err ; 
+             stp_err_out = stp_err ;
+           end*/	
   data_vld:begin
              edge_bit_en = 1'b0 ; 
              deser_en    = 1'b0 ; 
              par_chk_en  = 1'b0 ; 
              stp_chk_en  = 1'b0 ;
+             if(parity_enable)
+              par_err_out = par_err ;
+             else 
+              par_err_out = 1'b0 ;
+             stp_err_out = stp_err ;
              data_valid  = 1'b1 ;
              dat_samp_en = 1'b0 ;				 
            end			   
@@ -213,7 +218,7 @@ always @ (*)
              deser_en    = 1'b0 ; 
              par_chk_en  = 1'b0 ; 
              stp_chk_en  = 1'b0 ;	
-			 data_valid  = 1'b0 ;
+			       data_valid  = 1'b0 ;
              dat_samp_en = 1'b0 ;				 
 		   end 
   endcase                 	   

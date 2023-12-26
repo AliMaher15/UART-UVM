@@ -7,10 +7,10 @@
 # ** Error: Acs sdne.
 # 
 #        Unable to replace existing ini file (D:/Ali/Courses/Verification-Projects/UART-UVM/sim/uart_rx/uart_rx_uvm.mpf).  File can not be renamed.
-# End time: 13:57:01 on Dec 26,2023, Elapsed time: 0:08:23
-# Errors: 3, Warnings: 1
+# End time: 18:30:03 on Dec 26,2023, Elapsed time: 0:05:13
+# Errors: 5, Warnings: 1
 # vsim top_opt -c -assertdebug -debugDB -fsmdebug -coverage "+UVM_TESTNAME=uart_rx_input_test" 
-# Start time: 13:57:01 on Dec 26,2023
+# Start time: 18:30:03 on Dec 26,2023
 # Loading sv_std.std
 # Loading work.uart_rx_system_if(fast)
 # Loading work.uart_rx_if(fast)
@@ -66,20 +66,22 @@
 # --------------------------------------------------------------------
 # uvm_test_top               uart_rx_input_test            -     @478 
 #   m_uart_rx_env            uart_rx_env                   -     @493 
-#     m_coverage             uart_rx_coverage              -     @653 
-#       analysis_imp         uvm_analysis_imp              -     @660 
+#     m_coverage             uart_rx_coverage              -     @661 
+#       analysis_imp         uvm_analysis_imp              -     @668 
 #     m_scoreboard           uart_rx_scoreboard            -     @638 
+#       uart_rx_in_imp       uvm_analysis_imp_uart_rx_in   -     @653 
 #       uart_rx_out_imp      uvm_analysis_imp_uart_rx_out  -     @645 
 #     m_uart_rx_agent        uvm_agent                     -     @505 
-#       m_driver             uvm_driver #(REQ,RSP)         -     @785 
-#         rsp_port           uvm_analysis_port             -     @800 
-#         seq_item_port      uvm_seq_item_pull_port        -     @792 
-#       m_monitor            uvm_monitor                   -     @669 
-#         input_ap           uvm_analysis_port             -     @810 
-#         output_ap          uvm_analysis_port             -     @818 
-#       m_seqr               uart_rx_agent_seqr            -     @676 
-#         rsp_export         uvm_analysis_export           -     @683 
-#         seq_item_export    uvm_seq_item_pull_imp         -     @777 
+#       m_driver             uvm_driver #(REQ,RSP)         -     @800 
+#         rsp_port           uvm_analysis_port             -     @815 
+#         seq_item_port      uvm_seq_item_pull_port        -     @807 
+#       m_in_monitor         uvm_monitor                   -     @677 
+#         input_ap           uvm_analysis_port             -     @825 
+#       m_out_monitor        uvm_monitor                   -     @684 
+#         output_ap          uvm_analysis_port             -     @834 
+#       m_seqr               uart_rx_agent_seqr            -     @691 
+#         rsp_export         uvm_analysis_export           -     @698 
+#         seq_item_export    uvm_seq_item_pull_imp         -     @792 
 #         arbitration_queue  array                         0     -    
 #         lock_queue         array                         0     -    
 #         num_last_reqs      integral                      32    'd1  
@@ -99,7 +101,7 @@
 # 
 #   No instance or type overrides are registered with this factory
 # 
-# All types registered with the factory: 55 total
+# All types registered with the factory: 56 total
 # (types without type names will not be printed)
 # 
 #   Type Name
@@ -124,61 +126,61 @@
 # 
 # UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_input_test.svh(18) @ 70000: uvm_test_top [uvm_test_top] Starting test
 # UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_input_test.svh(20) @ 70000: uvm_test_top [uvm_test_top] Executing uart_rx_input_test_vseq
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 2240000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 2080000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#          1 :
-# -----------------------------------------------------
-# Name                   Type          Size  Value     
-# -----------------------------------------------------
-# m_item                 uart_rx_item  -     @844      
-#   s_data_in            integral      8     'b11100001
-#   par_en_in            integral      1     'b1       
-#   par_typ_in           integral      1     'b1       
-#   insert_parity_error  integral      1     'b0       
-#   insert_stop_error    integral      1     'b0       
-#   data_valid_out       integral      1     'b0       
-#   parity_error_out     integral      1     'b0       
-#   stop_error_out       integral      1     'b0       
-#   p_data_out           integral      8     'b11100001
-# -----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 4160000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# ------------------------------------------------
+# Name                   Type          Size  Value
+# ------------------------------------------------
+# <unnamed>              uart_rx_item  -     @860 
+#   s_data_in            integral      8     'b0  
+#   par_en_in            integral      1     'b1  
+#   par_typ_in           integral      1     'b1  
+#   insert_parity_error  integral      1     'b0  
+#   insert_stop_error    integral      1     'b1  
+#   data_valid_out       integral      1     'b1  
+#   parity_error_out     integral      1     'b0  
+#   stop_error_out       integral      1     'b1  
+#   p_data_out           integral      8     'b0  
+# ------------------------------------------------
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 4000000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#          2 :
 # -----------------------------------------------------
 # Name                   Type          Size  Value     
 # -----------------------------------------------------
-# m_item                 uart_rx_item  -     @844      
-#   s_data_in            integral      8     'b11111001
+# <unnamed>              uart_rx_item  -     @951      
+#   s_data_in            integral      8     'b11111111
 #   par_en_in            integral      1     'b1       
 #   par_typ_in           integral      1     'b0       
 #   insert_parity_error  integral      1     'b0       
 #   insert_stop_error    integral      1     'b0       
-#   data_valid_out       integral      1     'b0       
+#   data_valid_out       integral      1     'b1       
 #   parity_error_out     integral      1     'b0       
 #   stop_error_out       integral      1     'b0       
-#   p_data_out           integral      8     'b11111001
+#   p_data_out           integral      8     'b11111111
 # -----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 6080000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 5920000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#          3 :
-# --------------------------------------------------
-# Name                   Type          Size  Value  
-# --------------------------------------------------
-# m_item                 uart_rx_item  -     @844   
-#   s_data_in            integral      8     'b11101
-#   par_en_in            integral      1     'b1    
-#   par_typ_in           integral      1     'b1    
-#   insert_parity_error  integral      1     'b0    
-#   insert_stop_error    integral      1     'b0    
-#   data_valid_out       integral      1     'b0    
-#   parity_error_out     integral      1     'b0    
-#   stop_error_out       integral      1     'b0    
-#   p_data_out           integral      8     'b11101
-# --------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 7840000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# -----------------------------------------------------
+# Name                   Type          Size  Value     
+# -----------------------------------------------------
+# <unnamed>              uart_rx_item  -     @971      
+#   s_data_in            integral      8     'b11111111
+#   par_en_in            integral      1     'b1       
+#   par_typ_in           integral      1     'b1       
+#   insert_parity_error  integral      1     'b0       
+#   insert_stop_error    integral      1     'b0       
+#   data_valid_out       integral      1     'b1       
+#   parity_error_out     integral      1     'b0       
+#   stop_error_out       integral      1     'b0       
+#   p_data_out           integral      8     'b11111111
+# -----------------------------------------------------
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 7840000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#          4 :
 # -----------------------------------------------------
 # Name                   Type          Size  Value     
 # -----------------------------------------------------
-# m_item                 uart_rx_item  -     @844      
-#   s_data_in            integral      8     'b11001111
+# <unnamed>              uart_rx_item  -     @991      
+#   s_data_in            integral      8     'b11111111
 #   par_en_in            integral      1     'b0       
 #   par_typ_in           integral      1     'b0       
 #   insert_parity_error  integral      1     'b0       
@@ -186,95 +188,95 @@
 #   data_valid_out       integral      1     'b1       
 #   parity_error_out     integral      1     'b0       
 #   stop_error_out       integral      1     'b0       
-#   p_data_out           integral      8     'b11001111
+#   p_data_out           integral      8     'b11111111
 # -----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 9600000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 9600000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#          5 :
-# -----------------------------------------------------
-# Name                   Type          Size  Value     
-# -----------------------------------------------------
-# m_item                 uart_rx_item  -     @844      
-#   s_data_in            integral      8     'b10001100
-#   par_en_in            integral      1     'b0       
-#   par_typ_in           integral      1     'b0       
-#   insert_parity_error  integral      1     'b0       
-#   insert_stop_error    integral      1     'b0       
-#   data_valid_out       integral      1     'b1       
-#   parity_error_out     integral      1     'b0       
-#   stop_error_out       integral      1     'b0       
-#   p_data_out           integral      8     'b10001100
-# -----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 11520000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# ------------------------------------------------
+# Name                   Type          Size  Value
+# ------------------------------------------------
+# <unnamed>              uart_rx_item  -     @1011
+#   s_data_in            integral      8     'b0  
+#   par_en_in            integral      1     'b0  
+#   par_typ_in           integral      1     'b0  
+#   insert_parity_error  integral      1     'b0  
+#   insert_stop_error    integral      1     'b0  
+#   data_valid_out       integral      1     'b1  
+#   parity_error_out     integral      1     'b0  
+#   stop_error_out       integral      1     'b0  
+#   p_data_out           integral      8     'b0  
+# ------------------------------------------------
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 11360000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#          6 :
-# -----------------------------------------------------
-# Name                   Type          Size  Value     
-# -----------------------------------------------------
-# m_item                 uart_rx_item  -     @844      
-#   s_data_in            integral      8     'b10100011
-#   par_en_in            integral      1     'b1       
-#   par_typ_in           integral      1     'b1       
-#   insert_parity_error  integral      1     'b0       
-#   insert_stop_error    integral      1     'b0       
-#   data_valid_out       integral      1     'b0       
-#   parity_error_out     integral      1     'b0       
-#   stop_error_out       integral      1     'b0       
-#   p_data_out           integral      8     'b10100011
-# -----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 13440000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# ------------------------------------------------
+# Name                   Type          Size  Value
+# ------------------------------------------------
+# <unnamed>              uart_rx_item  -     @1027
+#   s_data_in            integral      8     'b0  
+#   par_en_in            integral      1     'b1  
+#   par_typ_in           integral      1     'b1  
+#   insert_parity_error  integral      1     'b1  
+#   insert_stop_error    integral      1     'b1  
+#   data_valid_out       integral      1     'b1  
+#   parity_error_out     integral      1     'b1  
+#   stop_error_out       integral      1     'b1  
+#   p_data_out           integral      8     'b0  
+# ------------------------------------------------
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 13280000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#          7 :
-# -----------------------------------------------------
-# Name                   Type          Size  Value     
-# -----------------------------------------------------
-# m_item                 uart_rx_item  -     @844      
-#   s_data_in            integral      8     'b11100000
-#   par_en_in            integral      1     'b1       
-#   par_typ_in           integral      1     'b0       
-#   insert_parity_error  integral      1     'b0       
-#   insert_stop_error    integral      1     'b0       
-#   data_valid_out       integral      1     'b0       
-#   parity_error_out     integral      1     'b0       
-#   stop_error_out       integral      1     'b0       
-#   p_data_out           integral      8     'b11100000
-# -----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 15360000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# ------------------------------------------------
+# Name                   Type          Size  Value
+# ------------------------------------------------
+# <unnamed>              uart_rx_item  -     @1043
+#   s_data_in            integral      8     'b0  
+#   par_en_in            integral      1     'b1  
+#   par_typ_in           integral      1     'b0  
+#   insert_parity_error  integral      1     'b0  
+#   insert_stop_error    integral      1     'b1  
+#   data_valid_out       integral      1     'b1  
+#   parity_error_out     integral      1     'b0  
+#   stop_error_out       integral      1     'b1  
+#   p_data_out           integral      8     'b0  
+# ------------------------------------------------
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 15200000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#          8 :
-# --------------------------------------------------
-# Name                   Type          Size  Value  
-# --------------------------------------------------
-# m_item                 uart_rx_item  -     @844   
-#   s_data_in            integral      8     'b10000
-#   par_en_in            integral      1     'b1    
-#   par_typ_in           integral      1     'b1    
-#   insert_parity_error  integral      1     'b0    
-#   insert_stop_error    integral      1     'b0    
-#   data_valid_out       integral      1     'b0    
-#   parity_error_out     integral      1     'b0    
-#   stop_error_out       integral      1     'b0    
-#   p_data_out           integral      8     'b10000
-# --------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 17280000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# ------------------------------------------------
+# Name                   Type          Size  Value
+# ------------------------------------------------
+# <unnamed>              uart_rx_item  -     @1063
+#   s_data_in            integral      8     'b0  
+#   par_en_in            integral      1     'b1  
+#   par_typ_in           integral      1     'b1  
+#   insert_parity_error  integral      1     'b1  
+#   insert_stop_error    integral      1     'b1  
+#   data_valid_out       integral      1     'b1  
+#   parity_error_out     integral      1     'b1  
+#   stop_error_out       integral      1     'b1  
+#   p_data_out           integral      8     'b0  
+# ------------------------------------------------
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 17120000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#          9 :
-# ---------------------------------------------------
-# Name                   Type          Size  Value   
-# ---------------------------------------------------
-# m_item                 uart_rx_item  -     @844    
-#   s_data_in            integral      8     'b101100
-#   par_en_in            integral      1     'b1     
-#   par_typ_in           integral      1     'b1     
-#   insert_parity_error  integral      1     'b0     
-#   insert_stop_error    integral      1     'b0     
-#   data_valid_out       integral      1     'b0     
-#   parity_error_out     integral      1     'b0     
-#   stop_error_out       integral      1     'b0     
-#   p_data_out           integral      8     'b101100
-# ---------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 19040000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# ------------------------------------------------
+# Name                   Type          Size  Value
+# ------------------------------------------------
+# <unnamed>              uart_rx_item  -     @1083
+#   s_data_in            integral      8     'b0  
+#   par_en_in            integral      1     'b1  
+#   par_typ_in           integral      1     'b1  
+#   insert_parity_error  integral      1     'b1  
+#   insert_stop_error    integral      1     'b1  
+#   data_valid_out       integral      1     'b1  
+#   parity_error_out     integral      1     'b1  
+#   stop_error_out       integral      1     'b1  
+#   p_data_out           integral      8     'b0  
+# ------------------------------------------------
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 19040000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#         10 :
 # -----------------------------------------------------
 # Name                   Type          Size  Value     
 # -----------------------------------------------------
-# m_item                 uart_rx_item  -     @844      
-#   s_data_in            integral      8     'b11010100
+# <unnamed>              uart_rx_item  -     @1103     
+#   s_data_in            integral      8     'b11111111
 #   par_en_in            integral      1     'b0       
 #   par_typ_in           integral      1     'b0       
 #   insert_parity_error  integral      1     'b0       
@@ -282,143 +284,143 @@
 #   data_valid_out       integral      1     'b1       
 #   parity_error_out     integral      1     'b0       
 #   stop_error_out       integral      1     'b0       
-#   p_data_out           integral      8     'b11010100
+#   p_data_out           integral      8     'b11111111
 # -----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 20960000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 20800000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#         11 :
+# ------------------------------------------------
+# Name                   Type          Size  Value
+# ------------------------------------------------
+# <unnamed>              uart_rx_item  -     @1123
+#   s_data_in            integral      8     'b0  
+#   par_en_in            integral      1     'b1  
+#   par_typ_in           integral      1     'b1  
+#   insert_parity_error  integral      1     'b1  
+#   insert_stop_error    integral      1     'b0  
+#   data_valid_out       integral      1     'b1  
+#   parity_error_out     integral      1     'b1  
+#   stop_error_out       integral      1     'b0  
+#   p_data_out           integral      8     'b0  
+# ------------------------------------------------
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 22720000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# OUTPUT#         12 :
 # -----------------------------------------------------
 # Name                   Type          Size  Value     
 # -----------------------------------------------------
-# m_item                 uart_rx_item  -     @844      
-#   s_data_in            integral      8     'b11111101
+# <unnamed>              uart_rx_item  -     @1139     
+#   s_data_in            integral      8     'b11111111
 #   par_en_in            integral      1     'b1       
-#   par_typ_in           integral      1     'b1       
-#   insert_parity_error  integral      1     'b0       
+#   par_typ_in           integral      1     'b0       
+#   insert_parity_error  integral      1     'b1       
 #   insert_stop_error    integral      1     'b0       
-#   data_valid_out       integral      1     'b0       
-#   parity_error_out     integral      1     'b0       
+#   data_valid_out       integral      1     'b1       
+#   parity_error_out     integral      1     'b1       
 #   stop_error_out       integral      1     'b0       
-#   p_data_out           integral      8     'b11111101
+#   p_data_out           integral      8     'b11111111
 # -----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 22880000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
-# OUTPUT#         12 :
-# -------------------------------------------------
-# Name                   Type          Size  Value 
-# -------------------------------------------------
-# m_item                 uart_rx_item  -     @844  
-#   s_data_in            integral      8     'b1110
-#   par_en_in            integral      1     'b1   
-#   par_typ_in           integral      1     'b0   
-#   insert_parity_error  integral      1     'b0   
-#   insert_stop_error    integral      1     'b0   
-#   data_valid_out       integral      1     'b0   
-#   parity_error_out     integral      1     'b0   
-#   stop_error_out       integral      1     'b0   
-#   p_data_out           integral      8     'b1110
-# -------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 24800000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 24640000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#         13 :
 # -----------------------------------------------------
 # Name                   Type          Size  Value     
 # -----------------------------------------------------
-# m_item                 uart_rx_item  -     @844      
-#   s_data_in            integral      8     'b10001000
+# <unnamed>              uart_rx_item  -     @1159     
+#   s_data_in            integral      8     'b11111111
 #   par_en_in            integral      1     'b1       
 #   par_typ_in           integral      1     'b1       
+#   insert_parity_error  integral      1     'b1       
+#   insert_stop_error    integral      1     'b0       
+#   data_valid_out       integral      1     'b1       
+#   parity_error_out     integral      1     'b1       
+#   stop_error_out       integral      1     'b0       
+#   p_data_out           integral      8     'b11111111
+# -----------------------------------------------------
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 26560000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# OUTPUT#         14 :
+# ------------------------------------------------
+# Name                   Type          Size  Value
+# ------------------------------------------------
+# <unnamed>              uart_rx_item  -     @1179
+#   s_data_in            integral      8     'b0  
+#   par_en_in            integral      1     'b0  
+#   par_typ_in           integral      1     'b0  
+#   insert_parity_error  integral      1     'b0  
+#   insert_stop_error    integral      1     'b0  
+#   data_valid_out       integral      1     'b1  
+#   parity_error_out     integral      1     'b0  
+#   stop_error_out       integral      1     'b0  
+#   p_data_out           integral      8     'b0  
+# ------------------------------------------------
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 28320000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# OUTPUT#         15 :
+# -----------------------------------------------------
+# Name                   Type          Size  Value     
+# -----------------------------------------------------
+# <unnamed>              uart_rx_item  -     @1199     
+#   s_data_in            integral      8     'b11111111
+#   par_en_in            integral      1     'b1       
+#   par_typ_in           integral      1     'b0       
 #   insert_parity_error  integral      1     'b0       
 #   insert_stop_error    integral      1     'b0       
-#   data_valid_out       integral      1     'b0       
+#   data_valid_out       integral      1     'b1       
 #   parity_error_out     integral      1     'b0       
 #   stop_error_out       integral      1     'b0       
-#   p_data_out           integral      8     'b10001000
+#   p_data_out           integral      8     'b11111111
 # -----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 26560000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
-# OUTPUT#         14 :
-# ----------------------------------------------------
-# Name                   Type          Size  Value    
-# ----------------------------------------------------
-# m_item                 uart_rx_item  -     @844     
-#   s_data_in            integral      8     'b1110110
-#   par_en_in            integral      1     'b0      
-#   par_typ_in           integral      1     'b0      
-#   insert_parity_error  integral      1     'b0      
-#   insert_stop_error    integral      1     'b0      
-#   data_valid_out       integral      1     'b1      
-#   parity_error_out     integral      1     'b0      
-#   stop_error_out       integral      1     'b0      
-#   p_data_out           integral      8     'b1110110
-# ----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 28480000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
-# OUTPUT#         15 :
-# --------------------------------------------------
-# Name                   Type          Size  Value  
-# --------------------------------------------------
-# m_item                 uart_rx_item  -     @844   
-#   s_data_in            integral      8     'b10001
-#   par_en_in            integral      1     'b1    
-#   par_typ_in           integral      1     'b0    
-#   insert_parity_error  integral      1     'b0    
-#   insert_stop_error    integral      1     'b0    
-#   data_valid_out       integral      1     'b0    
-#   parity_error_out     integral      1     'b0    
-#   stop_error_out       integral      1     'b0    
-#   p_data_out           integral      8     'b10001
-# --------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 30240000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 30240000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#         16 :
-# ----------------------------------------------------
-# Name                   Type          Size  Value    
-# ----------------------------------------------------
-# m_item                 uart_rx_item  -     @844     
-#   s_data_in            integral      8     'b1111000
-#   par_en_in            integral      1     'b0      
-#   par_typ_in           integral      1     'b1      
-#   insert_parity_error  integral      1     'b0      
-#   insert_stop_error    integral      1     'b0      
-#   data_valid_out       integral      1     'b1      
-#   parity_error_out     integral      1     'b0      
-#   stop_error_out       integral      1     'b0      
-#   p_data_out           integral      8     'b1111000
-# ----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 32160000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# ------------------------------------------------
+# Name                   Type          Size  Value
+# ------------------------------------------------
+# <unnamed>              uart_rx_item  -     @1215
+#   s_data_in            integral      8     'b0  
+#   par_en_in            integral      1     'b0  
+#   par_typ_in           integral      1     'b1  
+#   insert_parity_error  integral      1     'b0  
+#   insert_stop_error    integral      1     'b0  
+#   data_valid_out       integral      1     'b1  
+#   parity_error_out     integral      1     'b0  
+#   stop_error_out       integral      1     'b0  
+#   p_data_out           integral      8     'b0  
+# ------------------------------------------------
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 32000000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#         17 :
 # -----------------------------------------------------
 # Name                   Type          Size  Value     
 # -----------------------------------------------------
-# m_item                 uart_rx_item  -     @844      
-#   s_data_in            integral      8     'b11101111
+# <unnamed>              uart_rx_item  -     @1235     
+#   s_data_in            integral      8     'b11111111
 #   par_en_in            integral      1     'b1       
 #   par_typ_in           integral      1     'b1       
-#   insert_parity_error  integral      1     'b0       
+#   insert_parity_error  integral      1     'b1       
 #   insert_stop_error    integral      1     'b0       
-#   data_valid_out       integral      1     'b0       
-#   parity_error_out     integral      1     'b0       
+#   data_valid_out       integral      1     'b1       
+#   parity_error_out     integral      1     'b1       
 #   stop_error_out       integral      1     'b0       
-#   p_data_out           integral      8     'b11101111
+#   p_data_out           integral      8     'b11111111
 # -----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 34080000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 33920000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#         18 :
 # -----------------------------------------------------
 # Name                   Type          Size  Value     
 # -----------------------------------------------------
-# m_item                 uart_rx_item  -     @844      
-#   s_data_in            integral      8     'b10100010
+# <unnamed>              uart_rx_item  -     @1251     
+#   s_data_in            integral      8     'b11111111
 #   par_en_in            integral      1     'b1       
 #   par_typ_in           integral      1     'b0       
 #   insert_parity_error  integral      1     'b0       
-#   insert_stop_error    integral      1     'b0       
-#   data_valid_out       integral      1     'b0       
+#   insert_stop_error    integral      1     'b1       
+#   data_valid_out       integral      1     'b1       
 #   parity_error_out     integral      1     'b0       
-#   stop_error_out       integral      1     'b0       
-#   p_data_out           integral      8     'b10100010
+#   stop_error_out       integral      1     'b1       
+#   p_data_out           integral      8     'b11111111
 # -----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 35840000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 35840000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#         19 :
 # -----------------------------------------------------
 # Name                   Type          Size  Value     
 # -----------------------------------------------------
-# m_item                 uart_rx_item  -     @844      
-#   s_data_in            integral      8     'b11000101
+# <unnamed>              uart_rx_item  -     @1271     
+#   s_data_in            integral      8     'b11111111
 #   par_en_in            integral      1     'b0       
 #   par_typ_in           integral      1     'b0       
 #   insert_parity_error  integral      1     'b0       
@@ -426,191 +428,159 @@
 #   data_valid_out       integral      1     'b1       
 #   parity_error_out     integral      1     'b0       
 #   stop_error_out       integral      1     'b0       
-#   p_data_out           integral      8     'b11000101
+#   p_data_out           integral      8     'b11111111
 # -----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 37760000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 37600000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#         20 :
 # ------------------------------------------------
 # Name                   Type          Size  Value
 # ------------------------------------------------
-# m_item                 uart_rx_item  -     @844 
-#   s_data_in            integral      8     'b10 
+# <unnamed>              uart_rx_item  -     @1291
+#   s_data_in            integral      8     'b0  
 #   par_en_in            integral      1     'b1  
 #   par_typ_in           integral      1     'b1  
 #   insert_parity_error  integral      1     'b0  
-#   insert_stop_error    integral      1     'b0  
-#   data_valid_out       integral      1     'b0  
+#   insert_stop_error    integral      1     'b1  
+#   data_valid_out       integral      1     'b1  
 #   parity_error_out     integral      1     'b0  
-#   stop_error_out       integral      1     'b0  
-#   p_data_out           integral      8     'b10 
+#   stop_error_out       integral      1     'b1  
+#   p_data_out           integral      8     'b0  
 # ------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 39680000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 39520000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#         21 :
 # -----------------------------------------------------
 # Name                   Type          Size  Value     
 # -----------------------------------------------------
-# m_item                 uart_rx_item  -     @844      
-#   s_data_in            integral      8     'b10001001
+# <unnamed>              uart_rx_item  -     @1307     
+#   s_data_in            integral      8     'b11111111
 #   par_en_in            integral      1     'b1       
 #   par_typ_in           integral      1     'b1       
-#   insert_parity_error  integral      1     'b0       
-#   insert_stop_error    integral      1     'b0       
-#   data_valid_out       integral      1     'b0       
-#   parity_error_out     integral      1     'b0       
-#   stop_error_out       integral      1     'b0       
-#   p_data_out           integral      8     'b10001001
-# -----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 41440000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
-# OUTPUT#         22 :
-# -----------------------------------------------------
-# Name                   Type          Size  Value     
-# -----------------------------------------------------
-# m_item                 uart_rx_item  -     @844      
-#   s_data_in            integral      8     'b11011101
-#   par_en_in            integral      1     'b0       
-#   par_typ_in           integral      1     'b0       
 #   insert_parity_error  integral      1     'b0       
 #   insert_stop_error    integral      1     'b0       
 #   data_valid_out       integral      1     'b1       
 #   parity_error_out     integral      1     'b0       
 #   stop_error_out       integral      1     'b0       
-#   p_data_out           integral      8     'b11011101
+#   p_data_out           integral      8     'b11111111
 # -----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 43360000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 41440000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# OUTPUT#         22 :
+# ------------------------------------------------
+# Name                   Type          Size  Value
+# ------------------------------------------------
+# <unnamed>              uart_rx_item  -     @1327
+#   s_data_in            integral      8     'b0  
+#   par_en_in            integral      1     'b0  
+#   par_typ_in           integral      1     'b0  
+#   insert_parity_error  integral      1     'b0  
+#   insert_stop_error    integral      1     'b0  
+#   data_valid_out       integral      1     'b1  
+#   parity_error_out     integral      1     'b0  
+#   stop_error_out       integral      1     'b0  
+#   p_data_out           integral      8     'b0  
+# ------------------------------------------------
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 43200000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#         23 :
-# ----------------------------------------------------
-# Name                   Type          Size  Value    
-# ----------------------------------------------------
-# m_item                 uart_rx_item  -     @844     
-#   s_data_in            integral      8     'b1110011
-#   par_en_in            integral      1     'b1      
-#   par_typ_in           integral      1     'b1      
-#   insert_parity_error  integral      1     'b0      
-#   insert_stop_error    integral      1     'b0      
-#   data_valid_out       integral      1     'b0      
-#   parity_error_out     integral      1     'b0      
-#   stop_error_out       integral      1     'b0      
-#   p_data_out           integral      8     'b1110011
-# ----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 45280000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# ------------------------------------------------
+# Name                   Type          Size  Value
+# ------------------------------------------------
+# <unnamed>              uart_rx_item  -     @1347
+#   s_data_in            integral      8     'b0  
+#   par_en_in            integral      1     'b1  
+#   par_typ_in           integral      1     'b1  
+#   insert_parity_error  integral      1     'b1  
+#   insert_stop_error    integral      1     'b0  
+#   data_valid_out       integral      1     'b1  
+#   parity_error_out     integral      1     'b1  
+#   stop_error_out       integral      1     'b0  
+#   p_data_out           integral      8     'b0  
+# ------------------------------------------------
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 45120000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#         24 :
 # -----------------------------------------------------
 # Name                   Type          Size  Value     
 # -----------------------------------------------------
-# m_item                 uart_rx_item  -     @844      
-#   s_data_in            integral      8     'b10101011
+# <unnamed>              uart_rx_item  -     @1363     
+#   s_data_in            integral      8     'b11111111
 #   par_en_in            integral      1     'b1       
-#   par_typ_in           integral      1     'b1       
-#   insert_parity_error  integral      1     'b0       
-#   insert_stop_error    integral      1     'b0       
-#   data_valid_out       integral      1     'b0       
-#   parity_error_out     integral      1     'b0       
-#   stop_error_out       integral      1     'b0       
-#   p_data_out           integral      8     'b10101011
-# -----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 47040000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
-# OUTPUT#         25 :
-# -----------------------------------------------------
-# Name                   Type          Size  Value     
-# -----------------------------------------------------
-# m_item                 uart_rx_item  -     @844      
-#   s_data_in            integral      8     'b10011100
-#   par_en_in            integral      1     'b0       
 #   par_typ_in           integral      1     'b1       
 #   insert_parity_error  integral      1     'b0       
 #   insert_stop_error    integral      1     'b0       
 #   data_valid_out       integral      1     'b1       
 #   parity_error_out     integral      1     'b0       
 #   stop_error_out       integral      1     'b0       
-#   p_data_out           integral      8     'b10011100
+#   p_data_out           integral      8     'b11111111
 # -----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 48960000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 47040000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# OUTPUT#         25 :
+# ------------------------------------------------
+# Name                   Type          Size  Value
+# ------------------------------------------------
+# <unnamed>              uart_rx_item  -     @1383
+#   s_data_in            integral      8     'b0  
+#   par_en_in            integral      1     'b0  
+#   par_typ_in           integral      1     'b1  
+#   insert_parity_error  integral      1     'b0  
+#   insert_stop_error    integral      1     'b0  
+#   data_valid_out       integral      1     'b1  
+#   parity_error_out     integral      1     'b0  
+#   stop_error_out       integral      1     'b0  
+#   p_data_out           integral      8     'b0  
+# ------------------------------------------------
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 48800000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#         26 :
 # -----------------------------------------------------
 # Name                   Type          Size  Value     
 # -----------------------------------------------------
-# m_item                 uart_rx_item  -     @844      
-#   s_data_in            integral      8     'b11001100
+# <unnamed>              uart_rx_item  -     @1403     
+#   s_data_in            integral      8     'b11111111
 #   par_en_in            integral      1     'b1       
 #   par_typ_in           integral      1     'b0       
-#   insert_parity_error  integral      1     'b0       
-#   insert_stop_error    integral      1     'b0       
-#   data_valid_out       integral      1     'b0       
-#   parity_error_out     integral      1     'b0       
-#   stop_error_out       integral      1     'b0       
-#   p_data_out           integral      8     'b11001100
+#   insert_parity_error  integral      1     'b1       
+#   insert_stop_error    integral      1     'b1       
+#   data_valid_out       integral      1     'b1       
+#   parity_error_out     integral      1     'b1       
+#   stop_error_out       integral      1     'b1       
+#   p_data_out           integral      8     'b11111111
 # -----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 50880000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 50720000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#         27 :
-# ----------------------------------------------------
-# Name                   Type          Size  Value    
-# ----------------------------------------------------
-# m_item                 uart_rx_item  -     @844     
-#   s_data_in            integral      8     'b1111101
-#   par_en_in            integral      1     'b1      
-#   par_typ_in           integral      1     'b0      
-#   insert_parity_error  integral      1     'b0      
-#   insert_stop_error    integral      1     'b0      
-#   data_valid_out       integral      1     'b0      
-#   parity_error_out     integral      1     'b0      
-#   stop_error_out       integral      1     'b0      
-#   p_data_out           integral      8     'b1111101
-# ----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 52800000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# ------------------------------------------------
+# Name                   Type          Size  Value
+# ------------------------------------------------
+# <unnamed>              uart_rx_item  -     @1419
+#   s_data_in            integral      8     'b0  
+#   par_en_in            integral      1     'b1  
+#   par_typ_in           integral      1     'b0  
+#   insert_parity_error  integral      1     'b0  
+#   insert_stop_error    integral      1     'b1  
+#   data_valid_out       integral      1     'b1  
+#   parity_error_out     integral      1     'b0  
+#   stop_error_out       integral      1     'b1  
+#   p_data_out           integral      8     'b0  
+# ------------------------------------------------
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 52640000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#         28 :
 # -----------------------------------------------------
 # Name                   Type          Size  Value     
 # -----------------------------------------------------
-# m_item                 uart_rx_item  -     @844      
-#   s_data_in            integral      8     'b10000111
+# <unnamed>              uart_rx_item  -     @1439     
+#   s_data_in            integral      8     'b11111111
 #   par_en_in            integral      1     'b1       
 #   par_typ_in           integral      1     'b1       
-#   insert_parity_error  integral      1     'b0       
+#   insert_parity_error  integral      1     'b1       
 #   insert_stop_error    integral      1     'b0       
-#   data_valid_out       integral      1     'b0       
-#   parity_error_out     integral      1     'b0       
+#   data_valid_out       integral      1     'b1       
+#   parity_error_out     integral      1     'b1       
 #   stop_error_out       integral      1     'b0       
-#   p_data_out           integral      8     'b10000111
+#   p_data_out           integral      8     'b11111111
 # -----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 54560000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 54560000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#         29 :
-# --------------------------------------------------
-# Name                   Type          Size  Value  
-# --------------------------------------------------
-# m_item                 uart_rx_item  -     @844   
-#   s_data_in            integral      8     'b11100
-#   par_en_in            integral      1     'b0    
-#   par_typ_in           integral      1     'b0    
-#   insert_parity_error  integral      1     'b0    
-#   insert_stop_error    integral      1     'b0    
-#   data_valid_out       integral      1     'b1    
-#   parity_error_out     integral      1     'b0    
-#   stop_error_out       integral      1     'b0    
-#   p_data_out           integral      8     'b11100
-# --------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 56480000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
-# OUTPUT#         30 :
-# ---------------------------------------------------
-# Name                   Type          Size  Value   
-# ---------------------------------------------------
-# m_item                 uart_rx_item  -     @844    
-#   s_data_in            integral      8     'b111101
-#   par_en_in            integral      1     'b1     
-#   par_typ_in           integral      1     'b0     
-#   insert_parity_error  integral      1     'b0     
-#   insert_stop_error    integral      1     'b0     
-#   data_valid_out       integral      1     'b0     
-#   parity_error_out     integral      1     'b0     
-#   stop_error_out       integral      1     'b0     
-#   p_data_out           integral      8     'b111101
-# ---------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 58240000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
-# OUTPUT#         31 :
 # -----------------------------------------------------
 # Name                   Type          Size  Value     
 # -----------------------------------------------------
-# m_item                 uart_rx_item  -     @844      
-#   s_data_in            integral      8     'b11100011
+# <unnamed>              uart_rx_item  -     @1459     
+#   s_data_in            integral      8     'b11111111
 #   par_en_in            integral      1     'b0       
 #   par_typ_in           integral      1     'b0       
 #   insert_parity_error  integral      1     'b0       
@@ -618,191 +588,223 @@
 #   data_valid_out       integral      1     'b1       
 #   parity_error_out     integral      1     'b0       
 #   stop_error_out       integral      1     'b0       
-#   p_data_out           integral      8     'b11100011
+#   p_data_out           integral      8     'b11111111
 # -----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 60160000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 56320000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# OUTPUT#         30 :
+# -----------------------------------------------------
+# Name                   Type          Size  Value     
+# -----------------------------------------------------
+# <unnamed>              uart_rx_item  -     @1479     
+#   s_data_in            integral      8     'b11111111
+#   par_en_in            integral      1     'b1       
+#   par_typ_in           integral      1     'b0       
+#   insert_parity_error  integral      1     'b0       
+#   insert_stop_error    integral      1     'b1       
+#   data_valid_out       integral      1     'b1       
+#   parity_error_out     integral      1     'b0       
+#   stop_error_out       integral      1     'b1       
+#   p_data_out           integral      8     'b11111111
+# -----------------------------------------------------
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 58240000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# OUTPUT#         31 :
+# ------------------------------------------------
+# Name                   Type          Size  Value
+# ------------------------------------------------
+# <unnamed>              uart_rx_item  -     @1495
+#   s_data_in            integral      8     'b0  
+#   par_en_in            integral      1     'b0  
+#   par_typ_in           integral      1     'b0  
+#   insert_parity_error  integral      1     'b0  
+#   insert_stop_error    integral      1     'b0  
+#   data_valid_out       integral      1     'b1  
+#   parity_error_out     integral      1     'b0  
+#   stop_error_out       integral      1     'b0  
+#   p_data_out           integral      8     'b0  
+# ------------------------------------------------
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 60000000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#         32 :
 # -----------------------------------------------------
 # Name                   Type          Size  Value     
 # -----------------------------------------------------
-# m_item                 uart_rx_item  -     @844      
-#   s_data_in            integral      8     'b10111101
+# <unnamed>              uart_rx_item  -     @1515     
+#   s_data_in            integral      8     'b11111111
 #   par_en_in            integral      1     'b1       
 #   par_typ_in           integral      1     'b1       
-#   insert_parity_error  integral      1     'b0       
-#   insert_stop_error    integral      1     'b0       
-#   data_valid_out       integral      1     'b0       
-#   parity_error_out     integral      1     'b0       
-#   stop_error_out       integral      1     'b0       
-#   p_data_out           integral      8     'b10111101
+#   insert_parity_error  integral      1     'b1       
+#   insert_stop_error    integral      1     'b1       
+#   data_valid_out       integral      1     'b1       
+#   parity_error_out     integral      1     'b1       
+#   stop_error_out       integral      1     'b1       
+#   p_data_out           integral      8     'b11111111
 # -----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 61920000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 61920000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#         33 :
-# ----------------------------------------------------
-# Name                   Type          Size  Value    
-# ----------------------------------------------------
-# m_item                 uart_rx_item  -     @844     
-#   s_data_in            integral      8     'b1101010
-#   par_en_in            integral      1     'b0      
-#   par_typ_in           integral      1     'b0      
-#   insert_parity_error  integral      1     'b0      
-#   insert_stop_error    integral      1     'b0      
-#   data_valid_out       integral      1     'b1      
-#   parity_error_out     integral      1     'b0      
-#   stop_error_out       integral      1     'b0      
-#   p_data_out           integral      8     'b1101010
-# ----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 63680000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# ------------------------------------------------
+# Name                   Type          Size  Value
+# ------------------------------------------------
+# <unnamed>              uart_rx_item  -     @1531
+#   s_data_in            integral      8     'b0  
+#   par_en_in            integral      1     'b0  
+#   par_typ_in           integral      1     'b0  
+#   insert_parity_error  integral      1     'b0  
+#   insert_stop_error    integral      1     'b0  
+#   data_valid_out       integral      1     'b1  
+#   parity_error_out     integral      1     'b0  
+#   stop_error_out       integral      1     'b0  
+#   p_data_out           integral      8     'b0  
+# ------------------------------------------------
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 63680000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#         34 :
-# ---------------------------------------------------
-# Name                   Type          Size  Value   
-# ---------------------------------------------------
-# m_item                 uart_rx_item  -     @844    
-#   s_data_in            integral      8     'b111001
-#   par_en_in            integral      1     'b0     
-#   par_typ_in           integral      1     'b1     
-#   insert_parity_error  integral      1     'b0     
-#   insert_stop_error    integral      1     'b0     
-#   data_valid_out       integral      1     'b1     
-#   parity_error_out     integral      1     'b0     
-#   stop_error_out       integral      1     'b0     
-#   p_data_out           integral      8     'b111001
-# ---------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 65600000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
-# OUTPUT#         35 :
 # -----------------------------------------------------
 # Name                   Type          Size  Value     
 # -----------------------------------------------------
-# m_item                 uart_rx_item  -     @844      
-#   s_data_in            integral      8     'b10011010
-#   par_en_in            integral      1     'b1       
-#   par_typ_in           integral      1     'b0       
-#   insert_parity_error  integral      1     'b0       
-#   insert_stop_error    integral      1     'b0       
-#   data_valid_out       integral      1     'b0       
-#   parity_error_out     integral      1     'b0       
-#   stop_error_out       integral      1     'b0       
-#   p_data_out           integral      8     'b10011010
-# -----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 67520000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
-# OUTPUT#         36 :
-# ----------------------------------------------------
-# Name                   Type          Size  Value    
-# ----------------------------------------------------
-# m_item                 uart_rx_item  -     @844     
-#   s_data_in            integral      8     'b1011111
-#   par_en_in            integral      1     'b1      
-#   par_typ_in           integral      1     'b0      
-#   insert_parity_error  integral      1     'b0      
-#   insert_stop_error    integral      1     'b0      
-#   data_valid_out       integral      1     'b0      
-#   parity_error_out     integral      1     'b0      
-#   stop_error_out       integral      1     'b0      
-#   p_data_out           integral      8     'b1011111
-# ----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 69440000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
-# OUTPUT#         37 :
-# -----------------------------------------------------
-# Name                   Type          Size  Value     
-# -----------------------------------------------------
-# m_item                 uart_rx_item  -     @844      
-#   s_data_in            integral      8     'b10100011
-#   par_en_in            integral      1     'b1       
+# <unnamed>              uart_rx_item  -     @1551     
+#   s_data_in            integral      8     'b11111111
+#   par_en_in            integral      1     'b0       
 #   par_typ_in           integral      1     'b1       
 #   insert_parity_error  integral      1     'b0       
 #   insert_stop_error    integral      1     'b0       
-#   data_valid_out       integral      1     'b0       
+#   data_valid_out       integral      1     'b1       
 #   parity_error_out     integral      1     'b0       
 #   stop_error_out       integral      1     'b0       
-#   p_data_out           integral      8     'b10100011
+#   p_data_out           integral      8     'b11111111
 # -----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 71360000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 65440000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# OUTPUT#         35 :
+# ------------------------------------------------
+# Name                   Type          Size  Value
+# ------------------------------------------------
+# <unnamed>              uart_rx_item  -     @1567
+#   s_data_in            integral      8     'b0  
+#   par_en_in            integral      1     'b1  
+#   par_typ_in           integral      1     'b0  
+#   insert_parity_error  integral      1     'b1  
+#   insert_stop_error    integral      1     'b1  
+#   data_valid_out       integral      1     'b1  
+#   parity_error_out     integral      1     'b1  
+#   stop_error_out       integral      1     'b1  
+#   p_data_out           integral      8     'b0  
+# ------------------------------------------------
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 67360000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# OUTPUT#         36 :
+# ------------------------------------------------
+# Name                   Type          Size  Value
+# ------------------------------------------------
+# <unnamed>              uart_rx_item  -     @1583
+#   s_data_in            integral      8     'b0  
+#   par_en_in            integral      1     'b1  
+#   par_typ_in           integral      1     'b0  
+#   insert_parity_error  integral      1     'b1  
+#   insert_stop_error    integral      1     'b1  
+#   data_valid_out       integral      1     'b1  
+#   parity_error_out     integral      1     'b1  
+#   stop_error_out       integral      1     'b1  
+#   p_data_out           integral      8     'b0  
+# ------------------------------------------------
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 69280000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# OUTPUT#         37 :
+# ------------------------------------------------
+# Name                   Type          Size  Value
+# ------------------------------------------------
+# <unnamed>              uart_rx_item  -     @1603
+#   s_data_in            integral      8     'b0  
+#   par_en_in            integral      1     'b1  
+#   par_typ_in           integral      1     'b1  
+#   insert_parity_error  integral      1     'b1  
+#   insert_stop_error    integral      1     'b0  
+#   data_valid_out       integral      1     'b1  
+#   parity_error_out     integral      1     'b1  
+#   stop_error_out       integral      1     'b0  
+#   p_data_out           integral      8     'b0  
+# ------------------------------------------------
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 71200000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#         38 :
 # ------------------------------------------------
 # Name                   Type          Size  Value
 # ------------------------------------------------
-# m_item                 uart_rx_item  -     @844 
-#   s_data_in            integral      8     'b110
+# <unnamed>              uart_rx_item  -     @1623
+#   s_data_in            integral      8     'b0  
 #   par_en_in            integral      1     'b1  
+#   par_typ_in           integral      1     'b1  
+#   insert_parity_error  integral      1     'b1  
+#   insert_stop_error    integral      1     'b0  
+#   data_valid_out       integral      1     'b1  
+#   parity_error_out     integral      1     'b1  
+#   stop_error_out       integral      1     'b0  
+#   p_data_out           integral      8     'b0  
+# ------------------------------------------------
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 73120000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# OUTPUT#         39 :
+# ------------------------------------------------
+# Name                   Type          Size  Value
+# ------------------------------------------------
+# <unnamed>              uart_rx_item  -     @1643
+#   s_data_in            integral      8     'b0  
+#   par_en_in            integral      1     'b0  
+#   par_typ_in           integral      1     'b0  
+#   insert_parity_error  integral      1     'b0  
+#   insert_stop_error    integral      1     'b0  
+#   data_valid_out       integral      1     'b1  
+#   parity_error_out     integral      1     'b0  
+#   stop_error_out       integral      1     'b0  
+#   p_data_out           integral      8     'b0  
+# ------------------------------------------------
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 74880000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# OUTPUT#         40 :
+# ------------------------------------------------
+# Name                   Type          Size  Value
+# ------------------------------------------------
+# <unnamed>              uart_rx_item  -     @1663
+#   s_data_in            integral      8     'b0  
+#   par_en_in            integral      1     'b1  
+#   par_typ_in           integral      1     'b1  
+#   insert_parity_error  integral      1     'b1  
+#   insert_stop_error    integral      1     'b1  
+#   data_valid_out       integral      1     'b1  
+#   parity_error_out     integral      1     'b1  
+#   stop_error_out       integral      1     'b1  
+#   p_data_out           integral      8     'b0  
+# ------------------------------------------------
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 76800000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# OUTPUT#         41 :
+# ------------------------------------------------
+# Name                   Type          Size  Value
+# ------------------------------------------------
+# <unnamed>              uart_rx_item  -     @1679
+#   s_data_in            integral      8     'b0  
+#   par_en_in            integral      1     'b1  
+#   par_typ_in           integral      1     'b0  
+#   insert_parity_error  integral      1     'b0  
+#   insert_stop_error    integral      1     'b1  
+#   data_valid_out       integral      1     'b1  
+#   parity_error_out     integral      1     'b0  
+#   stop_error_out       integral      1     'b1  
+#   p_data_out           integral      8     'b0  
+# ------------------------------------------------
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 78720000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# OUTPUT#         42 :
+# ------------------------------------------------
+# Name                   Type          Size  Value
+# ------------------------------------------------
+# <unnamed>              uart_rx_item  -     @1699
+#   s_data_in            integral      8     'b0  
+#   par_en_in            integral      1     'b0  
 #   par_typ_in           integral      1     'b1  
 #   insert_parity_error  integral      1     'b0  
 #   insert_stop_error    integral      1     'b0  
-#   data_valid_out       integral      1     'b0  
+#   data_valid_out       integral      1     'b1  
 #   parity_error_out     integral      1     'b0  
 #   stop_error_out       integral      1     'b0  
-#   p_data_out           integral      8     'b110
+#   p_data_out           integral      8     'b0  
 # ------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 73120000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
-# OUTPUT#         39 :
-# -------------------------------------------------
-# Name                   Type          Size  Value 
-# -------------------------------------------------
-# m_item                 uart_rx_item  -     @844  
-#   s_data_in            integral      8     'b1111
-#   par_en_in            integral      1     'b0   
-#   par_typ_in           integral      1     'b0   
-#   insert_parity_error  integral      1     'b0   
-#   insert_stop_error    integral      1     'b0   
-#   data_valid_out       integral      1     'b1   
-#   parity_error_out     integral      1     'b0   
-#   stop_error_out       integral      1     'b0   
-#   p_data_out           integral      8     'b1111
-# -------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 75040000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
-# OUTPUT#         40 :
-# -----------------------------------------------------
-# Name                   Type          Size  Value     
-# -----------------------------------------------------
-# m_item                 uart_rx_item  -     @844      
-#   s_data_in            integral      8     'b11010111
-#   par_en_in            integral      1     'b1       
-#   par_typ_in           integral      1     'b1       
-#   insert_parity_error  integral      1     'b0       
-#   insert_stop_error    integral      1     'b0       
-#   data_valid_out       integral      1     'b0       
-#   parity_error_out     integral      1     'b0       
-#   stop_error_out       integral      1     'b0       
-#   p_data_out           integral      8     'b11010111
-# -----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 76960000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
-# OUTPUT#         41 :
-# -----------------------------------------------------
-# Name                   Type          Size  Value     
-# -----------------------------------------------------
-# m_item                 uart_rx_item  -     @844      
-#   s_data_in            integral      8     'b10110001
-#   par_en_in            integral      1     'b1       
-#   par_typ_in           integral      1     'b0       
-#   insert_parity_error  integral      1     'b0       
-#   insert_stop_error    integral      1     'b0       
-#   data_valid_out       integral      1     'b0       
-#   parity_error_out     integral      1     'b0       
-#   stop_error_out       integral      1     'b0       
-#   p_data_out           integral      8     'b10110001
-# -----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 78720000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
-# OUTPUT#         42 :
-# -----------------------------------------------------
-# Name                   Type          Size  Value     
-# -----------------------------------------------------
-# m_item                 uart_rx_item  -     @844      
-#   s_data_in            integral      8     'b10000101
-#   par_en_in            integral      1     'b0       
-#   par_typ_in           integral      1     'b1       
-#   insert_parity_error  integral      1     'b0       
-#   insert_stop_error    integral      1     'b0       
-#   data_valid_out       integral      1     'b1       
-#   parity_error_out     integral      1     'b0       
-#   stop_error_out       integral      1     'b0       
-#   p_data_out           integral      8     'b10000101
-# -----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 80480000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 80480000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#         43 :
 # -----------------------------------------------------
 # Name                   Type          Size  Value     
 # -----------------------------------------------------
-# m_item                 uart_rx_item  -     @844      
-#   s_data_in            integral      8     'b11111001
+# <unnamed>              uart_rx_item  -     @1719     
+#   s_data_in            integral      8     'b11111111
 #   par_en_in            integral      1     'b0       
 #   par_typ_in           integral      1     'b1       
 #   insert_parity_error  integral      1     'b0       
@@ -810,31 +812,31 @@
 #   data_valid_out       integral      1     'b1       
 #   parity_error_out     integral      1     'b0       
 #   stop_error_out       integral      1     'b0       
-#   p_data_out           integral      8     'b11111001
+#   p_data_out           integral      8     'b11111111
 # -----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 82400000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 82240000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#         44 :
 # -----------------------------------------------------
 # Name                   Type          Size  Value     
 # -----------------------------------------------------
-# m_item                 uart_rx_item  -     @844      
-#   s_data_in            integral      8     'b11010101
+# <unnamed>              uart_rx_item  -     @1735     
+#   s_data_in            integral      8     'b11111111
 #   par_en_in            integral      1     'b1       
 #   par_typ_in           integral      1     'b1       
 #   insert_parity_error  integral      1     'b0       
-#   insert_stop_error    integral      1     'b0       
-#   data_valid_out       integral      1     'b0       
+#   insert_stop_error    integral      1     'b1       
+#   data_valid_out       integral      1     'b1       
 #   parity_error_out     integral      1     'b0       
-#   stop_error_out       integral      1     'b0       
-#   p_data_out           integral      8     'b11010101
+#   stop_error_out       integral      1     'b1       
+#   p_data_out           integral      8     'b11111111
 # -----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 84160000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 84160000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#         45 :
 # -----------------------------------------------------
 # Name                   Type          Size  Value     
 # -----------------------------------------------------
-# m_item                 uart_rx_item  -     @844      
-#   s_data_in            integral      8     'b11010011
+# <unnamed>              uart_rx_item  -     @1751     
+#   s_data_in            integral      8     'b11111111
 #   par_en_in            integral      1     'b0       
 #   par_typ_in           integral      1     'b0       
 #   insert_parity_error  integral      1     'b0       
@@ -842,15 +844,15 @@
 #   data_valid_out       integral      1     'b1       
 #   parity_error_out     integral      1     'b0       
 #   stop_error_out       integral      1     'b0       
-#   p_data_out           integral      8     'b11010011
+#   p_data_out           integral      8     'b11111111
 # -----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 85920000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 85920000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#         46 :
 # -----------------------------------------------------
 # Name                   Type          Size  Value     
 # -----------------------------------------------------
-# m_item                 uart_rx_item  -     @844      
-#   s_data_in            integral      8     'b11000001
+# <unnamed>              uart_rx_item  -     @1771     
+#   s_data_in            integral      8     'b11111111
 #   par_en_in            integral      1     'b0       
 #   par_typ_in           integral      1     'b0       
 #   insert_parity_error  integral      1     'b0       
@@ -858,79 +860,79 @@
 #   data_valid_out       integral      1     'b1       
 #   parity_error_out     integral      1     'b0       
 #   stop_error_out       integral      1     'b0       
-#   p_data_out           integral      8     'b11000001
+#   p_data_out           integral      8     'b11111111
 # -----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 87680000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 87680000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#         47 :
-# ----------------------------------------------------
-# Name                   Type          Size  Value    
-# ----------------------------------------------------
-# m_item                 uart_rx_item  -     @844     
-#   s_data_in            integral      8     'b1001110
-#   par_en_in            integral      1     'b0      
-#   par_typ_in           integral      1     'b1      
-#   insert_parity_error  integral      1     'b0      
-#   insert_stop_error    integral      1     'b0      
-#   data_valid_out       integral      1     'b1      
-#   parity_error_out     integral      1     'b0      
-#   stop_error_out       integral      1     'b0      
-#   p_data_out           integral      8     'b1001110
-# ----------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 89600000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# -----------------------------------------------------
+# Name                   Type          Size  Value     
+# -----------------------------------------------------
+# <unnamed>              uart_rx_item  -     @1787     
+#   s_data_in            integral      8     'b11111111
+#   par_en_in            integral      1     'b0       
+#   par_typ_in           integral      1     'b1       
+#   insert_parity_error  integral      1     'b0       
+#   insert_stop_error    integral      1     'b0       
+#   data_valid_out       integral      1     'b1       
+#   parity_error_out     integral      1     'b0       
+#   stop_error_out       integral      1     'b0       
+#   p_data_out           integral      8     'b11111111
+# -----------------------------------------------------
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 89440000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#         48 :
-# ---------------------------------------------------
-# Name                   Type          Size  Value   
-# ---------------------------------------------------
-# m_item                 uart_rx_item  -     @844    
-#   s_data_in            integral      8     'b111100
-#   par_en_in            integral      1     'b1     
-#   par_typ_in           integral      1     'b1     
-#   insert_parity_error  integral      1     'b0     
-#   insert_stop_error    integral      1     'b0     
-#   data_valid_out       integral      1     'b0     
-#   parity_error_out     integral      1     'b0     
-#   stop_error_out       integral      1     'b0     
-#   p_data_out           integral      8     'b111100
-# ---------------------------------------------------
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 91360000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# ------------------------------------------------
+# Name                   Type          Size  Value
+# ------------------------------------------------
+# <unnamed>              uart_rx_item  -     @1803
+#   s_data_in            integral      8     'b0  
+#   par_en_in            integral      1     'b1  
+#   par_typ_in           integral      1     'b1  
+#   insert_parity_error  integral      1     'b1  
+#   insert_stop_error    integral      1     'b1  
+#   data_valid_out       integral      1     'b1  
+#   parity_error_out     integral      1     'b1  
+#   stop_error_out       integral      1     'b1  
+#   p_data_out           integral      8     'b0  
+# ------------------------------------------------
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 91360000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#         49 :
-# ----------------------------------------------------
-# Name                   Type          Size  Value    
-# ----------------------------------------------------
-# m_item                 uart_rx_item  -     @844     
-#   s_data_in            integral      8     'b1110001
-#   par_en_in            integral      1     'b0      
-#   par_typ_in           integral      1     'b1      
-#   insert_parity_error  integral      1     'b0      
-#   insert_stop_error    integral      1     'b0      
-#   data_valid_out       integral      1     'b1      
-#   parity_error_out     integral      1     'b0      
-#   stop_error_out       integral      1     'b0      
-#   p_data_out           integral      8     'b1110001
-# ----------------------------------------------------
+# -----------------------------------------------------
+# Name                   Type          Size  Value     
+# -----------------------------------------------------
+# <unnamed>              uart_rx_item  -     @1819     
+#   s_data_in            integral      8     'b11111111
+#   par_en_in            integral      1     'b0       
+#   par_typ_in           integral      1     'b1       
+#   insert_parity_error  integral      1     'b0       
+#   insert_stop_error    integral      1     'b0       
+#   data_valid_out       integral      1     'b1       
+#   parity_error_out     integral      1     'b0       
+#   stop_error_out       integral      1     'b0       
+#   p_data_out           integral      8     'b11111111
+# -----------------------------------------------------
 # UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_input_test.svh(22) @ 92800000: uvm_test_top [uvm_test_top] uart_rx_input_test_vseq complete
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(49) @ 93120000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(73) @ 93120000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] 
 # OUTPUT#         50 :
-# ---------------------------------------------------
-# Name                   Type          Size  Value   
-# ---------------------------------------------------
-# m_item                 uart_rx_item  -     @844    
-#   s_data_in            integral      8     'b110111
-#   par_en_in            integral      1     'b0     
-#   par_typ_in           integral      1     'b0     
-#   insert_parity_error  integral      1     'b0     
-#   insert_stop_error    integral      1     'b0     
-#   data_valid_out       integral      1     'b1     
-#   parity_error_out     integral      1     'b0     
-#   stop_error_out       integral      1     'b0     
-#   p_data_out           integral      8     'b110111
-# ---------------------------------------------------
+# ------------------------------------------------
+# Name                   Type          Size  Value
+# ------------------------------------------------
+# <unnamed>              uart_rx_item  -     @1839
+#   s_data_in            integral      8     'b0  
+#   par_en_in            integral      1     'b0  
+#   par_typ_in           integral      1     'b0  
+#   insert_parity_error  integral      1     'b0  
+#   insert_stop_error    integral      1     'b0  
+#   data_valid_out       integral      1     'b1  
+#   parity_error_out     integral      1     'b0  
+#   stop_error_out       integral      1     'b0  
+#   p_data_out           integral      8     'b0  
+# ------------------------------------------------
 # UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_input_test.svh(25) @ 93200000: uvm_test_top [uvm_test_top] Ending test
 # UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 93200000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(78) @ 93200000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] outputs_count 50
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(79) @ 93200000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] stop_error_count 0
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(80) @ 93200000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] parity_error_count 0
-# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(81) @ 93200000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] data_error_count 0
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(102) @ 93200000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] outputs_count 50
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(103) @ 93200000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] stop_error_count 0
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(104) @ 93200000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] parity_error_count 0
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_checkers/uart_rx_scoreboard.svh(105) @ 93200000: uvm_test_top.m_uart_rx_env.m_scoreboard [uvm_test_top.m_uart_rx_env.m_scoreboard] data_error_count 0
 # 
 # --- UVM Report Summary ---
 # 

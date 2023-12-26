@@ -9,8 +9,8 @@ module UART_RX # ( parameter DATA_WIDTH = 8 , PRESCALE_WIDTH = 5 )
  input   wire                          parity_enable,
  input   wire                          parity_type,
  output  wire   [DATA_WIDTH-1:0]       P_DATA, 
- output  wire                          par_err ,
- output  wire                          stp_err ,
+ output  wire                          par_err_out ,
+ output  wire                          stp_err_out ,
  output  wire                          data_valid
 );
 
@@ -26,6 +26,8 @@ wire                   strt_chk_en;
 wire                   strt_glitch;
 wire                   sampled_bit;
 wire                   dat_samp_en;
+wire				   par_err;
+wire				   stp_err;
 
  
 uart_rx_fsm # ( .DATA_WIDTH(8)) U0_uart_fsm (
@@ -38,6 +40,8 @@ uart_rx_fsm # ( .DATA_WIDTH(8)) U0_uart_fsm (
 .strt_glitch(strt_glitch),
 .par_err(par_err),
 .stp_err(stp_err), 
+.par_err_out(par_err_out),
+.stp_err_out(stp_err_out),
 .strt_chk_en(strt_chk_en),
 .edge_bit_en(edge_bit_en), 
 .deser_en(deser_en), 

@@ -18,6 +18,7 @@ task uart_rx_input_seq::body();
     //communicate with driver
     start_item(input_item);
     // randomize
-    Randomize_Uart_RX_item: assert (input_item.randomize() with {insert_parity_error==0; insert_stop_error==0;});
+    //Randomize_Uart_RX_item: assert (input_item.randomize() with {insert_parity_error==0; insert_stop_error==0;});
+    Randomize_Uart_RX_item: assert (input_item.randomize() with {s_data_in dist {'h00:=5,'hff:=5};});
     finish_item(input_item);
 endtask

@@ -34,8 +34,8 @@ dut (.CLK(rx_clk),
      //dut outputs to interface
      .P_DATA(UART_RX_IF.p_data_out),
      .data_valid(UART_RX_IF.data_valid_out),
-     .par_err(UART_RX_IF.parity_error_out),
-     .stp_err(UART_RX_IF.stop_error_out)
+     .par_err_out(UART_RX_IF.parity_error_out),
+     .stp_err_out(UART_RX_IF.stop_error_out)
      );
 //***************************************************//
 
