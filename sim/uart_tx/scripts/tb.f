@@ -22,3 +22,5 @@ D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_tb_top.sv
 +incdir+D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib/
 +incdir+D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib/
 +incdir+D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_checkers/
+
++define+def_uart_DATA_WIDTH=8

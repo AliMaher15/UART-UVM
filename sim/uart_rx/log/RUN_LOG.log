@@ -1,5 +1,5 @@
 # QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
-# Start time: 18:29:11 on Dec 26,2023
+# Start time: 20:18:34 on Dec 27,2023
 # vlog -reportprogress 300 -f scripts/dut.f 
 # -- Compiling module data_sampling
 # -- Compiling module deserializer
@@ -12,182 +12,10 @@
 # 
 # Top level modules:
 # 	UART_RX
-# End time: 18:29:11 on Dec 26,2023, Elapsed time: 0:00:00
+# End time: 20:18:34 on Dec 27,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
-# Start time: 18:29:11 on Dec 26,2023
-# vlog -reportprogress 300 -f scripts/tb.f 
-# -- Compiling package uart_rx_global_params_pkg
-# -- Compiling package uart_rx_item_pkg
-# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
-# ** Note: (vlog-2286) D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_item/uart_rx_item_pkg.sv(4): Using implicit +incdir+C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
-# -- Importing package uart_rx_global_params_pkg
-# -- Compiling package uart_rx_agent_pkg
-# -- Importing package uart_rx_item_pkg
-# -- Compiling interface uart_rx_if
-# -- Compiling package uart_rx_usertypes_pkg
-# -- Importing package uart_rx_agent_pkg
-# -- Compiling package uart_rx_tb_pkg
-# -- Importing package uart_rx_usertypes_pkg
-# -- Compiling package uart_rx_seq_pkg
-# -- Importing package uart_rx_tb_pkg
-# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/seq_lib/uart_rx_seq_pkg.sv(13)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/seq_lib//uart_rx_input_seq.svh(22): near "}": syntax error, unexpected '}', expecting ';'.
-# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/seq_lib/uart_rx_seq_pkg.sv(13)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/seq_lib//uart_rx_input_seq.svh(24): near "endtask": syntax error, unexpected endtask.
-# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib/uart_rx_test_pkg.sv(13)
-# ** while parsing macro expansion: 'uvm_object_utils' starting at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_vseq_base.svh(2)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_vseq_base.svh(2): near "return": syntax error, unexpected "SystemVerilog keyword 'return'".
-# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib/uart_rx_test_pkg.sv(13)
-# ** while parsing macro expansion: 'uvm_object_utils' starting at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_vseq_base.svh(2)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_vseq_base.svh(2): near "begin": syntax error, unexpected begin.
-# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib/uart_rx_test_pkg.sv(13)
-# ** while parsing macro expansion: 'uvm_object_utils' starting at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_vseq_base.svh(2)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_vseq_base.svh(2): near "return": syntax error, unexpected "SystemVerilog keyword 'return'".
-# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib/uart_rx_test_pkg.sv(13)
-# ** while parsing macro expansion: 'uvm_object_utils' starting at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_vseq_base.svh(2)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_vseq_base.svh(2): (vlog-2951) Invalid use of assignment expression in conditional constraint.
-# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib/uart_rx_test_pkg.sv(13)
-# ** while parsing macro expansion: 'uvm_declare_p_sequencer' starting at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_vseq_base.svh(3)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_vseq_base.svh(3): near "begin": syntax error, unexpected begin.
-# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib/uart_rx_test_pkg.sv(13)
-# ** while parsing macro expansion: 'uvm_declare_p_sequencer' starting at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_vseq_base.svh(3)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_vseq_base.svh(3): (vlog-2951) Invalid use of assignment expression in conditional constraint.
-# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib/uart_rx_test_pkg.sv(13)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_vseq_base.svh(10): near "new": syntax error, unexpected "SystemVerilog keyword 'new'".
-# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib/uart_rx_test_pkg.sv(13)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_vseq_base.svh(16): near "begin": syntax error, unexpected begin.
-# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib/uart_rx_test_pkg.sv(13)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_vseq_base.svh(24): near "=": syntax error, unexpected '=', expecting ++ or --.
-# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib/uart_rx_test_pkg.sv(13)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_vseq_base.svh(25): near "=": syntax error, unexpected '=', expecting ++ or --.
-# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib/uart_rx_test_pkg.sv(14)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_base_test.svh(15): near "new": syntax error, unexpected "SystemVerilog keyword 'new'".
-# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib/uart_rx_test_pkg.sv(14)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_base_test.svh(24): near "#": syntax error, unexpected '#'.
-# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib/uart_rx_test_pkg.sv(14)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_base_test.svh(32): near "=": syntax error, unexpected '=', expecting ++ or --.
-# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib/uart_rx_test_pkg.sv(14)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_base_test.svh(42): near "=": syntax error, unexpected '=', expecting ++ or --.
-# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib/uart_rx_test_pkg.sv(14)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_base_test.svh(45): near "=": syntax error, unexpected '=', expecting ++ or --.
-# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib/uart_rx_test_pkg.sv(14)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_base_test.svh(50): near "=": syntax error, unexpected '=', expecting ++ or --.
-# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib/uart_rx_test_pkg.sv(14)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_base_test.svh(51): near "=": syntax error, unexpected '=', expecting ++ or --.
-# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib/uart_rx_test_pkg.sv(14)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_base_test.svh(57): near "begin": syntax error, unexpected begin.
-# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib/uart_rx_test_pkg.sv(14)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_base_test.svh(60): near "end": syntax error, unexpected end.
-# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib/uart_rx_test_pkg.sv(16)
-# ** while parsing macro expansion: 'uvm_object_utils' starting at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_input_test_vseq.svh(3)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_input_test_vseq.svh(3): near "return": syntax error, unexpected "SystemVerilog keyword 'return'".
-# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib/uart_rx_test_pkg.sv(16)
-# ** while parsing macro expansion: 'uvm_object_utils' starting at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_input_test_vseq.svh(3)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_input_test_vseq.svh(3): near "begin": syntax error, unexpected begin.
-# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib/uart_rx_test_pkg.sv(16)
-# ** while parsing macro expansion: 'uvm_object_utils' starting at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_input_test_vseq.svh(3)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_input_test_vseq.svh(3): near "return": syntax error, unexpected "SystemVerilog keyword 'return'".
-# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib/uart_rx_test_pkg.sv(16)
-# ** while parsing macro expansion: 'uvm_object_utils' starting at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_input_test_vseq.svh(3)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_input_test_vseq.svh(3): (vlog-2951) Invalid use of assignment expression in conditional constraint.
-# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib/uart_rx_test_pkg.sv(16)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_input_test_vseq.svh(8): near "new": syntax error, unexpected "SystemVerilog keyword 'new'".
-# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib/uart_rx_test_pkg.sv(16)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_input_test_vseq.svh(17): near "repeat": syntax error, unexpected repeat.
-# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib/uart_rx_test_pkg.sv(17)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_input_test.svh(5): near "new": syntax error, unexpected "SystemVerilog keyword 'new'".
-# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib/uart_rx_test_pkg.sv(17)
-# ** while parsing macro expansion: 'uvm_info' starting at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_input_test.svh(18)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_input_test.svh(18): near "begin": syntax error, unexpected begin.
-# ** Error: (vlog-13069) D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_tb_top.sv(58): near "end": syntax error, unexpected end.
-# End time: 18:29:12 on Dec 26,2023, Elapsed time: 0:00:01
-# Errors: 30, Warnings: 0
-# ** Error: C:/questasim64_2021.1/win64/vlog failed.
-# Error in macro ./scripts/run.do line 17
-# C:/questasim64_2021.1/win64/vlog failed.
-#     while executing
-# "vlog -f scripts/tb.f"
-do scripts/run.do
-# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
-# Start time: 18:29:31 on Dec 26,2023
-# vlog -reportprogress 300 -f scripts/dut.f 
-# -- Compiling module data_sampling
-# -- Compiling module deserializer
-# -- Compiling module edge_bit_counter
-# -- Compiling module par_chk
-# -- Compiling module strt_chk
-# -- Compiling module stp_chk
-# -- Compiling module uart_rx_fsm
-# -- Compiling module UART_RX
-# 
-# Top level modules:
-# 	UART_RX
-# End time: 18:29:31 on Dec 26,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
-# Start time: 18:29:31 on Dec 26,2023
-# vlog -reportprogress 300 -f scripts/tb.f 
-# -- Compiling package uart_rx_global_params_pkg
-# -- Compiling package uart_rx_item_pkg
-# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
-# ** Note: (vlog-2286) D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_item/uart_rx_item_pkg.sv(4): Using implicit +incdir+C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
-# -- Importing package uart_rx_global_params_pkg
-# -- Compiling package uart_rx_agent_pkg
-# -- Importing package uart_rx_item_pkg
-# -- Compiling interface uart_rx_if
-# -- Compiling package uart_rx_usertypes_pkg
-# -- Importing package uart_rx_agent_pkg
-# -- Compiling package uart_rx_tb_pkg
-# -- Importing package uart_rx_usertypes_pkg
-# -- Compiling package uart_rx_seq_pkg
-# -- Importing package uart_rx_tb_pkg
-# ** Error (suppressible): D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/seq_lib//uart_rx_input_seq.svh(22): (vlog-7027) The name ('s_data') was not found in the current scope.  Please verify the spelling of the name 's_data'.
-# -- Compiling package uart_rx_test_pkg
-# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib/uart_rx_test_pkg.sv(10): (vlog-13006) Could not find the package (uart_rx_seq_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
-# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib/uart_rx_test_pkg.sv(13)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_vseq_base.svh(23): (vlog-2400) Identifier ('uart_rx_base_seq') found where a type or type identifier is required.
-# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib/uart_rx_test_pkg.sv(16)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_input_test_vseq.svh(5): Invalid type 'uart_rx_input_seq'. Please check the type of the variable 'urx_in_seq_h'.
-# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib/uart_rx_test_pkg.sv(16)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_input_test_vseq.svh(13): (vlog-2730) Undefined variable: 'urx_in_seq_h'.
-# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib/uart_rx_test_pkg.sv(16)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_input_test_vseq.svh(13): (vlog-2164) Class or package 'uart_rx_input_seq' not found.
-# ** Error: ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib/uart_rx_test_pkg.sv(16)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_input_test_vseq.svh(13): (vlog-2730) Undefined variable: 'uart_rx_input_seq'.
-# ** Error: (vlog-13069) ** while parsing file included at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib/uart_rx_test_pkg.sv(16)
-# ** at D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/test_lib//uart_rx_input_test_vseq.svh(13): near "::": syntax error, unexpected ::, expecting ';'.
-# -- Compiling module uart_rx_assertions
-# -- Compiling interface uart_rx_system_if
-# -- Compiling module uart_rx_tb_top
-# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_tb_top.sv(10): (vlog-13006) Could not find the package (uart_rx_seq_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
-# ** Error: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_rx_tb/uart_rx_tb_top.sv(11): (vlog-13006) Could not find the package (uart_rx_test_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
-# End time: 18:29:31 on Dec 26,2023, Elapsed time: 0:00:00
-# Errors: 10, Warnings: 0
-# ** Error: C:/questasim64_2021.1/win64/vlog failed.
-# Error in macro ./scripts/run.do line 17
-# C:/questasim64_2021.1/win64/vlog failed.
-#     while executing
-# "vlog -f scripts/tb.f"
-do scripts/run.do
-# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
-# Start time: 18:29:51 on Dec 26,2023
-# vlog -reportprogress 300 -f scripts/dut.f 
-# -- Compiling module data_sampling
-# -- Compiling module deserializer
-# -- Compiling module edge_bit_counter
-# -- Compiling module par_chk
-# -- Compiling module strt_chk
-# -- Compiling module stp_chk
-# -- Compiling module uart_rx_fsm
-# -- Compiling module UART_RX
-# 
-# Top level modules:
-# 	UART_RX
-# End time: 18:29:51 on Dec 26,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
-# Start time: 18:29:51 on Dec 26,2023
+# Start time: 20:18:35 on Dec 27,2023
 # vlog -reportprogress 300 -f scripts/tb.f 
 # -- Compiling package uart_rx_global_params_pkg
 # -- Compiling package uart_rx_item_pkg
@@ -212,10 +40,10 @@ do scripts/run.do
 # 
 # Top level modules:
 # 	uart_rx_tb_top
-# End time: 18:29:52 on Dec 26,2023, Elapsed time: 0:00:01
+# End time: 20:18:36 on Dec 27,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vopt 2021.1 Compiler 2021.01 Jan 19 2021
-# Start time: 18:29:52 on Dec 26,2023
+# Start time: 20:18:37 on Dec 27,2023
 # vopt -reportprogress 300 uart_rx_tb_top -o top_opt -debugdb "+acc" "+cover=sbecf+UART_RX(rtl)." 
 # 
 # Top level modules:
@@ -279,5 +107,5 @@ do scripts/run.do
 # -- Optimizing interface uart_rx_if(fast)
 # -- Optimizing interface uart_rx_system_if(fast)
 # Optimized design name is top_opt
-# End time: 18:29:56 on Dec 26,2023, Elapsed time: 0:00:04
+# End time: 20:18:45 on Dec 27,2023, Elapsed time: 0:00:08
 # Errors: 0, Warnings: 0

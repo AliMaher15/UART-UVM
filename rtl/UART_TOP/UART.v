@@ -1,5 +1,4 @@
 module UART #(parameter DATA_WIDTH = 8,
-                        Counter_WIDTH = 4,
                         PRESCALE_WIDTH = 5  //4 or 8 or 16 or 32
              )
 (
@@ -16,24 +15,27 @@ module UART #(parameter DATA_WIDTH = 8,
  input   wire                          RX_IN_S  ,
  output  wire   [DATA_WIDTH-1:0]       RX_OUT_P , 
  output  wire                          RX_OUT_V ,
+ output  wire                          RX_OUT_PAR_ERR ,
+ output  wire                          RX_OUT_STP_ERR ,
  
- input   wire                          PAR_EN   ,
- input   wire                          PAR_TYP
+ input   wire                          TX_PAR_EN   ,
+ input   wire                          TX_PAR_TYP  ,
+ input   wire                          RX_PAR_EN   ,
+ input   wire                          RX_PAR_TYP
 );
 
-UART_TX #( .DATA_WIDTH(DATA_WIDTH), .Counter_WIDTH(Counter_WIDTH) ) U0_UART_TX (
+UART_TX #( .DATA_WIDTH(DATA_WIDTH)) U0_UART_TX (
 .RST(RST)           ,
 .CLK(TX_CLK)        ,
 .P_DATA(TX_IN_P)    ,
 .Data_Valid(TX_IN_V),
-.PAR_EN(PAR_EN)     ,
-.PAR_TYP(PAR_TYP)   ,
+.PAR_EN(TX_PAR_EN)     ,
+.PAR_TYP(TX_PAR_TYP)   ,
 .Busy(TX_OUT_B)     ,
 .TX_OUT(TX_OUT_S)
 );
 
 UART_RX #( .DATA_WIDTH(DATA_WIDTH), 
-           .BIT_COUNTER_WIDTH(Counter_WIDTH),
            .PRESCALE_WIDTH(PRESCALE_WIDTH)
          )
  U0_UART_RX (
@@ -41,10 +43,12 @@ UART_RX #( .DATA_WIDTH(DATA_WIDTH),
  .CLK(RX_CLK)         ,
  .RX_IN(RX_IN_S)      ,
  .Prescale(Prescale)  ,
- .PAR_EN(PAR_EN)      ,
- .PAR_TYP(PAR_TYP)    ,
+ .parity_enable(RX_PAR_EN)      ,
+ .parity_type(RX_PAR_TYP)    ,
  .P_DATA(RX_OUT_P)    ,
- .data_valid(RX_OUT_V)
+ .data_valid(RX_OUT_V),
+ .par_err_out(RX_OUT_PAR_ERR),
+ .stp_err_out(RX_OUT_STP_ERR)
  );
 
 endmodule
