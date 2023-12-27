@@ -61,16 +61,15 @@ end
 //***************** CLOCK ***************************//
 initial begin
     rx_clk = 1;
-    //prescale_tb = 'd4;
-    prescale_tb = 'b1000 ;
     forever begin  
         #(CLK_PERIOD/2);  rx_clk = ~rx_clk;
     end
 end
 initial begin
     tx_clk = 1;
+    prescale_tb = 'b1000 ;
     forever begin
-        #((CLK_PERIOD/2)*8);  tx_clk = ~tx_clk ;
+        #((CLK_PERIOD/2)*prescale_tb);  tx_clk = ~tx_clk ;
     end 
 end
 //***************************************************// 

@@ -18,6 +18,6 @@ task uart_tx_input_seq::body();
     //communicate with driver
     start_item(input_item);
     // randomize
-    Randomize_Uart_TX_item: assert (input_item.randomize());
+    Randomize_Uart_TX_item: assert (input_item.randomize() with {p_data dist {'h00:=5,'hff:=5};});
     finish_item(input_item);
 endtask

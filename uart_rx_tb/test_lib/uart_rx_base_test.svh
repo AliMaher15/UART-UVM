@@ -48,7 +48,6 @@ class uart_rx_base_test extends  uvm_test;
   
     function void set_seqs(uart_rx_vseq_base seq);
       seq.m_cfg = m_uart_rx_env_cfg;
-      seq.sys_if = sys_if;
     endfunction
   
     // Print Testbench structure and factory contents
