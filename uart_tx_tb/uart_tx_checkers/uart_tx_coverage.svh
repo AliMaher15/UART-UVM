@@ -1,7 +1,6 @@
 class uart_tx_coverage extends uvm_subscriber#(uart_tx_item);
     `uvm_component_utils(uart_tx_coverage)
-
-    //parameter data_width = 8;
+    
     /// inputs to dut
     bit [DATA_WIDTH-1:0] p_data;
     bit par_en;
