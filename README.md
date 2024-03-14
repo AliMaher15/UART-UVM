@@ -5,15 +5,15 @@
 #### Functional Coverage
 Covergroups codes snapshots:
 
-![cg_parity_configurations](https://github.com/AliMaher15/UART-UVM/blob/main/doc/uart_tx_cg1.PNG)
+![cg_parity_configurations](https://github.com/AliMaher15/UART-UVM/blob/main/doc/uart_tx_cg1.png)
 
-![cg_zeros_or_ones](https://github.com/AliMaher15/UART-UVM/blob/main/doc/uart_tx_cg2.PNG)
+![cg_zeros_or_ones](https://github.com/AliMaher15/UART-UVM/blob/main/doc/uart_tx_cg2.png)
 
 Covergroups Results:
 ![Functional Coverage Results](https://github.com/AliMaher15/UART-UVM/blob/main/sim/uart_tx/coverage/fun_coverage.txt)
 TOTAL COVERGROUP COVERAGE: 100.00%  COVERGROUP TYPES: 2
 
-![Functional Coverage Results Snapshot](https://github.com/AliMaher15/UART-UVM/blob/main/doc/uart_tx_cg_questa.PNG)
+![Functional Coverage Results Snapshot](https://github.com/AliMaher15/UART-UVM/blob/main/doc/uart_tx_cg_questa.png)
 
 #### Code Coverage
 Short Version:
