@@ -1,3 +1,26 @@
+proc run_test {testname} {
+
+    # Start a new Transcript File
+    transcript file log/$testname.log
+
+    # Start Simulation (choose your options)
+    vsim top_opt -c    -assertdebug    -debugDB     -fsmdebug    -coverage    +UVM_TESTNAME=$testname
+    set NoQuitOnFinish 1
+    onbreak {resume}
+    log /* -r
+    run -all
+
+    # Save Coverage Results in .ucdb file
+    coverage attribute -name TESTNAME -value $testname
+    coverage save coverage/$testname.ucdb
+
+    # Close Transcript File by making a new one
+    transcript file ()
+
+    # draw the dut pins in waveforms
+    do waves.do
+}
+
 #***************************************************#
 # Clean Work Library
 #***************************************************#
@@ -7,33 +30,28 @@ vlib work
 #***************************************************#
 # Start a new Transcript File
 #***************************************************#
-transcript file log/RUN_LOG.log
-# better make one for each test
+transcript file log/compile.log
 
 #***************************************************#
 # Compile RTL and TB files
 #***************************************************#
-vlog -f scripts/dut.f
-vlog -f scripts/tb.f
+do scripts/compile_dut.do
+do scripts/compile_tb.do 
 
 #***************************************************#
 # Optimizing Design with vopt
 #***************************************************#
-vopt uart_tx_tb_top -o top_opt -debugdb  +acc +cover=sbecf+UART_TX(rtl).
+vopt uart_tx_tb_top -o top_opt -debugdb  +acc +cover=sbecf
 
 #***************************************************#
-# Simulation of a Test
+# Simulation of Tests
 #***************************************************#
 
-#********************************** 1. Input TEST ***********************************#
-transcript file log/uart_tx_input_test.log
-vsim top_opt -c -assertdebug -debugDB -fsmdebug -coverage +UVM_TESTNAME=uart_tx_input_test
-set NoQuitOnFinish 1
-onbreak {resume}
-log /* -r
-run -all
-coverage attribute -name TESTNAME -value uart_tx_input_test
-coverage save coverage/uart_tx_input_test.ucdb
+run_test uart_tx_input_test
+run_test idle_reset_test
+run_test active_reset_test
+run_test state_transition_reset_test
+run_test state_transition_reset_test
 
 #***************************************************#
 # Close the Transcript file
@@ -41,20 +59,15 @@ coverage save coverage/uart_tx_input_test.ucdb
 transcript file ()
 
 #***************************************************#
-# draw the dut pins in waveforms
-#***************************************************#
-do waves.do
-
-#***************************************************#
 # save the coverage in text files
 #***************************************************#
 vcover merge  coverage/uart_tx.ucdb \
-              coverage/uart_tx_input_test.ucdb   
+              coverage/uart_tx_input_test.ucdb   \
+              coverage/idle_reset_test.ucdb   \
+              coverage/active_reset_test.ucdb  \
+              coverage/state_transition_reset_test.ucdb
               
-              
-vcover report coverage/uart_tx.ucdb -cvg -details -output coverage/fun_coverage.txt
-vcover report coverage/uart_tx.ucdb -details -assert  -output coverage/assertions.txt
-vcover report coverage/uart_tx.ucdb  -output coverage/code_coverage.txt
+do scripts/vcover.do
 
 
 #add schematic -full sim:/uart_tx_tb_top/dut

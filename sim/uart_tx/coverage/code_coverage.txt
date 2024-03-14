@@ -6,10 +6,10 @@ Coverage Report Summary Data by instance
 =================================================================================
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Branches                        21        19         2    90.47%
+    Branches                        21        20         1    95.23%
     FSM States                       5         5         0   100.00%
-    FSM Transitions                  9         6         3    66.66%
-    Statements                      38        33         5    86.84%
+    FSM Transitions                  9         9         0   100.00%
+    Statements                      38        38         0   100.00%
 
 =================================================================================
 === Instance: /uart_tx_tb_top/dut/U0_SERIALIZER
@@ -41,36 +41,6 @@ Coverage Report Summary Data by instance
     Branches                         7         6         1    85.71%
     Statements                       6         6         0   100.00%
 
-=================================================================================
-=== Instance: /uart_tx_tb_top/dut/uart_tx_sva
-=== Design Unit: work.uart_tx_assertions
-=================================================================================
-    Enabled Coverage              Bins      Hits    Misses  Coverage
-    ----------------              ----      ----    ------  --------
-    Assertions                       4         4         0   100.00%
 
-=================================================================================
-=== Instance: /uart_tx_tb_pkg
-=== Design Unit: work.uart_tx_tb_pkg
-=================================================================================
-    Enabled Coverage              Bins      Hits    Misses  Coverage
-    ----------------              ----      ----    ------  --------
-    Covergroups                      2        na        na   100.00%
-        Coverpoints/Crosses          4        na        na        na
-            Covergroup Bins         10        10         0   100.00%
-
-=================================================================================
-=== Instance: /uart_tx_seq_pkg
-=== Design Unit: work.uart_tx_seq_pkg
-=================================================================================
-    Enabled Coverage              Bins      Hits    Misses  Coverage
-    ----------------              ----      ----    ------  --------
-    Assertions                       1         1         0   100.00%
-
-
-TOTAL COVERGROUP COVERAGE: 100.00%  COVERGROUP TYPES: 2
-
-TOTAL ASSERTION COVERAGE: 100.00%  ASSERTIONS: 5
-
-Total Coverage By Instance (filtered view): 93.71%
+Total Coverage By Instance (filtered view): 99.12%
 

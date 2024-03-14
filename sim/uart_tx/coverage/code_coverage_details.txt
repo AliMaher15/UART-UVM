@@ -1,0 +1,361 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /uart_tx_tb_top/dut/U0_TX_FSM
+=== Design Unit: work.uart_tx_fsm
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        21        20         1    95.23%
+
+================================Branch Details================================
+
+Branch Coverage for instance /uart_tx_tb_top/dut/U0_TX_FSM
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File D:/Ali/Courses/Verification-Projects/UART-UVM/rtl/UART_TX/uart_tx_fsm.v
+------------------------------------IF Branch------------------------------------
+    30                                      3320     Count coming in to IF
+    30              1                         22     
+    34              1                       3298     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    43                                      3565     Count coming in to CASE
+    44              1                       1283     
+    54              1                        511     
+    57              1                       1015     
+    71              1                        247     
+    74              1                        505     
+    77              1                          4     
+Branch totals: 6 hits of 6 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    45                                      1283     Count coming in to IF
+    45              1                        510     
+    49              1                        773     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    58                                      1015     Count coming in to IF
+    58              1                        509     
+    62              1                        246     
+    66              1                        260     
+Branch totals: 3 hits of 3 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    91                                      2284     Count coming in to CASE
+    92              1                        514     
+    97              1                        510     
+    103             1                        509     
+    108             1                        246     
+    113             1                        505     
+                                         ***0***     All False Count
+Branch totals: 5 hits of 6 branches = 83.33%
+
+------------------------------------IF Branch------------------------------------
+    124                                     2808     Count coming in to IF
+    124             1                         22     
+    128             1                       2786     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+FSM Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    FSM States                       5         5         0   100.00%
+    FSM Transitions                  9         9         0   100.00%
+
+================================FSM Details================================
+
+FSM Coverage for instance /uart_tx_tb_top/dut/U0_TX_FSM --
+
+FSM_ID: current_state
+    Current State Object : current_state
+    ----------------------
+    State Value MapInfo :
+    ---------------------
+Line          State Name               Value
+----          ----------               -----
+  44                IDLE                   0
+  54           Start_bit                   1
+  57            ser_data                   3
+  74            Stop_bit                   6
+  71             par_bit                   2
+    Covered States :
+    ----------------
+                   State           Hit_count
+                   -----           ---------
+                    IDLE                1041          
+               Start_bit                 510          
+                ser_data                1018          
+                Stop_bit                 505          
+                 par_bit                 246          
+    Covered Transitions :
+    ---------------------
+Line            Trans_ID           Hit_count          Transition          
+----            --------           ---------          ----------          
+  47                   0                 510          IDLE -> Start_bit             
+  55                   1                 509          Start_bit -> ser_data          
+  32                   2                   1          Start_bit -> IDLE             
+  68                   3                 260          ser_data -> Stop_bit          
+  64                   4                 246          ser_data -> par_bit           
+  32                   5                   3          ser_data -> IDLE              
+  75                   6                 505          Stop_bit -> IDLE              
+  72                   7                 245          par_bit -> Stop_bit           
+  32                   8                   1          par_bit -> IDLE               
+
+
+    Summary                       Bins      Hits    Misses  Coverage
+    -------                       ----      ----    ------  --------
+        FSM States                   5         5         0   100.00%
+        FSM Transitions              9         9         0   100.00%
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      38        38         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /uart_tx_tb_top/dut/U0_TX_FSM --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File D:/Ali/Courses/Verification-Projects/UART-UVM/rtl/UART_TX/uart_tx_fsm.v
+    28              1                       3320     
+    32              1                         22     
+    36              1                       3298     
+    41              1                       3565     
+    47              1                        510     
+    51              1                        773     
+    55              1                        511     
+    60              1                        509     
+    64              1                        246     
+    68              1                        260     
+    72              1                        247     
+    75              1                        505     
+    78              1                          4     
+    84              1                       2284     
+    86              1                       2284     
+    87              1                       2284     
+    88              1                       2284     
+    89              1                       2284     
+    90              1                       2284     
+    93              1                        514     
+    94              1                        514     
+    95              1                        514     
+    98              1                        510     
+    99              1                        510     
+    100             1                        510     
+    101             1                        510     
+    104             1                        509     
+    105             1                        509     
+    106             1                        509     
+    109             1                        246     
+    110             1                        246     
+    111             1                        246     
+    114             1                        505     
+    115             1                        505     
+    116             1                        505     
+    122             1                       2808     
+    126             1                         22     
+    130             1                       2786     
+
+=================================================================================
+=== Instance: /uart_tx_tb_top/dut/U0_SERIALIZER
+=== Design Unit: work.Serializer
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         5         5         0   100.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /uart_tx_tb_top/dut/U0_SERIALIZER
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File D:/Ali/Courses/Verification-Projects/UART-UVM/rtl/UART_TX/Serializer.v
+------------------------------------IF Branch------------------------------------
+    18                                      6223     Count coming in to IF
+    18              1                       1664     
+    22              1                       4559     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    31                                      7835     Count coming in to IF
+    31              1                        297     
+    35              1                       4564     
+    39              1                       2974     
+Branch totals: 3 hits of 3 branches = 100.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       1         1         0   100.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /uart_tx_tb_top/dut/U0_SERIALIZER --
+
+  File D:/Ali/Courses/Verification-Projects/UART-UVM/rtl/UART_TX/Serializer.v
+----------------Focused Condition View-------------------
+Line       18 Item    1  (counter == 0)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+
+Expression Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      1         1         0   100.00%
+
+================================Expression Details================================
+
+Expression Coverage for instance /uart_tx_tb_top/dut/U0_SERIALIZER --
+
+  File D:/Ali/Courses/Verification-Projects/UART-UVM/rtl/UART_TX/Serializer.v
+----------------Focused Expression View-----------------
+Line       49 Item    1  (counter == 8)
+Expression totals: 1 of 1 input term covered = 100.00%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       8         8         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /uart_tx_tb_top/dut/U0_SERIALIZER --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File D:/Ali/Courses/Verification-Projects/UART-UVM/rtl/UART_TX/Serializer.v
+    16              1                       6223     
+    20              1                       1664     
+    24              1                       4559     
+    29              1                       7835     
+    33              1                        297     
+    37              1                       4564     
+    41              1                       2974     
+    49              1                       5081     
+
+=================================================================================
+=== Instance: /uart_tx_tb_top/dut/U0_PARITY
+=== Design Unit: work.parity_calc
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         5         5         0   100.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /uart_tx_tb_top/dut/U0_PARITY
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File D:/Ali/Courses/Verification-Projects/UART-UVM/rtl/UART_TX/parity_calc.v
+------------------------------------IF Branch------------------------------------
+    16                                      1502     Count coming in to IF
+    16              1                         22     
+    20              1                        509     
+                                             971     All False Count
+Branch totals: 3 hits of 3 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    23                                       509     Count coming in to IF
+    23              1                        239     
+    23              2                        270     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Expression Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      3         3         0   100.00%
+
+================================Expression Details================================
+
+Expression Coverage for instance /uart_tx_tb_top/dut/U0_PARITY --
+
+  File D:/Ali/Courses/Verification-Projects/UART-UVM/rtl/UART_TX/parity_calc.v
+-----------Focused Expression View (Bimodal)------------
+Line       23 Item    1  (PAR_TYP? ~^P_DATA: ^P_DATA)
+Expression totals: 3 of 3 input terms covered = 100.00%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       3         3         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /uart_tx_tb_top/dut/U0_PARITY --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File D:/Ali/Courses/Verification-Projects/UART-UVM/rtl/UART_TX/parity_calc.v
+    14              1                       1502     
+    18              1                         22     
+    23              1                        509     
+
+=================================================================================
+=== Instance: /uart_tx_tb_top/dut/U0_MUX
+=== Design Unit: work.mux
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         7         6         1    85.71%
+
+================================Branch Details================================
+
+Branch Coverage for instance /uart_tx_tb_top/dut/U0_MUX
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File D:/Ali/Courses/Verification-Projects/UART-UVM/rtl/UART_TX/mux.v
+------------------------------------IF Branch------------------------------------
+    18                                      3979     Count coming in to IF
+    18              1                         28     
+    22              1                       3951     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    24                                      3951     Count coming in to CASE
+    25              1                        509     
+    27              1                       1201     
+    29              1                       1996     
+    31              1                        245     
+                                         ***0***     All False Count
+Branch totals: 4 hits of 5 branches = 80.00%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       6         6         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /uart_tx_tb_top/dut/U0_MUX --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File D:/Ali/Courses/Verification-Projects/UART-UVM/rtl/UART_TX/mux.v
+    16              1                       3979     
+    20              1                         28     
+    25              1                        509     
+    27              1                       1201     
+    29              1                       1996     
+    31              1                        245     
+
+
+Total Coverage By Instance (filtered view): 99.12%
+

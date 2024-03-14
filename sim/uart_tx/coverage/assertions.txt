@@ -1,28 +1,31 @@
 Coverage Report by instance with details
 
 =================================================================================
-=== Instance: /uart_tx_tb_top/dut/uart_tx_sva
-=== Design Unit: work.uart_tx_assertions
+=== Instance: /uart_tx_tb_top/UART_TX_IF
+=== Design Unit: work.uart_tx_if
 =================================================================================
 
 Assertion Coverage:
-    Assertions                       4         4         0   100.00%
+    Assertions                       5         5         0   100.00%
 --------------------------------------------------------------------------------------------------------------------------------
 Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
                                                   Count        Count    Count      Count      Count       Count  Count          
 --------------------------------------------------------------------------------------------------------------------------------
-/uart_tx_tb_top/dut/uart_tx_sva/uart_tx_reset_assertion
-                     D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_assertions.sv(30)
-                                                        0          2          0          0          2          0           1 off
-/uart_tx_tb_top/dut/uart_tx_sva/data_valid_high_1_clk
-                     D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_assertions.sv(35)
-                                                        0        100       1382         24       1506          0           1 off
-/uart_tx_tb_top/dut/uart_tx_sva/s_data_high_during_idle
-                     D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_assertions.sv(38)
-                                                        0        437       1043         25       1506          1           2 off
-/uart_tx_tb_top/dut/uart_tx_sva/busy_high_if_data_valid
-                     D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_assertions.sv(41)
-                                                        0        100       1382         24       1506          0           1 off
+/uart_tx_tb_top/UART_TX_IF/uart_tx_reset_assertion
+                     D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_agent/uart_tx_if.sv(30)
+                                                        0         11          0          0         11          0           4 off
+/uart_tx_tb_top/UART_TX_IF/data_valid_high_1_clk
+                     D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_agent/uart_tx_if.sv(35)
+                                                        0        509       7024        287       7820          0           4 off
+/uart_tx_tb_top/UART_TX_IF/s_data_high_during_idle
+                     D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_agent/uart_tx_if.sv(38)
+                                                        0        504       7030        286       7820          0           4 off
+/uart_tx_tb_top/UART_TX_IF/start_bit_low
+                     D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_agent/uart_tx_if.sv(41)
+                                                        0        509       7025        286       7820          0           4 off
+/uart_tx_tb_top/UART_TX_IF/busy_high_if_data_valid
+                     D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_agent/uart_tx_if.sv(44)
+                                                        0        509       7024        287       7820          0           4 off
 
 =================================================================================
 === Instance: /uart_tx_seq_pkg
@@ -30,14 +33,35 @@ Name                 File(Line)                   Failure      Pass     Vacuous 
 =================================================================================
 
 Assertion Coverage:
-    Assertions                       1         1         0   100.00%
+    Assertions                       2         2         0   100.00%
 --------------------------------------------------------------------------------------------------------------------------------
 Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
                                                   Count        Count    Count      Count      Count       Count  Count          
 --------------------------------------------------------------------------------------------------------------------------------
 /uart_tx_seq_pkg/uart_tx_input_seq/body/Randomize_Uart_TX_item
                      D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib//uart_tx_input_seq.svh(21)
-                                                        0        100          0          0        100          0           0 off
+                                                        0        265          0          0        265          0           0 off
+/uart_tx_seq_pkg/uart_tx_input_constr_seq/body/Randomize_Uart_TX_item
+                     D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib//uart_tx_input_constr_seq.svh(21)
+                                                        0        250          0          0        250          0           0 off
+
+=================================================================================
+=== Instance: /uart_tx_test_pkg
+=== Design Unit: work.uart_tx_test_pkg
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       2         2         0   100.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/uart_tx_test_pkg/active_reset_test/main_phase/Randomize_reset_delay_time
+                     D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//active_reset_test.svh(26)
+                                                        0          1          0          0          1          0           0 off
+/uart_tx_test_pkg/state_transition_reset_test/main_phase/Randomize_reset_delay_time
+                     D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//state_transition_reset_test.svh(36)
+                                                        0          1          0          0          1          0           0 off
 
 
 ASSERTION RESULTS:
@@ -45,21 +69,33 @@ ASSERTION RESULTS:
 Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
                                                   Count        Count    Count      Count      Count       Count  Count          
 --------------------------------------------------------------------------------------------------------------------------------
-/uart_tx_tb_top/dut/uart_tx_sva/uart_tx_reset_assertion
-                     D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_assertions.sv(30)
-                                                        0          2          0          0          2          0           1 off
-/uart_tx_tb_top/dut/uart_tx_sva/data_valid_high_1_clk
-                     D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_assertions.sv(35)
-                                                        0        100       1382         24       1506          0           1 off
-/uart_tx_tb_top/dut/uart_tx_sva/s_data_high_during_idle
-                     D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_assertions.sv(38)
-                                                        0        437       1043         25       1506          1           2 off
-/uart_tx_tb_top/dut/uart_tx_sva/busy_high_if_data_valid
-                     D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_assertions.sv(41)
-                                                        0        100       1382         24       1506          0           1 off
+/uart_tx_tb_top/UART_TX_IF/uart_tx_reset_assertion
+                     D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_agent/uart_tx_if.sv(30)
+                                                        0         11          0          0         11          0           4 off
+/uart_tx_tb_top/UART_TX_IF/data_valid_high_1_clk
+                     D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_agent/uart_tx_if.sv(35)
+                                                        0        509       7024        287       7820          0           4 off
+/uart_tx_tb_top/UART_TX_IF/s_data_high_during_idle
+                     D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_agent/uart_tx_if.sv(38)
+                                                        0        504       7030        286       7820          0           4 off
+/uart_tx_tb_top/UART_TX_IF/start_bit_low
+                     D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_agent/uart_tx_if.sv(41)
+                                                        0        509       7025        286       7820          0           4 off
+/uart_tx_tb_top/UART_TX_IF/busy_high_if_data_valid
+                     D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/uart_tx_agent/uart_tx_if.sv(44)
+                                                        0        509       7024        287       7820          0           4 off
 /uart_tx_seq_pkg/uart_tx_input_seq/body/Randomize_Uart_TX_item
                      D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib//uart_tx_input_seq.svh(21)
-                                                        0        100          0          0        100          0           0 off
+                                                        0        265          0          0        265          0           0 off
+/uart_tx_seq_pkg/uart_tx_input_constr_seq/body/Randomize_Uart_TX_item
+                     D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/seq_lib//uart_tx_input_constr_seq.svh(21)
+                                                        0        250          0          0        250          0           0 off
+/uart_tx_test_pkg/active_reset_test/main_phase/Randomize_reset_delay_time
+                     D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//active_reset_test.svh(26)
+                                                        0          1          0          0          1          0           0 off
+/uart_tx_test_pkg/state_transition_reset_test/main_phase/Randomize_reset_delay_time
+                     D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//state_transition_reset_test.svh(36)
+                                                        0          1          0          0          1          0           0 off
 
 Total Coverage By Instance (filtered view): 100.00%
 

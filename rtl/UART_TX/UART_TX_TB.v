@@ -6,7 +6,7 @@ module UART_TX_TB();
 ////////////         TB Parameters         /////////////
 ////////////////////////////////////////////////////////
 parameter    clk_period = 5 ;
-parameter    DATA_WIDTH_TB = 9 ;
+parameter    DATA_WIDTH_TB = 4 ;
 integer      j ;
 
 ////////////////////////////////////////////////////////
@@ -117,13 +117,22 @@ $display("expected output frame is 001101\n");
 delay_periods(1) ;
 check_output(7'b0011011);
 
+delay_periods(2) ;
 
+$display("*************************");
+$display("****** TEST CASE 5.5 ******");
+$display("*************************");
+$display("Parity is enabled & Parity Type is odd");
+input_with_parity(1'b1, 4'b0010) ;  // PAR_TYP and P_DATA
+$display("input data is 4'b0010");
+$display("expected output frame is 0010001\n");
+delay_periods(1) ;
+check_output2(6'b001000);
 
 $display("*************************");
 $display("****** TEST CASE 6 ******");
 $display("*************************");
 $display("Try to put a valid data right after 1 idle cycle");
-delay_periods(1) ;
 input_with_parity(1'b1, 4'b1010) ;  // PAR_TYP and P_DATA
 $display("input data is 4'b1010");
 $display("expected output frame is 0010111\n");
@@ -252,5 +261,29 @@ task check_output ;
     end 
  end
 endtask
+
+task check_output2 ;
+  input [5:0] data ;
+  
+  integer i;
+  reg    [5:0]     tx_out;
+  
+  begin
+   for(i=5 ; i>-1 ; i=i-1)
+    begin
+     tx_out[i] = TX_OUT_TB;
+     delay_periods(1) ;     
+    end
+   $display(" TX_OUT=%b",tx_out);
+   if(tx_out == data)
+     begin
+      $display("\n    SUCCESS\n");
+     end
+    else
+     begin
+      $display("\n    FAILED\n");
+     end 
+  end
+ endtask
 
 endmodule

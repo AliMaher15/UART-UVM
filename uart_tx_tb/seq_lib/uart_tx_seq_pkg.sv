@@ -11,6 +11,7 @@ package uart_tx_seq_pkg ;
     `include "uart_tx_base_seq.svh"  
            
     `include "uart_tx_input_seq.svh"
+    `include "uart_tx_input_constr_seq.svh"
    
 
 endpackage : uart_tx_seq_pkg

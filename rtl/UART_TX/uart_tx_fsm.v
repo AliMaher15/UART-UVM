@@ -83,41 +83,39 @@ always @ (*)
 //output logic
 always @ (*)
  begin
-   par_calc_en = 1'b0 ;
-   case (current_state)
-   IDLE     :  begin
-                mux_sel   = 2'b01  ;
-                ser_en    = 1'b0   ;
-                Busy_c    = 1'b0   ;
-             end
-   Start_bit:  begin
-                mux_sel     = 2'b00 ;
-                ser_en      = 1'b1  ;
-                par_calc_en = 1'b1  ;
-                Busy_c      = 1'b1  ;
-             end
-   ser_data :  begin
-                mux_sel = 2'b10 ;
-                ser_en  = 1'b1  ;
-                Busy_c  = 1'b1  ;
-             end
-   par_bit  :  begin
-                mux_sel = 2'b11 ;
-                ser_en  = 1'b0  ;
-                Busy_c  = 1'b1  ;
-             end
-   Stop_bit :  begin
-                mux_sel = 2'b01 ;
-                ser_en  = 1'b0  ;
-                Busy_c  = 1'b1  ;
-             end
-   default :   begin
-                mux_sel     = 2'b01 ;
-                ser_en      = 1'b0  ;
-                par_calc_en = 1'b0  ;
-                Busy_c      = 1'b0  ;
-             end  
-   endcase   
+    par_calc_en = 1'b0 ;
+    mux_sel     = 2'b01 ;
+    ser_en      = 1'b0  ;
+    par_calc_en = 1'b0  ;
+    Busy_c      = 1'b0  ;
+    case (current_state)
+    IDLE     :  begin
+                  mux_sel   = 2'b01  ;
+                  ser_en    = 1'b0   ;
+                  Busy_c    = 1'b0   ;
+              end
+    Start_bit:  begin
+                  mux_sel     = 2'b00 ;
+                  ser_en      = 1'b1  ;
+                  par_calc_en = 1'b1  ;
+                  Busy_c      = 1'b1  ;
+              end
+    ser_data :  begin
+                  mux_sel = 2'b10 ;
+                  ser_en  = 1'b1  ;
+                  Busy_c  = 1'b1  ;
+              end
+    par_bit  :  begin
+                  mux_sel = 2'b11 ;
+                  ser_en  = 1'b0  ;
+                  Busy_c  = 1'b1  ;
+              end
+    Stop_bit :  begin
+                  mux_sel = 2'b01 ;
+                  ser_en  = 1'b0  ;
+                  Busy_c  = 1'b1  ;
+              end 
+    endcase   
  end
  
  // Output Busy signal

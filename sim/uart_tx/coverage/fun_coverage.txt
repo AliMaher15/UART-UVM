@@ -22,23 +22,23 @@ Covergroup                                             Metric       Goal       B
         covered/total bins:                                 2          2          -                      
         missing/total bins:                                 0          2          -                      
         % Hit:                                        100.00%        100          -                      
-        bin on                                             43          1          -    Covered              
-        bin off                                            57          1          -    Covered              
+        bin on                                            247          1          -    Covered              
+        bin off                                           270          1          -    Covered              
     Coverpoint cp_parity_type                         100.00%        100          -    Covered              
         covered/total bins:                                 2          2          -                      
         missing/total bins:                                 0          2          -                      
         % Hit:                                        100.00%        100          -                      
-        bin even                                           50          1          -    Covered              
-        bin odd                                            50          1          -    Covered              
+        bin even                                          277          1          -    Covered              
+        bin odd                                           240          1          -    Covered              
     Cross cx_par_typ_en                               100.00%        100          -    Covered              
         covered/total bins:                                 4          4          -                      
         missing/total bins:                                 0          4          -                      
         % Hit:                                        100.00%        100          -                      
         Auto, Default and User Defined Bins:
-            bin on_even                                    24          1          -    Covered              
-            bin on_odd                                     19          1          -    Covered              
-            bin off_even                                   26          1          -    Covered              
-            bin off_odd                                    31          1          -    Covered              
+            bin on_even                                   128          1          -    Covered              
+            bin on_odd                                    119          1          -    Covered              
+            bin off_even                                  149          1          -    Covered              
+            bin off_odd                                   121          1          -    Covered              
  TYPE /uart_tx_tb_pkg/uart_tx_coverage/cg_zeros_or_ones_data 
                                                       100.00%        100          -    Covered              
     covered/total bins:                                     2          2          -                      
@@ -48,8 +48,8 @@ Covergroup                                             Metric       Goal       B
         covered/total bins:                                 2          2          -                      
         missing/total bins:                                 0          2          -                      
         % Hit:                                        100.00%        100          -                      
-        bin zeros                                           1          1          -    Covered              
-        bin ones                                            1          1          -    Covered              
+        bin zeros                                         151          1          -    Covered              
+        bin ones                                          111          1          -    Covered              
 
 COVERGROUP COVERAGE:
 ----------------------------------------------------------------------------------------------------------
@@ -65,23 +65,23 @@ Covergroup                                             Metric       Goal       B
         covered/total bins:                                 2          2          -                      
         missing/total bins:                                 0          2          -                      
         % Hit:                                        100.00%        100          -                      
-        bin on                                             43          1          -    Covered              
-        bin off                                            57          1          -    Covered              
+        bin on                                            247          1          -    Covered              
+        bin off                                           270          1          -    Covered              
     Coverpoint cp_parity_type                         100.00%        100          -    Covered              
         covered/total bins:                                 2          2          -                      
         missing/total bins:                                 0          2          -                      
         % Hit:                                        100.00%        100          -                      
-        bin even                                           50          1          -    Covered              
-        bin odd                                            50          1          -    Covered              
+        bin even                                          277          1          -    Covered              
+        bin odd                                           240          1          -    Covered              
     Cross cx_par_typ_en                               100.00%        100          -    Covered              
         covered/total bins:                                 4          4          -                      
         missing/total bins:                                 0          4          -                      
         % Hit:                                        100.00%        100          -                      
         Auto, Default and User Defined Bins:
-            bin on_even                                    24          1          -    Covered              
-            bin on_odd                                     19          1          -    Covered              
-            bin off_even                                   26          1          -    Covered              
-            bin off_odd                                    31          1          -    Covered              
+            bin on_even                                   128          1          -    Covered              
+            bin on_odd                                    119          1          -    Covered              
+            bin off_even                                  149          1          -    Covered              
+            bin off_odd                                   121          1          -    Covered              
  TYPE /uart_tx_tb_pkg/uart_tx_coverage/cg_zeros_or_ones_data 
                                                       100.00%        100          -    Covered              
     covered/total bins:                                     2          2          -                      
@@ -91,8 +91,8 @@ Covergroup                                             Metric       Goal       B
         covered/total bins:                                 2          2          -                      
         missing/total bins:                                 0          2          -                      
         % Hit:                                        100.00%        100          -                      
-        bin zeros                                           1          1          -    Covered              
-        bin ones                                            1          1          -    Covered              
+        bin zeros                                         151          1          -    Covered              
+        bin ones                                          111          1          -    Covered              
 
 TOTAL COVERGROUP COVERAGE: 100.00%  COVERGROUP TYPES: 2
 

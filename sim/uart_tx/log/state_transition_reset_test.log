@@ -1,0 +1,234 @@
+# ** Warning: (vish-6) -- Waiting for lock by "Ali@DESKTOP-KHI8CQ6, pid = 12304". Lockfile is "D:/Ali/Courses/Verification-Projects/UART-UVM/sim/uart_tx/uart_tx_sim.mpf_lock".
+# ** Warning: (vish-6) -- Waiting for lock by "Ali@DESKTOP-KHI8CQ6, pid = 12304". Lockfile is "D:/Ali/Courses/Verification-Projects/UART-UVM/sim/uart_tx/uart_tx_sim.mpf_lock".
+# ** Warning: (vish-6) -- Waiting for lock by "Ali@DESKTOP-KHI8CQ6, pid = 12304". Lockfile is "D:/Ali/Courses/Verification-Projects/UART-UVM/sim/uart_tx/uart_tx_sim.mpf_lock".
+# ** Warning: (vish-6) -- Waiting for lock by "Ali@DESKTOP-KHI8CQ6, pid = 12304". Lockfile is "D:/Ali/Courses/Verification-Projects/UART-UVM/sim/uart_tx/uart_tx_sim.mpf_lock".
+# ** Warning: (vish-6) -- Waiting for lock by "Ali@DESKTOP-KHI8CQ6, pid = 12304". Lockfile is "D:/Ali/Courses/Verification-Projects/UART-UVM/sim/uart_tx/uart_tx_sim.mpf_lock".
+# -- Giving up waiting on lock. Lockfile is "D:/Ali/Courses/Verification-Projects/UART-UVM/sim/uart_tx/uart_tx_sim.mpf_lock".
+# ** Error: WriteIniString D:/Ali/Courses/Verification-Projects/UART-UVM/sim/uart_tx/uart_tx_sim.mpf failed: 2
+# ** Error: WriteIniString D:/Ali/Courses/Verification-Projects/UART-UVM/sim/uart_tx/uart_tx_sim.mpf failed: 2
+# ** Warning: (vish-6) -- Waiting for lock by "Ali@DESKTOP-KHI8CQ6, pid = 12304". Lockfile is "D:/Ali/Courses/Verification-Projects/UART-UVM/sim/uart_tx/uart_tx_sim.mpf_lock".
+# ** Warning: (vish-6) -- Waiting for lock by "Ali@DESKTOP-KHI8CQ6, pid = 12304". Lockfile is "D:/Ali/Courses/Verification-Projects/UART-UVM/sim/uart_tx/uart_tx_sim.mpf_lock".
+# ** Warning: (vish-6) -- Waiting for lock by "Ali@DESKTOP-KHI8CQ6, pid = 12304". Lockfile is "D:/Ali/Courses/Verification-Projects/UART-UVM/sim/uart_tx/uart_tx_sim.mpf_lock".
+# ** Warning: (vish-6) -- Waiting for lock by "Ali@DESKTOP-KHI8CQ6, pid = 12304". Lockfile is "D:/Ali/Courses/Verification-Projects/UART-UVM/sim/uart_tx/uart_tx_sim.mpf_lock".
+# ** Warning: (vish-6) -- Waiting for lock by "Ali@DESKTOP-KHI8CQ6, pid = 12304". Lockfile is "D:/Ali/Courses/Verification-Projects/UART-UVM/sim/uart_tx/uart_tx_sim.mpf_lock".
+# -- Giving up waiting on lock. Lockfile is "D:/Ali/Courses/Verification-Projects/UART-UVM/sim/uart_tx/uart_tx_sim.mpf_lock".
+# ** Error: WriteIniString D:/Ali/Courses/Verification-Projects/UART-UVM/sim/uart_tx/uart_tx_sim.mpf failed: 2
+# ** Error: WriteIniString D:/Ali/Courses/Verification-Projects/UART-UVM/sim/uart_tx/uart_tx_sim.mpf failed: 2
+# End time: 18:02:06 on Mar 14,2024, Elapsed time: 0:02:11
+# Errors: 4, Warnings: 12
+# vsim top_opt -c -assertdebug -debugDB -fsmdebug -coverage "+UVM_TESTNAME=state_transition_reset_test" 
+# Start time: 18:02:06 on Mar 14,2024
+# Loading sv_std.std
+# Loading work.uart_tx_if(fast)
+# Loading work.rst_intf(fast)
+# Loading work.uart_tx_global_params_pkg(fast)
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.uart_tx_item_pkg(fast)
+# Loading work.uart_tx_agent_pkg(fast)
+# Loading work.uart_tx_usertypes_pkg(fast)
+# Loading work.uart_tx_tb_pkg(fast)
+# Loading work.uart_tx_seq_pkg(fast)
+# Loading work.uart_tx_test_pkg(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.uart_tx_tb_top(fast)
+# Loading work.rst_intf(fast__2)
+# Loading work.uart_tx_if(fast__2)
+# Loading work.UART_TX(fast)
+# Loading work.uart_tx_fsm(fast)
+# Loading work.Serializer(fast)
+# Loading work.parity_calc(fast)
+# Loading work.mux(fast)
+# ** Warning: (vsim-3764) Stand-alone call to function 'read_by_name' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Region: /uart_tx_tb_pkg::rst_driver_c File: D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb//rst_driver_c.svh Line: 33
+# Loading C:/questasim64_2021.1/uvm-1.1d\win64\uvm_dpi.dll
+# ** Note: (vsim-8716) Reusing existing debug database vsim.dbg.
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0.000 ns: reporter [RNTST] Running test state_transition_reset_test...
+# -------------------------------------------------------------------
+# Name                       Type                         Size  Value
+# -------------------------------------------------------------------
+# uvm_test_top               state_transition_reset_test  -     @477 
+#   m_rst_drv                rst_driver_c                 -     @498 
+#     rsp_port               uvm_analysis_port            -     @513 
+#     seq_item_port          uvm_seq_item_pull_port       -     @505 
+#     intf_name              string                       5     rst_i
+#     reset_time_ps          integral                     32    'd260
+#   m_uart_tx_env            uart_tx_env                  -     @491 
+#     m_coverage             uart_tx_coverage             -     @657 
+#       analysis_imp         uvm_analysis_imp             -     @664 
+#     m_scoreboard           uart_tx_scoreboard           -     @650 
+#       axp_in               uvm_analysis_export          -     @672 
+#       axp_out              uvm_analysis_export          -     @680 
+#       cmp                  uart_tx_sb_comparator        -     @695 
+#         axp_out            uvm_analysis_export          -     @702 
+#         axp_predicted_out  uvm_analysis_export          -     @710 
+#         expfifo            uvm_tlm_analysis_fifo #(T)   -     @718 
+#           analysis_export  uvm_analysis_imp             -     @757 
+#           get_ap           uvm_analysis_port            -     @749 
+#           get_peek_export  uvm_get_peek_imp             -     @733 
+#           put_ap           uvm_analysis_port            -     @741 
+#           put_export       uvm_put_imp                  -     @725 
+#         outfifo            uvm_tlm_analysis_fifo #(T)   -     @765 
+#           analysis_export  uvm_analysis_imp             -     @804 
+#           get_ap           uvm_analysis_port            -     @796 
+#           get_peek_export  uvm_get_peek_imp             -     @780 
+#           put_ap           uvm_analysis_port            -     @788 
+#           put_export       uvm_put_imp                  -     @772 
+#       prd                  uart_tx_sb_predictor         -     @688 
+#         predicted_out_ap   uvm_analysis_port            -     @820 
+#         uart_tx_imp        uvm_analysis_imp_uart_tx_m   -     @812 
+#     m_uart_tx_agent        uvm_agent                    -     @534 
+#       m_driver             uvm_driver #(REQ,RSP)        -     @945 
+#         rsp_port           uvm_analysis_port            -     @960 
+#         seq_item_port      uvm_seq_item_pull_port       -     @952 
+#       m_monitor            uvm_monitor                  -     @829 
+#         input_ap           uvm_analysis_port            -     @986 
+#         output_ap          uvm_analysis_port            -     @994 
+#       m_seqr               uart_tx_agent_seqr           -     @836 
+#         rsp_export         uvm_analysis_export          -     @843 
+#         seq_item_export    uvm_seq_item_pull_imp        -     @937 
+#         arbitration_queue  array                        0     -    
+#         lock_queue         array                        0     -    
+#         num_last_reqs      integral                     32    'd1  
+#         num_last_rsps      integral                     32    'd1  
+#       uart_tx_input_ap     uvm_analysis_port            -     @968 
+#       uart_tx_output_ap    uvm_analysis_port            -     @976 
+#     m_vseqr                uart_tx_vsequencer           -     @541 
+#       rsp_export           uvm_analysis_export          -     @548 
+#       seq_item_export      uvm_seq_item_pull_imp        -     @642 
+#       arbitration_queue    array                        0     -    
+#       lock_queue           array                        0     -    
+#       num_last_reqs        integral                     32    'd1  
+#       num_last_rsps        integral                     32    'd1  
+# -------------------------------------------------------------------
+# 
+#### Factory Configuration (*)
+# 
+#   No instance or type overrides are registered with this factory
+# 
+# All types registered with the factory: 62 total
+# (types without type names will not be printed)
+# 
+#   Type Name
+#   ---------
+#   active_reset_test
+#   idle_reset_test
+#   questa_uvm_recorder
+#   rst_driver_c
+#   state_transition_reset_test
+#   uart_tx_agent_seqr
+#   uart_tx_base_seq
+#   uart_tx_base_test
+#   uart_tx_coverage
+#   uart_tx_env
+#   uart_tx_env_cfg
+#   uart_tx_input_constr_seq
+#   uart_tx_input_seq
+#   uart_tx_input_test
+#   uart_tx_input_test_vseq
+#   uart_tx_item
+#   uart_tx_sb_comparator
+#   uart_tx_sb_predictor
+#   uart_tx_scoreboard
+#   uart_tx_vseq_base
+#   uart_tx_vsequencer
+# (*) Types with no associated type name will be printed as <unknown>
+# 
+####
+# 
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb//rst_driver_c.svh(39) @ 0.000 ns: uvm_test_top.m_rst_drv [rst] Going down.
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb//rst_driver_c.svh(43) @ 260.000 ns: uvm_test_top.m_rst_drv [rst] Going up.
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test.svh(18) @ 260.000 ns: uvm_test_top [uart_tx_input_test] Starting test
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test.svh(20) @ 260.000 ns: uvm_test_top [uart_tx_input_test] Executing uart_tx_input_test_vseq
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//state_transition_reset_test.svh(65) @ 612.000 ns: uvm_test_top [test] Hitting Reset!!!
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_phase.svh(1311) @ 612.000 ns: reporter [PH_JUMP] phase main (schedule uvm_sched, domain uvm) is jumping to phase pre_reset
+# UVM_INFO @ 612.000 ns: main_objection [OBJTN_CLEAR] Object 'uvm_top' cleared objection counts for main_objection
+# UVM_INFO @ 612.000 ns: uvm_test_top.m_uart_tx_env.m_uart_tx_agent.m_seqr [uvm_test_top.m_uart_tx_env.m_uart_tx_agent.m_seqr] Sequences stopped.  Removing request from sequencer fifo
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb//rst_driver_c.svh(39) @ 612.000 ns: uvm_test_top.m_rst_drv [rst] Going down.
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb//rst_driver_c.svh(43) @ 872.000 ns: uvm_test_top.m_rst_drv [rst] Going up.
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test.svh(18) @ 872.000 ns: uvm_test_top [uart_tx_input_test] Starting test
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test.svh(20) @ 872.000 ns: uvm_test_top [uart_tx_input_test] Executing uart_tx_input_test_vseq
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//state_transition_reset_test.svh(65) @ 902.000 ns: uvm_test_top [test] Hitting Reset!!!
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_phase.svh(1311) @ 902.000 ns: reporter [PH_JUMP] phase main (schedule uvm_sched, domain uvm) is jumping to phase pre_reset
+# UVM_INFO @ 902.000 ns: main_objection [OBJTN_CLEAR] Object 'uvm_top' cleared objection counts for main_objection
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb//rst_driver_c.svh(39) @ 902.000 ns: uvm_test_top.m_rst_drv [rst] Going down.
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb//rst_driver_c.svh(43) @ 1162.000 ns: uvm_test_top.m_rst_drv [rst] Going up.
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test.svh(18) @ 1162.000 ns: uvm_test_top [uart_tx_input_test] Starting test
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test.svh(20) @ 1162.000 ns: uvm_test_top [uart_tx_input_test] Executing uart_tx_input_test_vseq
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//state_transition_reset_test.svh(65) @ 1212.000 ns: uvm_test_top [test] Hitting Reset!!!
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_phase.svh(1311) @ 1212.000 ns: reporter [PH_JUMP] phase main (schedule uvm_sched, domain uvm) is jumping to phase pre_reset
+# UVM_INFO @ 1212.000 ns: main_objection [OBJTN_CLEAR] Object 'uvm_top' cleared objection counts for main_objection
+# UVM_INFO @ 1212.000 ns: uvm_test_top.m_uart_tx_env.m_uart_tx_agent.m_seqr [uvm_test_top.m_uart_tx_env.m_uart_tx_agent.m_seqr] Sequences stopped.  Removing request from sequencer fifo
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb//rst_driver_c.svh(39) @ 1212.000 ns: uvm_test_top.m_rst_drv [rst] Going down.
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb//rst_driver_c.svh(43) @ 1472.000 ns: uvm_test_top.m_rst_drv [rst] Going up.
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test.svh(18) @ 1472.000 ns: uvm_test_top [uart_tx_input_test] Starting test
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test.svh(20) @ 1472.000 ns: uvm_test_top [uart_tx_input_test] Executing uart_tx_input_test_vseq
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//state_transition_reset_test.svh(65) @ 1590.000 ns: uvm_test_top [test] Hitting Reset!!!
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_phase.svh(1311) @ 1590.000 ns: reporter [PH_JUMP] phase main (schedule uvm_sched, domain uvm) is jumping to phase pre_reset
+# UVM_INFO @ 1590.000 ns: main_objection [OBJTN_CLEAR] Object 'uvm_top' cleared objection counts for main_objection
+# UVM_INFO @ 1590.000 ns: uvm_test_top.m_uart_tx_env.m_uart_tx_agent.m_seqr [uvm_test_top.m_uart_tx_env.m_uart_tx_agent.m_seqr] Sequences stopped.  Removing request from sequencer fifo
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb//rst_driver_c.svh(39) @ 1590.000 ns: uvm_test_top.m_rst_drv [rst] Going down.
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb//rst_driver_c.svh(43) @ 1850.000 ns: uvm_test_top.m_rst_drv [rst] Going up.
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test.svh(18) @ 1850.000 ns: uvm_test_top [uart_tx_input_test] Starting test
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test.svh(20) @ 1850.000 ns: uvm_test_top [uart_tx_input_test] Executing uart_tx_input_test_vseq
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//state_transition_reset_test.svh(65) @ 1970.000 ns: uvm_test_top [test] Hitting Reset!!!
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_phase.svh(1311) @ 1970.000 ns: reporter [PH_JUMP] phase main (schedule uvm_sched, domain uvm) is jumping to phase pre_reset
+# UVM_INFO @ 1970.000 ns: main_objection [OBJTN_CLEAR] Object 'uvm_top' cleared objection counts for main_objection
+# UVM_INFO @ 1970.000 ns: uvm_test_top.m_uart_tx_env.m_uart_tx_agent.m_seqr [uvm_test_top.m_uart_tx_env.m_uart_tx_agent.m_seqr] Sequences stopped.  Removing request from sequencer fifo
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb//rst_driver_c.svh(39) @ 1970.000 ns: uvm_test_top.m_rst_drv [rst] Going down.
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb//rst_driver_c.svh(43) @ 2230.000 ns: uvm_test_top.m_rst_drv [rst] Going up.
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test.svh(18) @ 2230.000 ns: uvm_test_top [uart_tx_input_test] Starting test
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test.svh(20) @ 2230.000 ns: uvm_test_top [uart_tx_input_test] Executing uart_tx_input_test_vseq
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test.svh(22) @ 16605.000 ns: uvm_test_top [uart_tx_input_test] uart_tx_input_test_vseq complete
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_input_test.svh(24) @ 16605.000 ns: uvm_test_top [uart_tx_input_test] Ending test
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(58) @ 16605.000 ns: uvm_test_top [uvm_test_top] <shutdown_phase> started, objection raised.
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb/test_lib//uart_tx_base_test.svh(63) @ 17105.000 ns: uvm_test_top [uvm_test_top] <shutdown_phase> finished, objection dropped.
+# UVM_INFO D:/Ali/Courses/Verification-Projects/UART-UVM/uart_tx_tb//uart_tx_checkers/uart_tx_sb_comparator.svh(156) @ 17105.000 ns: uvm_test_top.m_uart_tx_env.m_scoreboard.cmp [uart_tx_sb_comparator] 
+# 
+# 
+# *** TEST PASSED - 102 vectors ran, 0 vectors passed ***
+# 
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   51
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [OBJTN_CLEAR]     5
+# [PH_JUMP]     5
+# [Questa UVM]     2
+# [RNTST]     1
+# [rst]    12
+# [test]     5
+# [uart_tx_input_test]    14
+# [uart_tx_sb_comparator]     1
+# [uvm_test_top]     2
+# [uvm_test_top.m_uart_tx_env.m_uart_tx_agent.m_seqr]     4
+# ** Note: $finish    : C:/questasim64_2021.1/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 17105 ns  Iteration: 70  Instance: /uart_tx_tb_top
+# 1
+# Break in Task uvm_pkg/uvm_root::run_test at C:/questasim64_2021.1/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430

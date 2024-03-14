@@ -16,4 +16,8 @@ package uart_tx_test_pkg ;
     `include "uart_tx_input_test_vseq.svh"
     `include "uart_tx_input_test.svh"
 
+    `include "active_reset_test.svh"
+    `include "idle_reset_test.svh"
+    `include "state_transition_reset_test.svh"
+
 endpackage : uart_tx_test_pkg

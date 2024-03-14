@@ -1,6 +1,3 @@
-//************************************//
-// still need to finish connect phase
-//***********************************//
 class uart_tx_env extends uvm_env;
 
     // register in factory 
@@ -27,7 +24,7 @@ function void uart_tx_env::build_phase(uvm_phase phase);
 
     // check configuration
     if(!uvm_config_db#(uart_tx_env_cfg)::get(this, "", "m_uart_tx_env_cfg", m_cfg))
-        `uvm_fatal("uart_tx_env", "Failed to get uart_tx_env_cfg from database")
+        `uvm_fatal(get_full_name(), "Failed to get env_cfg from database")
 
     // path configuration to agents
     uvm_config_db#(uart_tx_agent_cfg_t)::set(this, "m_uart_tx_agent*", "uart_tx_agent_cfg_t", m_cfg.m_uart_tx_agent_cfg);
@@ -49,5 +46,6 @@ function void uart_tx_env::connect_phase(uvm_phase phase);
 
     // Connect Coverage and Scoreboard with monitor
     m_uart_tx_agent.uart_tx_input_ap.connect(m_coverage.analysis_export);
-    m_uart_tx_agent.uart_tx_output_ap.connect(m_scoreboard.uart_tx_out_imp);
+    m_uart_tx_agent.uart_tx_input_ap.connect(m_scoreboard.axp_in);
+    m_uart_tx_agent.uart_tx_output_ap.connect(m_scoreboard.axp_out);
 endfunction: connect_phase
