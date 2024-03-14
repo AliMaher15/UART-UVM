@@ -1,4 +1,6 @@
 ## UART Tx verification environment
+### Top Module
+![uart_tx module](https://github.com/AliMaher15/UART-UVM/blob/main/doc/uart_tx_module.png)
 ### Testbench Architecture
 ![uart_tx testbench](https://github.com/AliMaher15/UART-UVM/blob/main/doc/UART_Tx_tb.PNG)
 ### Results
