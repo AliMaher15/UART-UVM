@@ -23,6 +23,7 @@ Detailed Version:
 Total Coverage By Instance (filtered view): 99.12%
 
 #### Assertions
+![Assertions Codes Snapshot](https://github.com/AliMaher15/UART-UVM/blob/main/doc/uart_tx_assertions_codes.png)\
 ![Assertions Results](https://github.com/AliMaher15/UART-UVM/blob/main/sim/uart_tx/coverage/assertions.txt)\
 Total Coverage By Instance (filtered view): 100.00%\
 ![Assertions Results Snapshot](https://github.com/AliMaher15/UART-UVM/blob/main/doc/uart_tx_assertions.png)
